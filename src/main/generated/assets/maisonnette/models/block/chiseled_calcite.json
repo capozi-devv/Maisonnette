@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "maisonnette:block/chiseled_calcite"
+  }
+}

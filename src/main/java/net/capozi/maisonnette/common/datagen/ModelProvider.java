@@ -18,6 +18,15 @@ public class ModelProvider extends FabricModelProvider {
         calcitePool.slab(BlockInit.CALCITE_SLAB);
         calcitePool.wall(BlockInit.CALCITE_WALL);
         calcitePool.button(BlockInit.CALCITE_BUTTON);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.CHISELED_CALCITE);
+        BlockStateModelGenerator.BlockTexturePool granitePool =blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.GRANITE);
+        granitePool.button(BlockInit.GRANITE_BUTTON);
+        BlockStateModelGenerator.BlockTexturePool smoothCalcitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.SMOOTH_CALCITE);
+        smoothCalcitePool.stairs(BlockInit.SMOOTH_CALCITE_STAIRS);
+        smoothCalcitePool.slab(BlockInit.SMOOTH_CALCITE_SLAB);
+        smoothCalcitePool.wall(BlockInit.SMOOTH_CALCITE_WALL);
+        smoothCalcitePool.button(BlockInit.SMOOTH_CALCITE_BUTTON);
+        BlockStateModelGenerator.BlockTexturePool dioritePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DIORITE);
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "maisonnette:block/smooth_calcite",
+    "side": "maisonnette:block/smooth_calcite",
+    "top": "maisonnette:block/smooth_calcite"
+  }
+}

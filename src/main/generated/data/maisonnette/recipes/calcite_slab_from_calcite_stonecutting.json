@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
+  "count": 2,
   "ingredient": {
     "item": "minecraft:calcite"
   },
-  "result": "maisonnette:calcite_stairs"
+  "result": "maisonnette:calcite_slab"
 }

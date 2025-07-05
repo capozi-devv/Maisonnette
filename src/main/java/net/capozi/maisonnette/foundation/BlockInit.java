@@ -25,9 +25,11 @@ public class BlockInit {
     public static final Block CALCITE_BUTTON = registerBlock("calcite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false));
     public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)));
     public static final Block CHISELED_CALCITE = registerBlock("chiseled_calcite", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)));
+    public static final Block SMOOTH_CALCITE = registerBlock("smooth_calcite", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)));
     public static final Block SMOOTH_CALCITE_STAIRS = registerBlock("smooth_calcite_stairs", new StairsBlock(Blocks.CALCITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRANITE_STAIRS)));
     public static final Block SMOOTH_CALCITE_SLAB = registerBlock("smooth_calcite_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.GRANITE_SLAB)));
     public static final Block SMOOTH_CALCITE_WALL = registerBlock("smooth_calcite_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.GRANITE_WALL)));
     public static final Block SMOOTH_CALCITE_BUTTON = registerBlock("smooth_calcite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false));
-    public static final Block SMOOTH_CALCITE_BRICKS = registerBlock("smooth_calcite_bricks", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)));
+    public static final Block GRANITE_BUTTON = registerBlock("granite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.STONE, 10, false));
+    public static final Block DIORITE_BUTTON = registerBlock("diorite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.STONE, 10, false));
 }

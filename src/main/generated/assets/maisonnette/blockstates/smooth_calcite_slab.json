@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "maisonnette:block/smooth_calcite_slab"
+    },
+    "type=double": {
+      "model": "maisonnette:block/smooth_calcite"
+    },
+    "type=top": {
+      "model": "maisonnette:block/smooth_calcite_slab_top"
+    }
+  }
+}

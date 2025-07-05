@@ -16,5 +16,12 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.CALCITE_BUTTON);
         addDrop(BlockInit.CALCITE_WALL);
         addDrop(BlockInit.CHISELED_CALCITE);
+        addDrop(BlockInit.GRANITE_BUTTON);
+        addDrop(BlockInit.SMOOTH_CALCITE_STAIRS);
+        addDrop(BlockInit.SMOOTH_CALCITE);
+        addDrop(BlockInit.SMOOTH_CALCITE_SLAB, slabDrops(BlockInit.SMOOTH_CALCITE_SLAB));
+        addDrop(BlockInit.SMOOTH_CALCITE_BUTTON);
+        addDrop(BlockInit.SMOOTH_CALCITE_WALL);
+        addDrop(BlockInit.DIORITE_BUTTON);
     }
 }
