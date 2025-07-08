@@ -32,4 +32,15 @@ public class BlockInit {
     public static final Block SMOOTH_CALCITE_BUTTON = registerBlock("smooth_calcite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false));
     public static final Block GRANITE_BUTTON = registerBlock("granite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.STONE, 10, false));
     public static final Block DIORITE_BUTTON = registerBlock("diorite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.STONE, 10, false));
+    public static final Block TUFF_STAIRS = registerBlock("tuff_stairs", new StairsBlock(Blocks.TUFF.getDefaultState(), FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block TUFF_SLAB = registerBlock("tuff_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block TUFF_WALL = registerBlock("tuff_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block TUFF_BUTTON = registerBlock("tuff_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false));
+    public static final Block SMOOTH_TUFF = registerBlock("smooth_tuff", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block SMOOTH_TUFF_STAIRS = registerBlock("smooth_tuff_stairs", new StairsBlock(Blocks.TUFF.getDefaultState(), FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block SMOOTH_TUFF_SLAB = registerBlock("smooth_tuff_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block SMOOTH_TUFF_WALL = registerBlock("smooth_tuff_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block SMOOTH_TUFF_BUTTON = registerBlock("smooth_tuff_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false));
+    public static final Block TUFF_BRICKS = registerBlock("tuff_bricks", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block CHISELED_TUFF = registerBlock("chiseled_tuff", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)));
 }

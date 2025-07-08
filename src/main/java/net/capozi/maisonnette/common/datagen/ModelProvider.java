@@ -27,6 +27,13 @@ public class ModelProvider extends FabricModelProvider {
         smoothCalcitePool.wall(BlockInit.SMOOTH_CALCITE_WALL);
         smoothCalcitePool.button(BlockInit.SMOOTH_CALCITE_BUTTON);
         BlockStateModelGenerator.BlockTexturePool dioritePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DIORITE);
+        dioritePool.button(BlockInit.DIORITE_BUTTON);
+        BlockStateModelGenerator.BlockTexturePool tuffPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.TUFF);
+        tuffPool.button(BlockInit.TUFF_BUTTON);
+        tuffPool.wall(BlockInit.TUFF_WALL);
+        tuffPool.slab(BlockInit.TUFF_SLAB);
+        tuffPool.stairs(BlockInit.TUFF_STAIRS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.CHISELED_TUFF);
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
