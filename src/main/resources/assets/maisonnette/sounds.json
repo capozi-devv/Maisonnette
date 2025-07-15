@@ -1,0 +1,38 @@
+{
+  "book_add": {
+    "subtitle": "sounds.maisonnette.book_add",
+    "sounds": [
+      "maisonnette:book_add"
+    ]
+  },
+  "book_stack_place": {
+    "subtitle": "sounds.maisonnette.book_place",
+    "sounds": [
+      "maisonnette:book_add"
+    ]
+  },
+  "book_stack_break": {
+    "subtitle": "sounds.maisonnette.book_break",
+    "sounds": [
+      "maisonnette:book_stack_break"
+    ]
+  },
+  "book_stack_hit": {
+    "subtitle": "sounds.maisonnette.book_hit",
+    "sounds": [
+      "maisonnette:book_stack_hit"
+    ]
+  },
+  "book_stack_step": {
+    "subtitle": "sounds.maisonnette.book_step",
+    "sounds": [
+      "maisonnette:book_stack_step"
+    ]
+  },
+  "book_stack_fall": {
+    "subtitle": "sounds.maisonnette.book_fall",
+    "sounds": [
+      "maisonnette:book_stack_fall"
+    ]
+  }
+}

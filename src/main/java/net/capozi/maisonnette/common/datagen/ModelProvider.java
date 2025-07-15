@@ -1,11 +1,20 @@
 package net.capozi.maisonnette.common.datagen;
 
+import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
+import static net.capozi.maisonnette.Maisonnette.MOD_ID;
 
 public class ModelProvider extends FabricModelProvider {
     public ModelProvider(FabricDataOutput output) {
@@ -21,11 +30,6 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.CHISELED_CALCITE);
         BlockStateModelGenerator.BlockTexturePool granitePool =blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.GRANITE);
         granitePool.button(BlockInit.GRANITE_BUTTON);
-        BlockStateModelGenerator.BlockTexturePool smoothCalcitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.SMOOTH_CALCITE);
-        smoothCalcitePool.stairs(BlockInit.SMOOTH_CALCITE_STAIRS);
-        smoothCalcitePool.slab(BlockInit.SMOOTH_CALCITE_SLAB);
-        smoothCalcitePool.wall(BlockInit.SMOOTH_CALCITE_WALL);
-        smoothCalcitePool.button(BlockInit.SMOOTH_CALCITE_BUTTON);
         BlockStateModelGenerator.BlockTexturePool dioritePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DIORITE);
         dioritePool.button(BlockInit.DIORITE_BUTTON);
         BlockStateModelGenerator.BlockTexturePool tuffPool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.TUFF);
@@ -33,10 +37,51 @@ public class ModelProvider extends FabricModelProvider {
         tuffPool.wall(BlockInit.TUFF_WALL);
         tuffPool.slab(BlockInit.TUFF_SLAB);
         tuffPool.stairs(BlockInit.TUFF_STAIRS);
-        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.CHISELED_TUFF);
+        generateBookStacks(blockStateModelGenerator);
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
     }
+    public static final TextureKey BOOK = TextureKey.of("book");
+    private void generateBookStacks(BlockStateModelGenerator generator) {
+        List<VariantSettings.Rotation> rots = List.of(VariantSettings.Rotation.R0, VariantSettings.Rotation.R90, VariantSettings.Rotation.R180, VariantSettings.Rotation.R270);
+        MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(BlockInit.BOOK_STACK);
+        for (int h = 0; h <= 3; h++) {
+            ArrayList<Identifier> models = new ArrayList<>();
+            for (int i = 0; i <= 6; i++) {
+                for (int r = 0; r <= 3; r++) {
+                    String parentModel = "block/template_book_stack_" + h + "_r" + r;
+                    Identifier modelId = new Identifier(MOD_ID, "block/book_stack_" + i + "_" + h + "_r" + r);
+                    Identifier texture = new Identifier(MOD_ID, "block/book_stack/book_" + i);
+                    Model model = new Model(
+                            Optional.of(new Identifier(MOD_ID, parentModel)),
+                            Optional.empty(),
+                            BOOK
+                    );
+                    model.upload(
+                            modelId, // output model path
+                            TextureMap.of(BOOK, texture),
+                            generator.modelCollector // required for writing the file
+                    );
+                    models.add(modelId);
+                }
+            }
+            ArrayList<BlockStateVariant> blockStateVariants = new ArrayList<>();
+            for (VariantSettings.Rotation rot: rots) {
+                for (Identifier i : models) {
+                    BlockStateVariant blockStateVariant = BlockStateVariant.create();
+                    blockStateVariant.put(VariantSettings.MODEL, i);
+                    blockStateVariant.put(VariantSettings.Y,rot);
+                    blockStateVariants.add(blockStateVariant);
+                }
+            }
+            Collections.shuffle(blockStateVariants);
+            for (int i = h+1; i <= 4; i++) {
+                multipartBlockStateSupplier.with(When.create().set(BookStackBlock.BOOKS, i), blockStateVariants);
+            }
+        }
+        generator.blockStateCollector.accept(multipartBlockStateSupplier);
+    }
+
 }

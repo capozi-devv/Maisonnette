@@ -5,7 +5,9 @@
 	"name": "Maisonnette",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Capozi",
+		"Cosmo",
+		"KrimsonCinder"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -17,6 +19,9 @@
 	"entrypoints": {
 		"main": [
 			"net.capozi.maisonnette.Maisonnette"
+		],
+		"client": [
+			"net.capozi.maisonnette.MaisonnetteClient"
 		],
 		"fabric-datagen": [
 			"net.capozi.maisonnette.MaisonnetteDataGenerator"

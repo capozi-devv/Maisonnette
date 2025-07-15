@@ -1,0 +1,53 @@
+{
+	"credit": "Model by Luxintrus",
+	"textures": {
+		"particle": "#book"
+	},
+	"elements": [
+		{
+			"from": [3.48, 7.98, 1.98],
+			"to": [12.52, 8.02, 14.02],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"up": {"uv": [9, 0, 0, 12], "texture": "#book"},
+				"down": {"uv": [9, 0, 0, 12], "texture": "#book"}
+			}
+		},
+		{
+			"from": [3.49, 11.99, 1.99],
+			"to": [12.51, 12.01, 14.01],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"up": {"uv": [9, 12, 0, 0], "texture": "#book"},
+				"down": {"uv": [9, 0, 0, 12], "texture": "#book"}
+			}
+		},
+		{
+			"from": [3.5, 8, 2],
+			"to": [3.5, 12, 14],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"east": {"uv": [9, 0, 13, 12], "rotation": 90, "texture": "#book"},
+				"west": {"uv": [9, 0, 13, 12], "rotation": 90, "texture": "#book"}
+			}
+		},
+		{
+			"from": [3.48, 7.98, 2.98],
+			"to": [11.52, 12.02, 13.02],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [1, 12, 9, 16], "texture": "#book"},
+				"east": {"uv": [1, 12, 11, 16], "texture": "#book"},
+				"south": {"uv": [9, 12, 1, 16], "texture": "#book"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "book",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

@@ -3,6 +3,7 @@ package net.capozi.maisonnette.common.datagen;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.item.Items;
 
 public class LootTableProvider extends FabricBlockLootTableProvider {
     public LootTableProvider(FabricDataOutput dataOutput) {
@@ -17,11 +18,6 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.CALCITE_WALL);
         addDrop(BlockInit.CHISELED_CALCITE);
         addDrop(BlockInit.GRANITE_BUTTON);
-        addDrop(BlockInit.SMOOTH_CALCITE_STAIRS);
-        addDrop(BlockInit.SMOOTH_CALCITE);
-        addDrop(BlockInit.SMOOTH_CALCITE_SLAB, slabDrops(BlockInit.SMOOTH_CALCITE_SLAB));
-        addDrop(BlockInit.SMOOTH_CALCITE_BUTTON);
-        addDrop(BlockInit.SMOOTH_CALCITE_WALL);
         addDrop(BlockInit.DIORITE_BUTTON);
         addDrop(BlockInit.TUFF_STAIRS);
         addDrop(BlockInit.TUFF_BUTTON);
@@ -29,5 +25,6 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.TUFF_WALL);
         addDrop(BlockInit.TUFF_BRICKS);
         addDrop(BlockInit.CHISELED_TUFF);
+        addDrop(BlockInit.BOOK_STACK, Items.BOOK);
     }
 }
