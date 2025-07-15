@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "maisonnette:tuff_stairs",
     "maisonnette:calcite_stairs"
   ]
 }

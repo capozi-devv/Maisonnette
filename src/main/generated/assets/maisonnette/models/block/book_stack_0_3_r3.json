@@ -1,0 +1,6 @@
+{
+  "parent": "maisonnette:block/template_book_stack_3_r3",
+  "textures": {
+    "book": "maisonnette:block/book_stack/book_0"
+  }
+}

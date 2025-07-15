@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "maisonnette:calcite_button"
+    "maisonnette:calcite_button",
+    "maisonnette:tuff_button",
+    "maisonnette:diorite_button",
+    "maisonnette:granite_button"
   ]
 }
