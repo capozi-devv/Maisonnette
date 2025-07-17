@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "maisonnette:block/oxidized_copper_bulb_bottom",
+    "side": "maisonnette:block/oxidized_copper_torchbulb_side",
+    "top": "maisonnette:block/oxidized_copper_torchbulb_top"
+  }
+}
