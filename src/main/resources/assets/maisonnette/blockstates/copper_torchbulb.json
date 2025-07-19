@@ -1,6 +1,6 @@
 {
   "variants": {
-    "lit=false": { "model": "maisonnette:block/copper_torchbulb_unlit" },
-    "lit=true": { "model": "maisonnette:block/copper_torchbulb_lit" },
+    "lit=false": { "model": "maisonnette:block/copper_bulb_unlit" },
+    "lit=true": { "model": "maisonnette:block/copper_torchbulb_lit" }
   }
 }

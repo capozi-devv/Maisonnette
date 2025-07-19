@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "maisonnette:block/weathered_copper_bulb_bottom",
+    "side": "maisonnette:block/weathered_copper_torchbulb_side",
+    "top": "maisonnette:block/weathered_copper_torchbulb_top"
+  }
+}
