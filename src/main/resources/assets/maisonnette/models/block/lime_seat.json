@@ -1,0 +1,8 @@
+{
+  "parent": "maisonnette:block/seat_parent",
+  "textures": {
+    "side": "maisonnette:block/lime_seat_side",
+    "top": "maisonnette:block/lime_seat_top",
+    "particle": "maisonnette:block/lime_seat_top"
+  }
+}

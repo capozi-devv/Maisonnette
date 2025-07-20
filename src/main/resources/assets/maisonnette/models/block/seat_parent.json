@@ -1,0 +1,21 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "maisonnette:block/seat_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 8, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"east": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

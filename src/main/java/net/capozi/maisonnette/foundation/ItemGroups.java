@@ -28,6 +28,14 @@ public class ItemGroups {
                         entries.add(BlockInit.TUFF_WALL);
                         entries.add(BlockInit.TUFF_BUTTON);
                         entries.add(Items.BOOK);
+                        entries.add(BlockInit.COPPER_TORCHBULB);
+                        entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
+                        entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
+                        entries.add(BlockInit.OXIDIZED_COPPER_TORCHBULB);
+                        entries.add(BlockInit.COPPER_SOULBULB);
+                        entries.add(BlockInit.EXPOSED_COPPER_SOULBULB);
+                        entries.add(BlockInit.WEATHERED_COPPER_SOULBULB);
+                        entries.add(BlockInit.OXIDIZED_COPPER_SOULBULB);
                     }).build());
     public static void init() {
 

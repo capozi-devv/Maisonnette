@@ -3,6 +3,7 @@ package net.capozi.maisonnette.foundation;
 import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.capozi.maisonnette.common.block.BulbBlock;
+import net.capozi.maisonnette.common.block.SeatBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -11,11 +12,13 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import static net.capozi.maisonnette.common.block.BulbBlock.LIT;
+
 public class BlockInit {
-	public static void init() {
-	}
+	public static void init() {}
 	private static Item registerBlockItem(String name, Block block) {
 		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name),
 				new BlockItem(block, new FabricItemSettings()));
@@ -41,20 +44,35 @@ public class BlockInit {
 	public static final Block TUFF_BUTTON = registerBlock("tuff_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false), true);
 	public static final Block TUFF_BRICKS = registerBlock("tuff_bricks", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)), true);
 	public static final Block CHISELED_TUFF = registerBlock("chiseled_tuff", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)), true);
-	public static final Block COPPER_TORCHBULB = registerBlock("copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block EXPOSED_COPPER_TORCHBULB = registerBlock("exposed_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).lightLevel(12)), true);
-	public static final Block WEATHERED_COPPER_TORCHBULB = registerBlock("weathered_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).lightLevel(8)), true);
-	public static final Block OXIDIZED_COPPER_TORCHBULB = registerBlock("oxidized_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).lightLevel(4)), true);
-	public static final Block WAXED_COPPER_TORCHBULB = registerBlock("waxed_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block WAXED_EXPOSED_COPPER_TORCHBULB = registerBlock("waxed_exposed_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).lightLevel(12)), true);
-	public static final Block WAXED_WEATHERED_COPPER_TORCHBULB = registerBlock("waxed_weathered_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).lightLevel(8)), true);
-	public static final Block WAXED_OXIDIZED_COPPER_TORCHBULB = registerBlock("waxed_oxidized_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP).lightLevel(4)), true);
-	public static final Block COPPER_SOULBULB = registerBlock("copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block EXPOSED_COPPER_SOULBULB = registerBlock("exposed_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block WEATHERED_COPPER_SOULBULB = registerBlock("weathered_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block OXIDIZED_COPPER_SOULBULB = registerBlock("oxidized_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block WAXED_COPPER_SOULBULB = registerBlock("waxed_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block WAXED_EXPOSED_COPPER_SOULBULB = registerBlock("waxed_exposed_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block WAXED_WEATHERED_COPPER_SOULBULB = registerBlock("waxed_weathered_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
-	public static final Block WAXED_OXIDIZED_COPPER_SOULBULB = registerBlock("waxed_oxidized_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)), true);
+	public static final Block COPPER_TORCHBULB = registerBlock("copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 15 : 0)), true);
+	public static final Block EXPOSED_COPPER_TORCHBULB = registerBlock("exposed_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 12 : 0)), true);
+	public static final Block WEATHERED_COPPER_TORCHBULB = registerBlock("weathered_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 8 : 0)), true);
+	public static final Block OXIDIZED_COPPER_TORCHBULB = registerBlock("oxidized_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 4 : 0)), true);
+	public static final Block WAXED_COPPER_TORCHBULB = registerBlock("waxed_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED,FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 15 : 0)), true);
+	public static final Block WAXED_EXPOSED_COPPER_TORCHBULB = registerBlock("waxed_exposed_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 12 : 0)), true);
+	public static final Block WAXED_WEATHERED_COPPER_TORCHBULB = registerBlock("waxed_weathered_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 8 : 0)), true);
+	public static final Block WAXED_OXIDIZED_COPPER_TORCHBULB = registerBlock("waxed_oxidized_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 4 : 0)), true);
+	public static final Block COPPER_SOULBULB = registerBlock("copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 15 : 0)), true);
+	public static final Block EXPOSED_COPPER_SOULBULB = registerBlock("exposed_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 12 : 0)), true);
+	public static final Block WEATHERED_COPPER_SOULBULB = registerBlock("weathered_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 8 : 0)), true);
+	public static final Block OXIDIZED_COPPER_SOULBULB = registerBlock("oxidized_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 4 : 0)), true);
+	public static final Block WAXED_COPPER_SOULBULB = registerBlock("waxed_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 15 : 0)), true);
+	public static final Block WAXED_EXPOSED_COPPER_SOULBULB = registerBlock("waxed_exposed_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 12 : 0)), true);
+	public static final Block WAXED_WEATHERED_COPPER_SOULBULB = registerBlock("waxed_weathered_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 8 : 0)), true);
+	public static final Block WAXED_OXIDIZED_COPPER_SOULBULB = registerBlock("waxed_oxidized_copper_soulbulb", new BulbBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 4 : 0)), true);
+	public static final Block WHITE_SEAT = registerBlock("white_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block ORANGE_SEAT = registerBlock("orange_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block LIGHT_BLUE_SEAT = registerBlock("light_blue_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block YELLOW_SEAT = registerBlock("yellow_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block LIME_SEAT = registerBlock("lime_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block PINK_SEAT = registerBlock("pink_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block GRAY_SEAT = registerBlock("gray_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block LIGHT_GRAY_SEAT = registerBlock("light_gray_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block CYAN_SEAT = registerBlock("cyan_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block BLUE_SEAT = registerBlock("blue_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block PURPLE_SEAT = registerBlock("purple_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block BROWN_SEAT = registerBlock("brown_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block GREEN_SEAT = registerBlock("green_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block RED_SEAT = registerBlock("red_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block BLACK_SEAT = registerBlock("black_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
 }
