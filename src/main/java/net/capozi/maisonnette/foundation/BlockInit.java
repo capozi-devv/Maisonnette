@@ -75,4 +75,5 @@ public class BlockInit {
 	public static final Block GREEN_SEAT = registerBlock("green_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
 	public static final Block RED_SEAT = registerBlock("red_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
 	public static final Block BLACK_SEAT = registerBlock("black_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+	public static final Block MAGENTA_SEAT = registerBlock("magenta_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
 }

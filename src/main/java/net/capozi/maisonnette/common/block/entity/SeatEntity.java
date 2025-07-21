@@ -10,6 +10,9 @@ public class SeatEntity extends Entity {
     public SeatEntity(EntityType<?> type, World world, BlockPos pos) {
         super(type, world);
     }
+    public SeatEntity(EntityType<SeatEntity> seatEntityEntityType, World world) {
+        super(seatEntityEntityType, world);
+    }
     @Override
     protected void initDataTracker() {}
     @Override

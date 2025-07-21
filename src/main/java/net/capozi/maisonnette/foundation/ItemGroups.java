@@ -36,6 +36,22 @@ public class ItemGroups {
                         entries.add(BlockInit.EXPOSED_COPPER_SOULBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_SOULBULB);
                         entries.add(BlockInit.OXIDIZED_COPPER_SOULBULB);
+                        entries.add(BlockInit.WHITE_SEAT);
+                        entries.add(BlockInit.ORANGE_SEAT);
+                        entries.add(BlockInit.MAGENTA_SEAT);
+                        entries.add(BlockInit.LIGHT_BLUE_SEAT);
+                        entries.add(BlockInit.YELLOW_SEAT);
+                        entries.add(BlockInit.LIME_SEAT);
+                        entries.add(BlockInit.PINK_SEAT);
+                        entries.add(BlockInit.GRAY_SEAT);
+                        entries.add(BlockInit.LIGHT_GRAY_SEAT);
+                        entries.add(BlockInit.CYAN_SEAT);
+                        entries.add(BlockInit.PURPLE_SEAT);
+                        entries.add(BlockInit.BLUE_SEAT);
+                        entries.add(BlockInit.BROWN_SEAT);
+                        entries.add(BlockInit.GREEN_SEAT);
+                        entries.add(BlockInit.RED_SEAT);
+                        entries.add(BlockInit.BLACK_SEAT);
                     }).build());
     public static void init() {
 
