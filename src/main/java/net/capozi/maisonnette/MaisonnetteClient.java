@@ -1,5 +1,6 @@
 package net.capozi.maisonnette;
 
+import net.capozi.maisonnette.common.entity.client.EmptyRenderer;
 import net.capozi.maisonnette.common.entity.client.ModModelLayers;
 import net.capozi.maisonnette.common.entity.client.SpecterModel;
 import net.capozi.maisonnette.common.entity.client.SpecterRenderer;
@@ -12,6 +13,9 @@ public class MaisonnetteClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		EntityRendererRegistry.register(EntityInit.SPECTER, SpecterRenderer::new);
+		EntityRendererRegistry.register(EntityInit.SEAT, (ctx) ->
+				new EmptyRenderer<>(ctx)
+		);
 		EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SPECTER, SpecterModel::getTexturedModelData);
 	}
 }

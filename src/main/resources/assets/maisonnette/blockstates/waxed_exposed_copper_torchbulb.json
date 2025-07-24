@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "facing=up,lit=false":    { "model": "maisonnette:block/exposed_copper_torchbulb_unlit" },
+    "facing=up,lit=true":     { "model": "maisonnette:block/exposed_copper_torchbulb_lit" },
+
+    "facing=down,lit=false":  { "model": "maisonnette:block/exposed_copper_torchbulb_unlit", "x": 180 },
+    "facing=down,lit=true":   { "model": "maisonnette:block/exposed_copper_torchbulb_lit",   "x": 180 },
+
+    "facing=north,lit=false": { "model": "maisonnette:block/exposed_copper_torchbulb_unlit", "x": 90 },
+    "facing=north,lit=true":  { "model": "maisonnette:block/exposed_copper_torchbulb_lit",   "x": 90 },
+
+    "facing=south,lit=false": { "model": "maisonnette:block/exposed_copper_torchbulb_unlit", "x": 90, "y": 180 },
+    "facing=south,lit=true":  { "model": "maisonnette:block/exposed_copper_torchbulb_lit",   "x": 90, "y": 180 },
+
+    "facing=west,lit=false":  { "model": "maisonnette:block/exposed_copper_torchbulb_unlit", "x": 90, "y": 270 },
+    "facing=west,lit=true":   { "model": "maisonnette:block/exposed_copper_torchbulb_lit",   "x": 90, "y": 270 },
+
+    "facing=east,lit=false":  { "model": "maisonnette:block/exposed_copper_torchbulb_unlit", "x": 90, "y": 90 },
+    "facing=east,lit=true":   { "model": "maisonnette:block/exposed_copper_torchbulb_lit",   "x": 90, "y": 90 }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:gold_nugget"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "W": {
+      "item": "minecraft:cyan_wool"
+    }
+  },
+  "pattern": [
+    "   ",
+    "WNW",
+    "PPP"
+  ],
+  "result": {
+    "item": "maisonnette:cyan_seat"
+  },
+  "show_notification": true
+}

@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-20T19:44:07.0990278	Maisonnette/Model Definitions
+// 1.20.1	2025-07-21T19:44:40.0589785	Maisonnette/Model Definitions
 a3643352151e826bde94bf33fadbdcd38f4585ca assets\maisonnette\models\block\book_stack_0_1_r1.json
 b086b0b02fd814f82d3802ac5e71c888f2efaca6 assets\maisonnette\models\block\book_stack_4_3_r0.json
 2c6d0ec65b410435e7fb20f9e759270178c94d62 assets\maisonnette\models\block\book_stack_4_2_r3.json
@@ -124,7 +124,7 @@ a6385fd6c802ac13400d6fc26acccaac25413f90 assets\maisonnette\models\block\book_st
 7369a07bb1e624aafdd9be8153e16da66f86e02c assets\maisonnette\models\block\book_stack_0_3_r0.json
 90a3be35cc12f20916026ff0ae52148d7fe9d55e assets\maisonnette\models\block\book_stack_4_1_r0.json
 c4fb3e298afd834a9617dcc3c84cd07eea76efb8 assets\maisonnette\models\block\tuff_slab.json
-a1aa2f5e0aaa006c9a1715b0cc0f2c886be6b824 assets\maisonnette\blockstates\book_stack.json
+62c538110ff9611f45de27162d37b56109dac4f1 assets\maisonnette\blockstates\book_stack.json
 cd395832580e47ada02401023f73a663844dfac9 assets\maisonnette\models\block\book_stack_6_3_r2.json
 048682b6814a5f6519b4960bf63da13a1e81caaa assets\maisonnette\models\block\book_stack_2_2_r0.json
 9211194e73d9b3cf0c309f7dfd3d86ac46dabdb7 assets\maisonnette\models\block\book_stack_4_1_r3.json

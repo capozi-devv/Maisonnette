@@ -41,7 +41,7 @@ public class ModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
+        
     }
     public static final TextureKey BOOK = TextureKey.of("book");
     private void generateBookStacks(BlockStateModelGenerator generator) {

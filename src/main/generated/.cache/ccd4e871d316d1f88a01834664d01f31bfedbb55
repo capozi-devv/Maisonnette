@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-20T19:44:07.0935024	Maisonnette/Block Loot Tables
+// 1.20.1	2025-07-21T19:44:40.0559778	Maisonnette/Block Loot Tables
 7737da0fb57b35fef3f454699f3f81a42859c638 data\maisonnette\loot_tables\blocks\tuff_slab.json
 d099558c1f064227be823d42b55ec04a4f73024a data\maisonnette\loot_tables\blocks\calcite_bricks.json
 093a2919e023a6222743ec509cb2e0bea3eca549 data\maisonnette\loot_tables\blocks\tuff_button.json
@@ -12,5 +12,5 @@ aa2d1553dbb5fdff403341f47e673c8bd46d0dca data\maisonnette\loot_tables\blocks\boo
 646cc1b30a609a190e3fea4276530f52a38ef093 data\maisonnette\loot_tables\blocks\calcite_slab.json
 473029786f9c9e32beac42a21ba2a96fad6777a1 data\maisonnette\loot_tables\blocks\chiseled_calcite.json
 fe2d6e3c6c4929d64b1dd68d1bbe2031389faf04 data\maisonnette\loot_tables\blocks\chiseled_tuff.json
-1464ad717c2bd00b97a61545191973d40309c7a5 data\maisonnette\loot_tables\blocks\calcite_wall.json
 2c03329670eae761b4d68bccc770b4465051f21a data\maisonnette\loot_tables\blocks\tuff_wall.json
+1464ad717c2bd00b97a61545191973d40309c7a5 data\maisonnette\loot_tables\blocks\calcite_wall.json
