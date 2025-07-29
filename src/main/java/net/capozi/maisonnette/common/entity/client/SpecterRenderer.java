@@ -1,7 +1,7 @@
 package net.capozi.maisonnette.common.entity.client;
 
 import net.capozi.maisonnette.Maisonnette;
-import net.capozi.maisonnette.common.entity.custom.SpecterEntity;
+import net.capozi.maisonnette.common.entity.object.SpecterEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.util.Identifier;

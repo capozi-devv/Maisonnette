@@ -1,6 +1,6 @@
 package net.capozi.maisonnette.common.entity.client;
 
-import net.capozi.maisonnette.common.entity.custom.SpecterEntity;
+import net.capozi.maisonnette.common.entity.object.SpecterEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;

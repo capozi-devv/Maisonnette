@@ -1,4 +1,4 @@
-package net.capozi.maisonnette.common.entity.custom;
+package net.capozi.maisonnette.common.entity.object;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

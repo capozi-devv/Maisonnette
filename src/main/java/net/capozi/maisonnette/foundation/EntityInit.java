@@ -1,8 +1,8 @@
 package net.capozi.maisonnette.foundation;
 
 import net.capozi.maisonnette.Maisonnette;
-import net.capozi.maisonnette.common.entity.custom.SeatEntity;
-import net.capozi.maisonnette.common.entity.custom.SpecterEntity;
+import net.capozi.maisonnette.common.entity.object.SeatEntity;
+import net.capozi.maisonnette.common.entity.object.SpecterEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -20,7 +20,7 @@ public class EntityInit {
 			Registries.ENTITY_TYPE,
 			new Identifier("maisonnette", "seat"),
 			FabricEntityTypeBuilder.<SeatEntity>create(SpawnGroup.MISC, SeatEntity::new)
-					.dimensions(EntityDimensions.fixed(0.6f, 0.5f)) // slab (0.5) + 1 pixel = 0.5625
+					.dimensions(EntityDimensions.fixed(0.6f, 0.5f))
 					.trackRangeBlocks(10)
 					.trackedUpdateRate(1)
 					.disableSaving()

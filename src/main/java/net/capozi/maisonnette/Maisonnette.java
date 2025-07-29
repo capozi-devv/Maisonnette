@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import net.capozi.maisonnette.common.block.BookStackBlock;
-import net.capozi.maisonnette.common.entity.custom.SpecterEntity;
+import net.capozi.maisonnette.common.entity.object.SpecterEntity;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.capozi.maisonnette.foundation.EntityInit;
 import net.capozi.maisonnette.foundation.ItemGroups;

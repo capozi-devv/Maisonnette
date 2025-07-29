@@ -1,6 +1,6 @@
 package net.capozi.maisonnette.common.block;
 
-import net.capozi.maisonnette.common.entity.custom.SeatEntity;
+import net.capozi.maisonnette.common.entity.object.SeatEntity;
 import net.capozi.maisonnette.foundation.EntityInit;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
