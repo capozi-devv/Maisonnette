@@ -3,6 +3,7 @@ package net.capozi.maisonnette.foundation;
 import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.capozi.maisonnette.common.block.BulbBlock;
+import net.capozi.maisonnette.common.block.MosaicBlock;
 import net.capozi.maisonnette.common.block.SeatBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -30,6 +31,7 @@ public class BlockInit {
 		}
 		return Registry.register(Registries.BLOCK, new Identifier(Maisonnette.MOD_ID, name), block);
 	}
+    public static final Block MOSAIC = registerBlock("mosaic_tiles", new MosaicBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)), true);
 	public static final Block BOOK_STACK = registerBlock("book_stack", new BookStackBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO).sounds(SoundInit.BOOK_STACK_SOUNDS).nonOpaque().offset(OffsetType.NONE).burnable()), false);
 	public static final Block CALCITE_STAIRS = registerBlock("calcite_stairs", new StairsBlock(Blocks.CALCITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRANITE_STAIRS)), true);
 	public static final Block CALCITE_SLAB = registerBlock("calcite_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.GRANITE_SLAB)), true);

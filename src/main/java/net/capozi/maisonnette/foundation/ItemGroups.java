@@ -47,6 +47,7 @@ public class ItemGroups {
                         entries.add(BlockInit.GREEN_SEAT);
                         entries.add(BlockInit.RED_SEAT);
                         entries.add(BlockInit.BLACK_SEAT);
+                        entries.add(BlockInit.MOSAIC);
                     }).build());
     public static void init() {
 
