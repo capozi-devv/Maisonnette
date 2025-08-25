@@ -24,7 +24,13 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.TUFF_SLAB, slabDrops(BlockInit.TUFF_SLAB));
         addDrop(BlockInit.TUFF_WALL);
         addDrop(BlockInit.TUFF_BRICKS);
-        addDrop(BlockInit.CHISELED_TUFF);
-        addDrop(BlockInit.BOOK_STACK, Items.BOOK);
+        addDrop(BlockInit.COPPER_TORCHBULB);
+        addDrop(BlockInit.EXPOSED_COPPER_TORCHBULB);
+        addDrop(BlockInit.WAXED_COPPER_TORCHBULB);
+        addDrop(BlockInit.OXIDIZED_COPPER_TORCHBULB);
+        addDrop(BlockInit.WAXED_COPPER_TORCHBULB);
+        addDrop(BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
+        addDrop(BlockInit.WAXED_COPPER_TORCHBULB);
+        addDrop(BlockInit.OXIDIZED_COPPER_TORCHBULB);
     }
 }

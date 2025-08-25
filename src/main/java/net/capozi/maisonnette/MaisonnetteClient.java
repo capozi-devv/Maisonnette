@@ -13,9 +13,7 @@ public class MaisonnetteClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		EntityRendererRegistry.register(EntityInit.SPECTER, SpecterRenderer::new);
-		EntityRendererRegistry.register(EntityInit.SEAT, (ctx) ->
-				new EmptyRenderer<>(ctx)
-		);
+		EntityRendererRegistry.register(EntityInit.SEAT, (ctx) -> new EmptyRenderer<>(ctx));
 		EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SPECTER, SpecterModel::getTexturedModelData);
 	}
 }

@@ -22,7 +22,6 @@ public class ItemGroups {
                         entries.add(BlockInit.CALCITE_WALL);
                         entries.add(BlockInit.CALCITE_BUTTON);
                         entries.add(BlockInit.TUFF_BRICKS);
-                        entries.add(BlockInit.CHISELED_TUFF);
                         entries.add(BlockInit.TUFF_STAIRS);
                         entries.add(BlockInit.TUFF_SLAB);
                         entries.add(BlockInit.TUFF_WALL);
@@ -32,10 +31,6 @@ public class ItemGroups {
                         entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
                         entries.add(BlockInit.OXIDIZED_COPPER_TORCHBULB);
-                        entries.add(BlockInit.COPPER_SOULBULB);
-                        entries.add(BlockInit.EXPOSED_COPPER_SOULBULB);
-                        entries.add(BlockInit.WEATHERED_COPPER_SOULBULB);
-                        entries.add(BlockInit.OXIDIZED_COPPER_SOULBULB);
                         entries.add(BlockInit.WHITE_SEAT);
                         entries.add(BlockInit.ORANGE_SEAT);
                         entries.add(BlockInit.MAGENTA_SEAT);

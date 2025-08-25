@@ -12,6 +12,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.loot.context.LootContextParameterSet;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
@@ -33,6 +35,9 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
+import java.util.Collections;
+import java.util.List;
+
 public class BookStackBlock extends Block implements Waterloggable {
     public static final VoxelShape SHAPE_0 = createCuboidShape((double)2.0F, (double)0.0F, (double)2.0F, (double)14.0F, (double)4.0F, (double)14.0F);
     public static final VoxelShape SHAPE_1 = createCuboidShape((double)2.0F, (double)0.0F, (double)2.0F, (double)14.0F, (double)8.0F, (double)14.0F);
@@ -52,7 +57,6 @@ public class BookStackBlock extends Block implements Waterloggable {
             case 3 -> var10000 = SHAPE_2;
             default -> var10000 = SHAPE_3;
         }
-
         return var10000;
     }
     public Item asItem() {
@@ -64,32 +68,16 @@ public class BookStackBlock extends Block implements Waterloggable {
     public boolean canReplace(BlockState state, ItemPlacementContext ctx) {
         return !ctx.shouldCancelInteraction() && ctx.getStack().getItem() == this.asItem() && (Integer)state.get(BOOKS) < 4 || super.canReplace(state, ctx);
     }
-
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState state = ctx.getWorld().getBlockState(ctx.getBlockPos());
         return state.isOf(this) ? (BlockState)state.cycle(BOOKS) : (BlockState)this.getDefaultState().with(WATERLOGGED, state.getFluidState().getFluid() == Fluids.WATER);
     }
-
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if ((Boolean)state.get(WATERLOGGED)) {
-            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
-        }
-
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
-    }
-
     public FluidState getFluidState(BlockState state) {
         return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
-
-    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return Block.sideCoversSmallSquare(world, pos.down(), Direction.UP);
-    }
-
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(new Property[]{BOOKS, WATERLOGGED});
     }
-
     public static ActionResult placeBookStack(PlayerEntity player, World world, Hand hand, BlockHitResult hit) {
         ItemStack stack = player.getStackInHand(hand);
         if (stack.isOf(Items.BOOK)) {
@@ -107,14 +95,12 @@ public class BookStackBlock extends Block implements Waterloggable {
                         Criteria.PLACED_BLOCK.trigger(serverPlayerEntity, pos, stack);
                     }
                 }
-
                 BlockSoundGroup blockSoundGroup = placedState.getSoundGroup();
                 world.playSound(player, pos, placedState.getSoundGroup().getPlaceSound(), SoundCategory.BLOCKS, (blockSoundGroup.getVolume() + 1.0F) / 2.0F, blockSoundGroup.getPitch() * 0.8F);
                 world.emitGameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Emitter.of(player, placedState));
                 if (!player.getAbilities().creativeMode) {
                     stack.decrement(1);
                 }
-
                 return ActionResult.success(world.isClient);
             } else {
                 return ActionResult.PASS;
@@ -135,5 +121,27 @@ public class BookStackBlock extends Block implements Waterloggable {
             }
             return ActionResult.PASS;
         });
+    }
+    @Override
+    public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
+        return Collections.singletonList(new ItemStack(Items.BOOK, state.get(BOOKS)));
+    }
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockState blockState = world.getBlockState(pos.down());
+        if (blockState.isIn(BlockTags.SNOW_LAYER_CANNOT_SURVIVE_ON)) {
+            return false;
+        } else {
+            return blockState.isIn(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON)
+                    ? true
+                    : Block.isFaceFullSquare(blockState.getCollisionShape(world, pos.down()), Direction.UP) || blockState.isOf(this) && (Integer)blockState.get(BOOKS) == 8;
+        }
+    }
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if ((Boolean)state.get(WATERLOGGED)) {
+            world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
+        return !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 }

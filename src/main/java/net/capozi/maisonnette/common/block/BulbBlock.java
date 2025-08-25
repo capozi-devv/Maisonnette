@@ -3,6 +3,7 @@ package net.capozi.maisonnette.common.block;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -17,6 +18,8 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+
+import static net.capozi.maisonnette.common.block.BookStackBlock.BOOKS;
 
 public class BulbBlock extends FacingBlock {
     public static final DirectionProperty FACING;
@@ -66,7 +69,7 @@ public class BulbBlock extends FacingBlock {
         if (!world.isClient) {
             boolean lit = state.get(LIT);
             world.setBlockState(pos, state.with(LIT, !lit), Block.NOTIFY_ALL);
-            world.playSound(player, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 1f, 1f);
+            world.playSound(player, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 15f, 1f);
             return ActionResult.SUCCESS;
         }
         return ActionResult.CONSUME;

@@ -47,12 +47,12 @@ public class ModelProvider extends FabricModelProvider {
     private void generateBookStacks(BlockStateModelGenerator generator) {
         List<VariantSettings.Rotation> rots = List.of(VariantSettings.Rotation.R0, VariantSettings.Rotation.R90, VariantSettings.Rotation.R180, VariantSettings.Rotation.R270);
         MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(BlockInit.BOOK_STACK);
-        for (int h = 0; h <= 3; h++) {
+        for (int height = 0; height <= 3; height++) {
             ArrayList<Identifier> models = new ArrayList<>();
             for (int i = 0; i <= 6; i++) {
-                for (int r = 0; r <= 3; r++) {
-                    String parentModel = "block/template_book_stack_" + h + "_r" + r;
-                    Identifier modelId = new Identifier(MOD_ID, "block/book_stack_" + i + "_" + h + "_r" + r);
+                for (int rotation = 0; rotation <= 3; rotation++) {
+                    String parentModel = "block/template_book_stack_" + height + "_r" + rotation;
+                    Identifier modelId = new Identifier(MOD_ID, "block/book_stack_" + i + "_" + height + "_r" + rotation);
                     Identifier texture = new Identifier(MOD_ID, "block/book_stack/book_" + i);
                     Model model = new Model(
                             Optional.of(new Identifier(MOD_ID, parentModel)),
@@ -77,7 +77,7 @@ public class ModelProvider extends FabricModelProvider {
                 }
             }
             Collections.shuffle(blockStateVariants);
-            for (int i = h+1; i <= 4; i++) {
+            for (int i = height+1; i <= 4; i++) {
                 multipartBlockStateSupplier.with(When.create().set(BookStackBlock.BOOKS, i), blockStateVariants);
             }
         }

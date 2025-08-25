@@ -29,16 +29,9 @@ public class Maisonnette implements ModInitializer {
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WEATHERED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.WEATHERED_COPPER_TORCHBULB, BlockInit.OXIDIZED_COPPER_TORCHBULB);
-		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_SOULBULB, BlockInit.EXPOSED_COPPER_SOULBULB);
-		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_SOULBULB, BlockInit.WEATHERED_COPPER_SOULBULB);
-		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.WEATHERED_COPPER_SOULBULB, BlockInit.OXIDIZED_COPPER_SOULBULB);
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.WAXED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.WEATHERED_COPPER_TORCHBULB, BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.OXIDIZED_COPPER_TORCHBULB, BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
-		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.COPPER_SOULBULB, BlockInit.WAXED_COPPER_SOULBULB);
-		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.EXPOSED_COPPER_SOULBULB, BlockInit.WAXED_EXPOSED_COPPER_SOULBULB);
-		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.WEATHERED_COPPER_SOULBULB, BlockInit.WAXED_WEATHERED_COPPER_SOULBULB);
-		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.OXIDIZED_COPPER_SOULBULB, BlockInit.WAXED_OXIDIZED_COPPER_SOULBULB);
 	}
 }

@@ -30,7 +30,6 @@ public class RecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_STAIRS, Blocks.TUFF, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_BRICKS, Blocks.TUFF, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_BUTTON, Blocks.TUFF, 3);
-        offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CHISELED_TUFF, Blocks.TUFF, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_WALL, Blocks.TUFF, 1);
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.COPPER_TORCHBULB, 1)
                 .pattern("CCC")
@@ -42,16 +41,6 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .input('G', Items.GLASS_PANE)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(BlockInit.COPPER_TORCHBULB)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.COPPER_SOULBULB, 1)
-                .pattern("CCC")
-                .pattern("RFR")
-                .pattern("CGC")
-                .input('C', Items.COPPER_INGOT)
-                .input('R', Items.REDSTONE)
-                .input('F', Items.CAMPFIRE)
-                .input('G', Items.GLASS_PANE)
-                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.COPPER_SOULBULB)));
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.WHITE_SEAT, 1)
                 .pattern("   ")
                 .pattern("WNW")

@@ -28,5 +28,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.TUFF_BUTTON)
                 .add(BlockInit.DIORITE_BUTTON)
                 .add(BlockInit.GRANITE_BUTTON);
+        getOrCreateTagBuilder(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON)
+                .add(BlockInit.BOOK_STACK);
     }
 }
