@@ -83,39 +83,4 @@ public class ModelProvider extends FabricModelProvider {
         }
         generator.blockStateCollector.accept(multipartBlockStateSupplier);
     }
-    private void generateMosaics(BlockStateModelGenerator generator) {
-        MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(BlockInit.BOOK_STACK);
-        for (int height = 1; height <= 4; height++) {
-            ArrayList<Identifier> models = new ArrayList<>();
-            for (int i = 0; i <= 6; i++) {
-                for (int rotation = 0; rotation <= 5; rotation++) {
-                    String parentModel = "block/template_mosaic_template_" + height + "_" + rotation;
-                    Identifier modelId = new Identifier(MOD_ID, "block/template_mosaic_template_" + i + "_" + height + "_r" + rotation);
-                    Identifier texture = new Identifier(MOD_ID, "block/mosaic_" + i);
-                    Model model = new Model(
-                            Optional.of(new Identifier(MOD_ID, parentModel)),
-                            Optional.empty(),
-                            BOOK
-                    );
-                    model.upload(
-                            modelId, // output model path
-                            TextureMap.of(BOOK, texture),
-                            generator.modelCollector // required for writing the file
-                    );
-                    models.add(modelId);
-                }
-            }
-            ArrayList<BlockStateVariant> blockStateVariants = new ArrayList<>();
-            for (Identifier i : models) {
-                BlockStateVariant blockStateVariant = BlockStateVariant.create();
-                blockStateVariant.put(VariantSettings.MODEL, i);
-                blockStateVariants.add(blockStateVariant);
-            }
-            Collections.shuffle(blockStateVariants);
-            for (int i = height+1; i <= 4; i++) {
-                multipartBlockStateSupplier.with(When.create().set(BookStackBlock.BOOKS, i), blockStateVariants);
-            }
-        }
-        generator.blockStateCollector.accept(multipartBlockStateSupplier);
-    }
 }
