@@ -57,20 +57,17 @@ public class SpecterEntity extends FlyingEntity {
 						this.state = State.WAIT;
 					}
 				}
-
 			}
 		}
 
 		private boolean willCollide(Vec3d direction, int steps) {
 			Box box = this.specterEntity.getBoundingBox();
-
 			for (int i = 1; i < steps; ++i) {
 				box = box.offset(direction);
 				if (!this.specterEntity.getWorld().isSpaceEmpty(this.specterEntity, box)) {
 					return false;
 				}
 			}
-
 			return true;
 		}
 	}

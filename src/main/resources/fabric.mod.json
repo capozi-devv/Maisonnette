@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "maisonnette",
 	"version": "${version}",
-	"name": "Maisonnette",
+	"name": "Maisonnette Des Chargins",
 	"description": "When Art-Deco meets Academia",
 	"authors": [
 		"Capozi",
@@ -10,7 +10,6 @@
 		"KrimsonCinder"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/capozi-devv/Maisonnette-des-Chagrins"
 	},
 	"license": "MIT",
