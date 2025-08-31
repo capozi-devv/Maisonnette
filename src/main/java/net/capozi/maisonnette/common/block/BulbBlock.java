@@ -32,8 +32,14 @@ public class BulbBlock extends FacingBlock {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, POWERED, LIT);
     }
+    public boolean emitsRedstonePower(BlockState state) {
+        return true;
+    }
+    public boolean hasComparatorOutput(BlockState state) {
+        return true;
+    }
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
-        return (Boolean)world.getBlockState(pos).get(LIT) ? 15 : 0;
+        return world.getBlockState(pos).get(LIT) ? 15 : 0;
     }
     public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {
         if (oldState.getBlock() != state.getBlock() && world instanceof ServerWorld serverWorld) {

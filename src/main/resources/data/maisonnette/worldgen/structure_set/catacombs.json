@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "maisonnette:catacombs",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 30,
+    "separation": 10,
+    "spread_type": "linear",
+    "salt": 69395092,
+    "frequency_reduction_method": "default",
+    "frequency": 0.5
+  }
+}

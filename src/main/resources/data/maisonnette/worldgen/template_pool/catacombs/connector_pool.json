@@ -1,0 +1,33 @@
+{
+  "name": "maisonnette:catacombs/connector_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "maisonnette:catacombs/connectors/hall_room_connector",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "maisonnette:catacombs/connectors/room_hall_connector",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "maisonnette:catacombs/connectors/hall_hall_connector",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
