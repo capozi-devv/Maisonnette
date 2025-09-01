@@ -2,8 +2,8 @@ package net.capozi.maisonnette;
 
 import net.capozi.maisonnette.common.entity.client.EmptyRenderer;
 import net.capozi.maisonnette.common.entity.client.ModModelLayers;
-import net.capozi.maisonnette.common.entity.client.SpecterModel;
 import net.capozi.maisonnette.common.entity.client.SpecterRenderer;
+import net.capozi.maisonnette.common.entity.client.SpecterModel;
 import net.capozi.maisonnette.foundation.EntityInit;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
