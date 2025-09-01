@@ -1,20 +1,16 @@
 {
-  "type": "minecraft:jigsaw",
+  "type": "maisonnette:expanded_jigsaw",
   "biomes": "#minecraft:is_overworld",
   "step": "underground_structures",
   "terrain_adaptation": "bury",
   "spawn_overrides": {},
   "start_pool": "maisonnette:catacombs/start_pool",
-  "size": 7,
+  "size": 20,
   "start_height": {
     "type": "minecraft:uniform",
-    "min_inclusive": {
-      "absolute": -40
-    },
-    "max_inclusive": {
-      "absolute": -20
-    }
+    "min_inclusive": { "absolute": -40 },
+    "max_inclusive": { "absolute": -20 }
   },
-  "max_distance_from_center": 116,
+  "max_distance_from_center": 11600,
   "use_expansion_hack": false
 }
