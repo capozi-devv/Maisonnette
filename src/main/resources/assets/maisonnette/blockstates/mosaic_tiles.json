@@ -1,0 +1,36 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "minecraft:block/pink_petals_1"
+      },
+      "when": {
+        "tiles": "1|2|3|4"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/pink_petals_2"
+      },
+      "when": {
+        "tiles": "2|3|4"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/pink_petals_3"
+      },
+      "when": {
+        "tiles": "3|4"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/pink_petals_4"
+      },
+      "when": {
+        "tiles": "4"
+      }
+    }
+  ]
+}
