@@ -5,6 +5,7 @@ import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.capozi.maisonnette.common.block.BulbBlock;
 import net.capozi.maisonnette.common.block.MosaicBlock;
 import net.capozi.maisonnette.common.block.SeatBlock;
+import net.capozi.maisonnette.common.item.MosaicTileItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -21,17 +22,27 @@ import static net.capozi.maisonnette.common.block.BulbBlock.LIT;
 
 public class BlockInit {
 	public static void init() {}
-	private static Item registerBlockItem(String name, Block block) {
+	private static Item registerBlockItem(String name, BlockItem blockItem) {
 		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name),
-				new BlockItem(block, new FabricItemSettings()));
+				blockItem);
 	}
-	private static Block registerBlock(String name, Block block, boolean registerBlockItem) {
+    private static Item registerBlockItem(String name, Block block) {
+        return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
+    }
+	private static Block registerBlock(String name, Block block, boolean registerBlockItem, boolean tile) {
 		if (registerBlockItem) {
-			registerBlockItem(name, block);
+			registerBlockItem(name, new MosaicTileItem(block,new FabricItemSettings()));
 		}
 		return Registry.register(Registries.BLOCK, new Identifier(Maisonnette.MOD_ID, name), block);
 	}
-    public static final Block MOSAIC = registerBlock("mosaic_tiles", new MosaicBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)), true);
+    private static Block registerBlock(String name, Block block, boolean registerBlockItem) {
+        if (registerBlockItem) {
+            registerBlockItem(name, block);
+        }
+        return Registry.register(Registries.BLOCK, new Identifier(Maisonnette.MOD_ID, name), block);
+    }
+    public static final Block MOSAIC = registerBlock("mosaic_tiles", new MosaicBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)), true,true);
 	public static final Block BOOK_STACK = registerBlock("book_stack", new BookStackBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO).sounds(SoundInit.BOOK_STACK_SOUNDS).nonOpaque().offset(OffsetType.NONE).burnable()), false);
 	public static final Block CALCITE_STAIRS = registerBlock("calcite_stairs", new StairsBlock(Blocks.CALCITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRANITE_STAIRS)), true);
 	public static final Block CALCITE_SLAB = registerBlock("calcite_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.GRANITE_SLAB)), true);
