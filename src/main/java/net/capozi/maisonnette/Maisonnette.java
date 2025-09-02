@@ -35,7 +35,6 @@ public class Maisonnette implements ModInitializer {
 		ItemGroups.init();
 		SoundInit.init();
 		BookStackBlock.registerBookUseCallback();
-
 		FabricDefaultAttributeRegistry.register(EntityInit.SPECTER, SpecterEntity.createSpecterAttributes());
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WEATHERED_COPPER_TORCHBULB);

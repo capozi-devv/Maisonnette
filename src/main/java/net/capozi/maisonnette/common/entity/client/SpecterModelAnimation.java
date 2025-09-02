@@ -8,8 +8,8 @@ import net.minecraft.client.render.entity.animation.Transformation;
 /**
  * Made with Blockbench 4.11.2
  * Exported for Minecraft version 1.19 or later with Yarn mappings
- * @author Capozi / Krimson
- */
+ * @author Capzoi / Krimson
+ **/
 public class SpecterModelAnimation {
 	public static final Animation idle = Animation.Builder.create(4.0F).looping()
 		.addBoneAnimation("left_rib", new Transformation(Transformation.Targets.ROTATE,
@@ -157,7 +157,7 @@ public class SpecterModelAnimation {
 			new Keyframe(3.0F, AnimationHelper.createRotationalVector(0.0F, 5.0F, 0.0F), Transformation.Interpolations.LINEAR)
 		))
 		.addBoneAnimation("arms", new Transformation(Transformation.Targets.ROTATE, 
-			new Keyframe(0.0F, AnimationHelper.createRotationalVector(20.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
+			new Keyframe(0.0F, AnimationHelper.createRotationalVector(40.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
 		))
 		.build();
 
