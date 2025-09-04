@@ -8,7 +8,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.structure.StructureType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.capozi.maisonnette.common.entity.object.SpecterEntity;
 import net.capozi.maisonnette.foundation.BlockInit;
