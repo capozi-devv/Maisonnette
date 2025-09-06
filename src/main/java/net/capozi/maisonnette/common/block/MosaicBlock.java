@@ -4,6 +4,7 @@ import net.capozi.maisonnette.foundation.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -19,7 +20,7 @@ import net.minecraft.world.BlockView;
 import java.util.Collections;
 import java.util.List;
 
-public class MosaicBlock extends Block {
+public class MosaicBlock extends Block implements Waterloggable {
     public static final VoxelShape SHAPE_0 = createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)8.0F, (double)2.0F, (double)8.0F);
     public static final VoxelShape SHAPE_1 = createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)8.0F, (double)2.0F, (double)16.0F);
     public static final VoxelShape SHAPE_2 = createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)16.0F, (double)2.0F, (double)16.0F);

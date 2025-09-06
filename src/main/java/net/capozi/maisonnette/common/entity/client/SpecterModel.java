@@ -10,7 +10,7 @@ import net.minecraft.entity.Entity;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class SpecterModel<T extends SpecterEntity> extends EntityModel<T> {
+public class SpecterModel extends EntityModel<SpecterEntity> {
 	private final ModelPart Specter;
 	private final ModelPart body;
 	private final ModelPart ribs;
@@ -107,12 +107,13 @@ public class SpecterModel<T extends SpecterEntity> extends EntityModel<T> {
 		ModelPartData crown = extras.addChild("crown", ModelPartBuilder.create().uv(112, 0).cuboid(-2.0F, -1.5F, -2.0F, 4.0F, 3.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(3.8F, -6.0F, -1.0F, 0.0F, 0.0F, 0.2182F));
 		return TexturedModelData.of(modelData, 128, 128);
 	}
+
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		Specter.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
     @Override
-    public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+    public void setAngles(SpecterEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
 
     }
 }

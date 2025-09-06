@@ -2,6 +2,7 @@ package net.capozi.maisonnette.common.entity.object;
 
 import java.util.EnumSet;
 
+import net.capozi.maisonnette.common.entity.animation.SpecterAnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.control.MoveControl;
 import net.minecraft.entity.ai.goal.Goal;
@@ -16,6 +17,14 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class SpecterEntity extends FlyingEntity {
+    private SpecterAnimationState animationState = SpecterAnimationState.IDLE;
+
+    public void setAnimationState(SpecterAnimationState state) {
+        this.animationState = state;
+    }
+    public SpecterAnimationState getAnimationState() {
+        return this.animationState;
+    }
 	public SpecterEntity(EntityType<? extends FlyingEntity> entityType, World world) {
 		super(entityType, world);
 		this.moveControl = new SpecterMoveControl(this);
@@ -114,7 +123,6 @@ public class SpecterEntity extends FlyingEntity {
 			double z = this.specterEntity.getZ() + (random.nextDouble() - 0.5) * 32.0;
 
 			this.specterEntity.getMoveControl().moveTo(x, y, z, 1.0F);
-
 			// Set idle cooldown (e.g. 4–6 seconds)
 			this.cooldown = 80 + random.nextInt(40); // 40 to 80 ticks
 		}
