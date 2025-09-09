@@ -27,6 +27,7 @@ public class ItemGroups {
                         entries.add(BlockInit.TUFF_WALL);
                         entries.add(BlockInit.TUFF_BUTTON);
                         entries.add(Items.BOOK);
+                        entries.add(ItemInit.SPIRIT_ORB);
                         entries.add(BlockInit.COPPER_TORCHBULB);
                         entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
