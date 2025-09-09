@@ -17,8 +17,4 @@ public class SpiritOrbItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         return super.use(world, user, hand);
     }
-    @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        return super.useOnEntity(stack, user, entity, hand);
-    }
 }
