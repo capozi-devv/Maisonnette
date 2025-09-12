@@ -17,11 +17,8 @@ import java.util.Optional;
 import static net.capozi.maisonnette.Maisonnette.MOD_ID;
 
 public class ModelProvider extends FabricModelProvider {
-    public ModelProvider(FabricDataOutput output) {
-        super(output);
-    }
-    @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    public ModelProvider(FabricDataOutput output) { super(output); }
+    @Override public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool calcitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CALCITE);
         calcitePool.stairs(BlockInit.CALCITE_STAIRS);
         calcitePool.slab(BlockInit.CALCITE_SLAB);
@@ -39,10 +36,7 @@ public class ModelProvider extends FabricModelProvider {
         tuffPool.stairs(BlockInit.TUFF_STAIRS);
         generateBookStacks(blockStateModelGenerator);
     }
-    @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        
-    }
+    @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {}
     public static final TextureKey BOOK = TextureKey.of("book");
     private void generateBookStacks(BlockStateModelGenerator generator) {
         List<VariantSettings.Rotation> rots = List.of(VariantSettings.Rotation.R0, VariantSettings.Rotation.R90, VariantSettings.Rotation.R180, VariantSettings.Rotation.R270);

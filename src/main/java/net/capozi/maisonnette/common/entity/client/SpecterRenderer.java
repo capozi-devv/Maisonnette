@@ -11,8 +11,5 @@ public class SpecterRenderer extends MobEntityRenderer<SpecterEntity, SpecterMod
     public SpecterRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new SpecterModel(ctx.getPart(ModModelLayers.SPECTER)), 0.6f);
     }
-    @Override
-    public Identifier getTexture(SpecterEntity entity) {
-        return TEXTURE;
-    }
+    @Override public Identifier getTexture(SpecterEntity entity) { return TEXTURE; }
 }

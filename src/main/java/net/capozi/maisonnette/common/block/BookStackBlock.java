@@ -122,23 +122,18 @@ public class BookStackBlock extends Block implements Waterloggable {
             return ActionResult.PASS;
         });
     }
-    @Override
-    public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
+    @Override public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
         return Collections.singletonList(new ItemStack(Items.BOOK, state.get(BOOKS)));
     }
-    @Override
-    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+    @Override public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockState blockState = world.getBlockState(pos.down());
         if (blockState.isIn(BlockTags.SNOW_LAYER_CANNOT_SURVIVE_ON)) {
             return false;
         } else {
-            return blockState.isIn(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON)
-                    ? true
-                    : Block.isFaceFullSquare(blockState.getCollisionShape(world, pos.down()), Direction.UP) || blockState.isOf(this) && (Integer)blockState.get(BOOKS) == 8;
+            return blockState.isIn(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON) ? true : Block.isFaceFullSquare(blockState.getCollisionShape(world, pos.down()), Direction.UP) || blockState.isOf(this) && (Integer)blockState.get(BOOKS) == 8;
         }
     }
-    @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    @Override public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if ((Boolean)state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }

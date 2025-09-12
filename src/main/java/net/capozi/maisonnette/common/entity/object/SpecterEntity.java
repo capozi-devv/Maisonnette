@@ -18,38 +18,27 @@ import net.minecraft.world.World;
 
 public class SpecterEntity extends FlyingEntity {
     private SpecterAnimationState animationState = SpecterAnimationState.IDLE;
-
-    public void setAnimationState(SpecterAnimationState state) {
-        this.animationState = state;
-    }
-    public SpecterAnimationState getAnimationState() {
-        return this.animationState;
-    }
+    public void setAnimationState(SpecterAnimationState state) { this.animationState = state; }
+    public SpecterAnimationState getAnimationState() { return this.animationState; }
 	public SpecterEntity(EntityType<? extends FlyingEntity> entityType, World world) {
 		super(entityType, world);
 		this.moveControl = new SpecterMoveControl(this);
 	}
-
 	public static DefaultAttributeContainer.Builder createSpecterAttributes() {
 		return createMobAttributes()
 				.add(EntityAttributes.GENERIC_FLYING_SPEED, 1f);
 	}
-
-	@Override
-	protected void initGoals() {
+	@Override protected void initGoals() {
 		this.goalSelector.add(5, new FlyRandomlyGoal(this));
 		this.goalSelector.add(5, new LookAroundGoal(this));
 	}
-
 	private static class SpecterMoveControl extends MoveControl {
 		private final SpecterEntity specterEntity;
 		private int collisionCheckCooldown;
-
 		public SpecterMoveControl(SpecterEntity specterEntity) {
 			super(specterEntity);
 			this.specterEntity = specterEntity;
 		}
-
 		public void tick() {
 			if (this.state == State.MOVE_TO) {
 				if (this.collisionCheckCooldown-- <= 0) {
@@ -68,7 +57,6 @@ public class SpecterEntity extends FlyingEntity {
 				}
 			}
 		}
-
 		private boolean willCollide(Vec3d direction, int steps) {
 			Box box = this.specterEntity.getBoundingBox();
 			for (int i = 1; i < steps; ++i) {
@@ -80,23 +68,18 @@ public class SpecterEntity extends FlyingEntity {
 			return true;
 		}
 	}
-
 	static class FlyRandomlyGoal extends Goal {
 		private final SpecterEntity specterEntity;
 		private int cooldown = 0;
-
 		public FlyRandomlyGoal(SpecterEntity specterEntity) {
 			this.specterEntity = specterEntity;
 			this.setControls(EnumSet.of(Control.MOVE));
 		}
-
-		@Override
-		public boolean canStart() {
+		@Override public boolean canStart() {
 			if (cooldown > 0) {
 				cooldown--;
 				return false;
 			}
-
 			MoveControl moveControl = this.specterEntity.getMoveControl();
 			if (!moveControl.isMoving()) {
 				return true;
@@ -108,22 +91,13 @@ public class SpecterEntity extends FlyingEntity {
 				return distanceSq < 1.0 || distanceSq > 3600.0;
 			}
 		}
-
-		@Override
-		public boolean shouldContinue() {
-			return false;
-		}
-
-		@Override
-		public void start() {
+		@Override public boolean shouldContinue() { return false; }
+		@Override public void start() {
 			Random random = this.specterEntity.getRandom();
-
 			double x = this.specterEntity.getX() + (random.nextDouble() - 0.5) * 32.0;
 			double y = this.specterEntity.getY() + (random.nextDouble() - 0.5) * 16.0;
 			double z = this.specterEntity.getZ() + (random.nextDouble() - 0.5) * 32.0;
-
 			this.specterEntity.getMoveControl().moveTo(x, y, z, 1.0F);
-			// Set idle cooldown (e.g. 4–6 seconds)
 			this.cooldown = 80 + random.nextInt(40); // 40 to 80 ticks
 		}
 	}

@@ -18,25 +18,16 @@ public class SeatEntity extends Entity {
         this(type, world);
         this.setPosition(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
     }
-    @Override
-    protected void initDataTracker() {}
-
-    @Override
-    protected void readCustomDataFromNbt(NbtCompound nbt) {}
-
-    @Override
-    protected void writeCustomDataToNbt(NbtCompound nbt) {}
-
-    @Override
-    public void tick() {
+    @Override protected void initDataTracker() {}
+    @Override protected void readCustomDataFromNbt(NbtCompound nbt) {}
+    @Override protected void writeCustomDataToNbt(NbtCompound nbt) {}
+    @Override public void tick() {
         super.tick();
         if (!hasPassengers() && !getWorld().isClient) {
             this.discard();
         }
     }
-
-    @Override
-    public ActionResult interact(PlayerEntity player, Hand hand) {
+    @Override public ActionResult interact(PlayerEntity player, Hand hand) {
         if (!getWorld().isClient && !player.hasVehicle()) {
             player.startRiding(this);
         }
@@ -45,19 +36,9 @@ public class SeatEntity extends Entity {
     @Override public boolean isInvisible() { return true; }
     @Override public boolean isInvulnerable() { return true; }
     @Override public boolean canHit() { return false; }
-    @Override
-    public boolean doesNotCollide(double offsetX, double offsetY, double offsetZ) {
-        return true;
-    }
+    @Override public boolean doesNotCollide(double offsetX, double offsetY, double offsetZ) { return true; }
     @Override public boolean isPushable() { return false; }
-    @Override
-    public boolean isAttackable() {
-        return false;
-    }
-    @Override
-    public boolean hasNoGravity() {
-        return true;
-    }
-
+    @Override public boolean isAttackable() { return false; }
+    @Override public boolean hasNoGravity() { return true; }
 }
 

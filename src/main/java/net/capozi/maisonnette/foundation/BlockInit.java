@@ -22,13 +22,10 @@ import static net.capozi.maisonnette.common.block.BulbBlock.LIT;
 public class BlockInit {
 	public static void init() {}
 	private static Item registerBlockItem(String name, Block block) {
-		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name),
-				new BlockItem(block, new FabricItemSettings()));
+		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name), new BlockItem(block, new FabricItemSettings()));
 	}
 	private static Block registerBlock(String name, Block block, boolean registerBlockItem) {
-		if (registerBlockItem) {
-			registerBlockItem(name, block);
-		}
+		if (registerBlockItem) { registerBlockItem(name, block); }
 		return Registry.register(Registries.BLOCK, new Identifier(Maisonnette.MOD_ID, name), block);
 	}
     public static final Block MOSAIC = registerBlock("mosaic_tiles", new MosaicBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)), true);

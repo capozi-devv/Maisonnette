@@ -18,17 +18,9 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 public class Maisonnette implements ModInitializer {
 	public static final String MOD_ID = "maisonnette";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    public static Identifier identifier(String name) {
-        return new Identifier(Maisonnette.MOD_ID, name);
-    }
-    public static final StructureType<ExpandedJigsawStructure> EXPANDED_JIGSAW =
-            Registry.register(
-                    Registries.STRUCTURE_TYPE,
-                    new Identifier(MOD_ID, "expanded_jigsaw"),
-                    () -> ExpandedJigsawStructure.CODEC
-            );
-	@Override
-	public void onInitialize() {
+    public static Identifier identifier(String name) { return new Identifier(Maisonnette.MOD_ID, name); }
+    public static final StructureType<ExpandedJigsawStructure> EXPANDED_JIGSAW = Registry.register(Registries.STRUCTURE_TYPE, new Identifier(MOD_ID, "expanded_jigsaw"), () -> ExpandedJigsawStructure.CODEC);
+	@Override public void onInitialize() {
 		BlockInit.init();
         ItemInit.init();
 		EntityInit.init();

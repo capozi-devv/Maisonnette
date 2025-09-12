@@ -6,11 +6,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.item.Items;
 
 public class LootTableProvider extends FabricBlockLootTableProvider {
-    public LootTableProvider(FabricDataOutput dataOutput) {
-        super(dataOutput);
-    }
-    @Override
-    public void generate() {
+    public LootTableProvider(FabricDataOutput dataOutput) { super(dataOutput); }
+    @Override public void generate() {
         addDrop(BlockInit.CALCITE_STAIRS);
         addDrop(BlockInit.CALCITE_BRICKS);
         addDrop(BlockInit.CALCITE_SLAB, slabDrops(BlockInit.CALCITE_SLAB));

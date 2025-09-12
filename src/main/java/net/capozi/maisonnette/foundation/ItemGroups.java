@@ -50,7 +50,5 @@ public class ItemGroups {
                         entries.add(BlockInit.BLACK_SEAT);
                         entries.add(BlockInit.MOSAIC);
                     }).build());
-    public static void init() {
-
-    }
+    public static void init() {}
 }

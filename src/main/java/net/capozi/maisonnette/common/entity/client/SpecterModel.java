@@ -108,12 +108,10 @@ public class SpecterModel extends EntityModel<SpecterEntity> {
 		return TexturedModelData.of(modelData, 128, 128);
 	}
 
-	@Override
-	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
+	@Override public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		Specter.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
-    @Override
-    public void setAngles(SpecterEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+    @Override public void setAngles(SpecterEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
 
     }
 }

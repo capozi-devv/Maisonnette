@@ -14,12 +14,10 @@ public class SoundInit {
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
     public static final SoundEvent BOOK_ADD = registerSoundEvent("book_add");
-
     public static final SoundEvent BOOK_STACK_BREAK = registerSoundEvent("book_stack_break");
     public static final SoundEvent BOOK_STACK_STEP = registerSoundEvent("book_stack_step");
     public static final SoundEvent BOOK_STACK_PLACE = registerSoundEvent("book_stack_place");
     public static final SoundEvent BOOK_STACK_HIT = registerSoundEvent("book_stack_hit");
     public static final SoundEvent BOOK_STACK_FALL = registerSoundEvent("book_stack_fall");
-    public static final BlockSoundGroup BOOK_STACK_SOUNDS = new BlockSoundGroup(1f, 1f,
-            SoundInit.BOOK_STACK_BREAK, SoundInit.BOOK_STACK_STEP, SoundInit.BOOK_STACK_PLACE, SoundInit.BOOK_STACK_HIT, SoundInit.BOOK_STACK_FALL);
+    public static final BlockSoundGroup BOOK_STACK_SOUNDS = new BlockSoundGroup(1f, 1f, SoundInit.BOOK_STACK_BREAK, SoundInit.BOOK_STACK_STEP, SoundInit.BOOK_STACK_PLACE, SoundInit.BOOK_STACK_HIT, SoundInit.BOOK_STACK_FALL);
 }

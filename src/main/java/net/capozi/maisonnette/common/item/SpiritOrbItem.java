@@ -18,13 +18,10 @@ public class SpiritOrbItem extends Item {
     public SpiritOrbItem(Settings settings) {
         super(settings);
     }
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    @Override public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         return super.use(world, user, hand);
     }
-
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+    @Override public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable("item.maisonnette.spirit_orb.tootip"));
     }
 }

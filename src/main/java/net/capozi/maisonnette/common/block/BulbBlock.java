@@ -45,7 +45,6 @@ public class BulbBlock extends FacingBlock {
         if (oldState.getBlock() != state.getBlock() && world instanceof ServerWorld serverWorld) {
             this.update(state, serverWorld, pos);
         }
-
     }
     public void update(BlockState state, ServerWorld world, BlockPos pos) {
         boolean bl = world.isReceivingRedstonePower(pos);
@@ -63,15 +62,13 @@ public class BulbBlock extends FacingBlock {
         LIT = Properties.LIT;
         FACING = Properties.FACING;
     }
-    @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
+    @Override public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(FACING, ctx.getSide());
     }
     public boolean hasRandomTicks(BlockState state) {
         return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
-    @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    @Override public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             boolean lit = state.get(LIT);
             world.setBlockState(pos, state.with(LIT, !lit), Block.NOTIFY_ALL);
