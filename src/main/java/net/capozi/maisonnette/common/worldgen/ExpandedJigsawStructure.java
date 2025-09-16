@@ -48,9 +48,7 @@ public final class ExpandedJigsawStructure extends Structure {
             case NONE -> 0;
             case BURY, BEARD_THIN, BEARD_BOX -> 12;
         };
-        return structure.maxDistanceFromCenter + terrainOffset > MAX_SIZE
-                ? DataResult.error(() -> "Structure size including terrain adaptation must not exceed 128")
-                : DataResult.success(structure);
+        return structure.maxDistanceFromCenter + terrainOffset > MAX_SIZE ? DataResult.error(() -> "Structure size including terrain adaptation must not exceed 12800") : DataResult.success(structure);
     }
     public ExpandedJigsawStructure(Structure.Config config, RegistryEntry<StructurePool> startPool, Optional<Identifier> startJigsawName, int size, HeightProvider startHeight, boolean useExpansionHack, Optional<Heightmap.Type> projectStartToHeightmap, int maxDistanceFromCenter) {
         super(config);

@@ -8,7 +8,7 @@ import net.minecraft.client.render.entity.animation.Transformation;
 /**
  * Made with Blockbench 4.11.2
  * Exported for Minecraft version 1.19 or later with Yarn mappings
- * @author Capzoi / Krimson
+ * @author Capozi / Krimson
  **/
 public class SpecterModelAnimation {
 	public static final Animation idle = Animation.Builder.create(4.0F).looping()
