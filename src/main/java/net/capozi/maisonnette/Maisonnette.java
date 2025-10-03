@@ -2,6 +2,7 @@ package net.capozi.maisonnette;
 
 import net.capozi.maisonnette.common.worldgen.ExpandedJigsawStructure;
 import net.capozi.maisonnette.foundation.*;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -35,5 +36,6 @@ public class Maisonnette implements ModInitializer {
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.WEATHERED_COPPER_TORCHBULB, BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.OXIDIZED_COPPER_TORCHBULB, BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.BOOK_STACK, 5, 5);
 	}
 }
