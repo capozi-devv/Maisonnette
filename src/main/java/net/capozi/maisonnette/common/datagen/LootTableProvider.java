@@ -29,5 +29,20 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
         addDrop(BlockInit.WAXED_COPPER_TORCHBULB);
         addDrop(BlockInit.OXIDIZED_COPPER_TORCHBULB);
+        addDrop(BlockInit.BLACK_SEAT);
+        addDrop(BlockInit.BLUE_SEAT);
+        addDrop(BlockInit.BROWN_SEAT);
+        addDrop(BlockInit.CYAN_SEAT);
+        addDrop(BlockInit.GRAY_SEAT);
+        addDrop(BlockInit.GREEN_SEAT);
+        addDrop(BlockInit.LIGHT_BLUE_SEAT);
+        addDrop(BlockInit.LIGHT_GRAY_SEAT);
+        addDrop(BlockInit.LIME_SEAT);
+        addDrop(BlockInit.MAGENTA_SEAT);
+        addDrop(BlockInit.PINK_SEAT);
+        addDrop(BlockInit.ORANGE_SEAT);
+        addDrop(BlockInit.RED_SEAT);
+        addDrop(BlockInit.WHITE_SEAT);
+        addDrop(BlockInit.YELLOW_SEAT);
     }
 }
