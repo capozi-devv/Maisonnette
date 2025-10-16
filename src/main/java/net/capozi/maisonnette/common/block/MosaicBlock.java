@@ -15,6 +15,7 @@ import net.minecraft.state.property.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 import java.util.Collections;
@@ -22,11 +23,12 @@ import java.util.List;
 
 public class MosaicBlock extends Block implements Waterloggable {
     public static final VoxelShape SHAPE_0 = createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)8.0F, (double)2.0F, (double)8.0F);
-    public static final VoxelShape SHAPE_1 = createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)8.0F, (double)2.0F, (double)16.0F);
-    public static final VoxelShape SHAPE_2 = createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)16.0F, (double)2.0F, (double)16.0F);
+    public static final VoxelShape SHAPE_1 = createCuboidShape((double)0.0F, (double)0.0F, (double)8.0F, (double)8.0F, (double)2.0F, (double)16.0F);
+    public static final VoxelShape SHAPE_2 = createCuboidShape((double)8.0F, (double)0.0F, (double)8.0F, (double)16.0F, (double)2.0F, (double)16.0F);
+    public static final VoxelShape SHAPE_3 = createCuboidShape((double)8.0F, (double)0.0F, (double)0.0F, (double)16.0F, (double)2.0F, (double)8.0F);
     public static final IntProperty TILES = IntProperty.of("tiles", 1, 4);
-    public static final BooleanProperty WATERLOGGED;
-    public static final DirectionProperty FACING;
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+    public static final DirectionProperty FACING = Properties.FACING;
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(new Property[]{TILES, WATERLOGGED, FACING});
     }
@@ -34,9 +36,9 @@ public class MosaicBlock extends Block implements Waterloggable {
         VoxelShape var10000;
         switch ((Integer)state.get(TILES)) {
             case 1 -> var10000 = SHAPE_0;
-            case 2 -> var10000 = SHAPE_1;
-            case 3 -> var10000 = SHAPE_2;
-            case 4 -> var10000 = SHAPE_2;
+            case 2 -> var10000 = VoxelShapes.union(SHAPE_0,SHAPE_1);
+            case 3 -> var10000 = VoxelShapes.union(SHAPE_0,SHAPE_1,SHAPE_2);
+            case 4 -> var10000 = VoxelShapes.union(SHAPE_0,SHAPE_1,SHAPE_2,SHAPE_3);
             default -> var10000 = SHAPE_2;
         }
         return var10000;
@@ -56,7 +58,6 @@ public class MosaicBlock extends Block implements Waterloggable {
         return state.isOf(this) ? (BlockState)state.cycle(TILES) : (BlockState)this.getDefaultState().with(FACING, Direction.UP);
     }
     static {
-        WATERLOGGED = Properties.WATERLOGGED;
-        FACING = Properties.FACING;
+
     }
 }
