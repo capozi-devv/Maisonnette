@@ -38,12 +38,14 @@
   "block.maisonnette.red_seat": "Red Seat",
   "block.maisonnette.black_seat": "Black Seat",
   "block.maisonnette.mosaic_tiles": "Mosaic Tiles",
-  "itemgroup.maisonnette": "Maisonnette des Chagrins",
+  "itemgroup.maisonnette": "Maisonnette",
   "sounds.maisonnette.book_add": "Book Added",
   "sounds.maisonnette.book_place": "Book Placed",
   "sounds.maisonnette.book_break": "Book Broken",
   "sounds.maisonnette.book_hit": "Book Breaking",
   "sounds.maisonnette.book_step": "Footsteps",
   "sounds.maisonnette.book_fall": "Something Falls",
-  "entity.maisonnette.specter": "Specter"
+  "entity.maisonnette.specter": "Specter",
+  "item.maisonnette.spirit_orb": "§bOrb of Spirits",
+  "item.maisonnette.spirit_orb.tootip": "This item is currently unfinished, it has no functionality"
 }

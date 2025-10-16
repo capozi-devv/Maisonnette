@@ -27,6 +27,7 @@ public class ItemGroups {
                         entries.add(BlockInit.TUFF_WALL);
                         entries.add(BlockInit.TUFF_BUTTON);
                         entries.add(Items.BOOK);
+                        entries.add(ItemInit.SPIRIT_ORB);
                         entries.add(BlockInit.COPPER_TORCHBULB);
                         entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
@@ -49,7 +50,5 @@ public class ItemGroups {
                         entries.add(BlockInit.BLACK_SEAT);
                         entries.add(BlockInit.MOSAIC);
                     }).build());
-    public static void init() {
-
-    }
+    public static void init() {}
 }

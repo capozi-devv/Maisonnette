@@ -1,4 +1,4 @@
-package net.capozi.maisonnette.common.entity.client;
+package net.capozi.maisonnette.common.entity.animation;
 
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.animation.AnimationHelper;
@@ -8,7 +8,7 @@ import net.minecraft.client.render.entity.animation.Transformation;
 /**
  * Made with Blockbench 4.11.2
  * Exported for Minecraft version 1.19 or later with Yarn mappings
- * @author Capzoi / Krimson
+ * @author Capozi / Krimson
  **/
 public class SpecterModelAnimation {
 	public static final Animation idle = Animation.Builder.create(4.0F).looping()
@@ -61,7 +61,6 @@ public class SpecterModelAnimation {
 			new Keyframe(0.0F, AnimationHelper.createRotationalVector(-12.5F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
 		))
 		.build();
-
 	public static final Animation wander = Animation.Builder.create(3.0F).looping()
 		.addBoneAnimation("left_rib", new Transformation(Transformation.Targets.ROTATE, 
 			new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, -25.0F, 0.0F), Transformation.Interpolations.LINEAR)
@@ -160,7 +159,6 @@ public class SpecterModelAnimation {
 			new Keyframe(0.0F, AnimationHelper.createRotationalVector(40.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
 		))
 		.build();
-
 	public static final Animation attack = Animation.Builder.create(1.0F)
 		.addBoneAnimation("Specter", new Transformation(Transformation.Targets.ROTATE, 
 			new Keyframe(0.0F, AnimationHelper.createRotationalVector(7.5F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR),
@@ -211,7 +209,6 @@ public class SpecterModelAnimation {
 			new Keyframe(0.0F, AnimationHelper.createTranslationalVector(0.0F, -5.0F, 5.0F), Transformation.Interpolations.LINEAR)
 		))
 		.build();
-
 	public static final Animation pursue = Animation.Builder.create(2.0F).looping()
 		.addBoneAnimation("Specter", new Transformation(Transformation.Targets.ROTATE, 
 			new Keyframe(0.0F, AnimationHelper.createRotationalVector(15.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
