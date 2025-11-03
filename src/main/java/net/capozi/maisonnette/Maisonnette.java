@@ -23,7 +23,6 @@ public class Maisonnette implements ModInitializer {
     public static final StructureType<ExpandedJigsawStructure> EXPANDED_JIGSAW = Registry.register(Registries.STRUCTURE_TYPE, new Identifier(MOD_ID, "expanded_jigsaw"), () -> ExpandedJigsawStructure.CODEC);
 	@Override public void onInitialize() {
 		BlockInit.init();
-        ItemInit.init();
 		EntityInit.init();
 		ItemGroups.init();
 		SoundInit.init();
