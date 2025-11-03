@@ -21,7 +21,6 @@ public class MosaicTileItem extends BlockItem {
                 return super.useOnBlock(context);
             }
             return ActionResult.CONSUME;
-        }else{
         } else {
             return super.useOnBlock(context);
         }
