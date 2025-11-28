@@ -15,13 +15,10 @@ public class ItemGroups {
             new Identifier(Maisonnette.MOD_ID, "maisonnette"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maisonnette"))
                     .icon(() -> new ItemStack(Items.ENCHANTED_BOOK)).entries((displayContext, entries) -> {
-                        entries.add(BlockInit.CALCITE_BRICKS);
-                        entries.add(BlockInit.CHISELED_CALCITE);
                         entries.add(BlockInit.CALCITE_STAIRS);
                         entries.add(BlockInit.CALCITE_SLAB);
                         entries.add(BlockInit.CALCITE_WALL);
                         entries.add(BlockInit.CALCITE_BUTTON);
-                        entries.add(BlockInit.TUFF_BRICKS);
                         entries.add(BlockInit.TUFF_STAIRS);
                         entries.add(BlockInit.TUFF_SLAB);
                         entries.add(BlockInit.TUFF_WALL);

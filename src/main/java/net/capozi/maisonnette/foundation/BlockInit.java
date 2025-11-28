@@ -31,8 +31,8 @@ public class BlockInit {
                 new BlockItem(block, new FabricItemSettings()));
     }
 	private static Block registerBlock(String name, Block block, boolean registerBlockItem, boolean tile) {
-		if (registerBlockItem) {
-			registerBlockItem(name, new MosaicTileItem(block,new FabricItemSettings()));
+		if (tile) {
+			registerBlockItem(name, new MosaicTileItem(block, new FabricItemSettings()));
 		}
 		return Registry.register(Registries.BLOCK, new Identifier(Maisonnette.MOD_ID, name), block);
 	}
@@ -48,15 +48,12 @@ public class BlockInit {
 	public static final Block CALCITE_SLAB = registerBlock("calcite_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.GRANITE_SLAB)), true);
 	public static final Block CALCITE_WALL = registerBlock("calcite_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.GRANITE_WALL)), true);
 	public static final Block CALCITE_BUTTON = registerBlock("calcite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false), true);
-	public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)), true);
-	public static final Block CHISELED_CALCITE = registerBlock("chiseled_calcite", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)), true);
 	public static final Block GRANITE_BUTTON = registerBlock("granite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.STONE, 10, false), true);
 	public static final Block DIORITE_BUTTON = registerBlock("diorite_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.STONE, 10, false), true);
 	public static final Block TUFF_STAIRS = registerBlock("tuff_stairs", new StairsBlock(Blocks.TUFF.getDefaultState(), FabricBlockSettings.copyOf(Blocks.TUFF)), true);
 	public static final Block TUFF_SLAB = registerBlock("tuff_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.TUFF)), true);
 	public static final Block TUFF_WALL = registerBlock("tuff_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.TUFF)), true);
 	public static final Block TUFF_BUTTON = registerBlock("tuff_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), BlockSetType.STONE, 10, false), true);
-	public static final Block TUFF_BRICKS = registerBlock("tuff_bricks", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)), true);
 	public static final Block COPPER_TORCHBULB = registerBlock("copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 15 : 0)), true);
 	public static final Block EXPOSED_COPPER_TORCHBULB = registerBlock("exposed_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 12 : 0)), true);
 	public static final Block WEATHERED_COPPER_TORCHBULB = registerBlock("weathered_copper_torchbulb", new BulbBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).luminance(state -> state.get(LIT) ? 8 : 0)), true);

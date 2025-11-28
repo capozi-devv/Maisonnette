@@ -34,7 +34,7 @@ public class MosaicBlock extends Block implements Waterloggable {
     }
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         VoxelShape var10000;
-        switch ((Integer)state.get(TILES)) {
+        switch (state.get(TILES)) {
             case 1 -> var10000 = SHAPE_0;
             case 2 -> var10000 = VoxelShapes.union(SHAPE_0,SHAPE_1);
             case 3 -> var10000 = VoxelShapes.union(SHAPE_0,SHAPE_1,SHAPE_2);
@@ -56,8 +56,5 @@ public class MosaicBlock extends Block implements Waterloggable {
     @Override public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState state = ctx.getWorld().getBlockState(ctx.getBlockPos());
         return state.isOf(this) ? (BlockState)state.cycle(TILES) : (BlockState)this.getDefaultState().with(FACING, Direction.UP);
-    }
-    static {
-
     }
 }

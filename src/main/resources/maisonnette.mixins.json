@@ -3,7 +3,6 @@
 	"package": "net.capozi.maisonnette.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ItemRendererMixin",
         "ModelLoaderMixin"
 	],
 	"injectors": {

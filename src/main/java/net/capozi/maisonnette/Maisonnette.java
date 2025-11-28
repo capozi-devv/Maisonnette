@@ -11,7 +11,6 @@ import net.minecraft.world.gen.structure.StructureType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.capozi.maisonnette.common.block.BookStackBlock;
-import net.capozi.maisonnette.common.entity.object.SpecterEntity;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 
@@ -27,7 +26,6 @@ public class Maisonnette implements ModInitializer {
 		ItemGroups.init();
 		SoundInit.init();
 		BookStackBlock.registerBookUseCallback();
-		FabricDefaultAttributeRegistry.register(EntityInit.SPECTER, SpecterEntity.createSpecterAttributes());
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WEATHERED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.WEATHERED_COPPER_TORCHBULB, BlockInit.OXIDIZED_COPPER_TORCHBULB);

@@ -24,7 +24,6 @@ public class ModelProvider extends FabricModelProvider {
         calcitePool.slab(BlockInit.CALCITE_SLAB);
         calcitePool.wall(BlockInit.CALCITE_WALL);
         calcitePool.button(BlockInit.CALCITE_BUTTON);
-        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.CHISELED_CALCITE);
         BlockStateModelGenerator.BlockTexturePool granitePool =blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.GRANITE);
         granitePool.button(BlockInit.GRANITE_BUTTON);
         BlockStateModelGenerator.BlockTexturePool dioritePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.DIORITE);
