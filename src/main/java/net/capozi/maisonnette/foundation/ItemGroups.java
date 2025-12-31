@@ -45,6 +45,14 @@ public class ItemGroups {
                         entries.add(BlockInit.RED_SEAT);
                         entries.add(BlockInit.BLACK_SEAT);
                         entries.add(BlockInit.MOSAIC);
+                        entries.add(BlockInit.WILLOW_LOG);
+                        entries.add(BlockInit.WILLOW_WOOD);
+                        entries.add(BlockInit.STRIPPED_WILLOW_LOG);
+                        entries.add(BlockInit.STRIPPED_WILLOW_WOOD);
+                        entries.add(BlockInit.WAXED_COPPER_TORCHBULB);
+                        entries.add(BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
+                        entries.add(BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);
+                        entries.add(BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
                     }).build());
     public static void init() {}
 }

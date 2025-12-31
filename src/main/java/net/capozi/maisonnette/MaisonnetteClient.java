@@ -8,7 +8,8 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 
 public class MaisonnetteClient implements ClientModInitializer {
-	@Override public void onInitializeClient() {
+	@Override
+    public void onInitializeClient() {
 		EntityRendererRegistry.register(EntityInit.SEAT, (ctx) -> new EmptyRenderer<>(ctx));
 	}
 }

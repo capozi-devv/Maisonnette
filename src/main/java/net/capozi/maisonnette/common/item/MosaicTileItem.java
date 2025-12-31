@@ -11,7 +11,8 @@ public class MosaicTileItem extends BlockItem {
     public MosaicTileItem(Block block, Settings settings) {
         super(block, settings);
     }
-    @Override public ActionResult useOnBlock(ItemUsageContext context) {
+    @Override
+    public ActionResult useOnBlock(ItemUsageContext context) {
         BlockState blockState = context.getWorld().getBlockState(context.getBlockPos());
         if (blockState.getBlock() instanceof MosaicBlock mosaicBlock) {
             int num = blockState.get(MosaicBlock.TILES);

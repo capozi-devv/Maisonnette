@@ -3,11 +3,13 @@ package net.capozi.maisonnette.common.datagen;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 
 public class LootTableProvider extends FabricBlockLootTableProvider {
     public LootTableProvider(FabricDataOutput dataOutput) { super(dataOutput); }
-    @Override public void generate() {
+    @Override
+    public void generate() {
         addDrop(BlockInit.CALCITE_STAIRS);
         addDrop(BlockInit.CALCITE_SLAB, slabDrops(BlockInit.CALCITE_SLAB));
         addDrop(BlockInit.CALCITE_BUTTON);
@@ -41,5 +43,11 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.RED_SEAT);
         addDrop(BlockInit.WHITE_SEAT);
         addDrop(BlockInit.YELLOW_SEAT);
+        addDrop(BlockInit.WILLOW_WOOD);
+        addDrop(BlockInit.WILLOW_LOG);
+        addDrop(BlockInit.WILLOW_PLANKS);
+        addDrop(BlockInit.STRIPPED_WILLOW_WOOD);
+        addDrop(BlockInit.STRIPPED_WILLOW_LOG);
+        addDrop(BlockInit.RED_WILLOW_LEAVES, leavesDrops(BlockInit.RED_WILLOW_LEAVES, Blocks.SAND, 0.1f));
     }
 }

@@ -22,7 +22,7 @@ import net.minecraft.world.gen.structure.StructureType;
 import java.util.Optional;
 
 public final class ExpandedJigsawStructure extends Structure {
-    public static final int MAX_SIZE = 12800;
+    public static final int MAX_SIZE = Integer.MAX_VALUE;
     public static final Codec<ExpandedJigsawStructure> CODEC = Codecs.validate(
             RecordCodecBuilder.mapCodec(instance -> instance.group(
                     configCodecBuilder(instance),

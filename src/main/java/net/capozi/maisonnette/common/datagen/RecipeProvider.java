@@ -15,7 +15,8 @@ import java.util.function.Consumer;
 
 public class RecipeProvider extends FabricRecipeProvider {
     public RecipeProvider(FabricDataOutput dataOutput) { super(dataOutput); }
-    @Override public void generate(Consumer<RecipeJsonProvider> exporter) {
+    @Override
+    public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_SLAB, Blocks.CALCITE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_STAIRS, Blocks.CALCITE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_WALL, Blocks.CALCITE, 1);

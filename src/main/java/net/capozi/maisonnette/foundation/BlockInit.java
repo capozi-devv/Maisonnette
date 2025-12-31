@@ -23,8 +23,7 @@ import static net.capozi.maisonnette.common.block.BulbBlock.LIT;
 public class BlockInit {
 	public static void init() {}
 	private static Item registerBlockItem(String name, BlockItem blockItem) {
-		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name),
-				blockItem);
+		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name), blockItem);
 	}
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name),
@@ -78,4 +77,13 @@ public class BlockInit {
 	public static final Block RED_SEAT = registerBlock("red_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
 	public static final Block BLACK_SEAT = registerBlock("black_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
 	public static final Block MAGENTA_SEAT = registerBlock("magenta_seat", new SeatBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).sounds(BlockSoundGroup.NETHER_WOOD)), true);
+    public static final Block WILLOW_LOG = registerBlock("willow_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)), true);
+    public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4f)), true);
+    public static final Block WILLOW_WOOD = registerBlock("willow_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)), true);
+    public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4f)), true);
+    public static final Block WILLOW_PLANKS = registerBlock("willow_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)), true);
+    public static final Block RED_WILLOW_LEAVES = registerBlock("red_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
+    public static final Block ORANGE_WILLOW_LEAVES = registerBlock("orange_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
+    public static final Block YELLOW_WILLOW_LEAVES = registerBlock("yellow_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
+    //public static final Block WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 }

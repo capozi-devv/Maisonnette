@@ -18,7 +18,8 @@ import static net.capozi.maisonnette.Maisonnette.MOD_ID;
 
 public class ModelProvider extends FabricModelProvider {
     public ModelProvider(FabricDataOutput output) { super(output); }
-    @Override public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    @Override
+    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool calcitePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CALCITE);
         calcitePool.stairs(BlockInit.CALCITE_STAIRS);
         calcitePool.slab(BlockInit.CALCITE_SLAB);
@@ -34,6 +35,12 @@ public class ModelProvider extends FabricModelProvider {
         tuffPool.slab(BlockInit.TUFF_SLAB);
         tuffPool.stairs(BlockInit.TUFF_STAIRS);
         generateBookStacks(blockStateModelGenerator);
+        blockStateModelGenerator.registerLog(BlockInit.WILLOW_LOG).log(BlockInit.WILLOW_LOG).wood(BlockInit.WILLOW_WOOD);
+        blockStateModelGenerator.registerLog(BlockInit.STRIPPED_WILLOW_LOG).log(BlockInit.STRIPPED_WILLOW_LOG).wood(BlockInit.STRIPPED_WILLOW_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.RED_WILLOW_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORANGE_WILLOW_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.YELLOW_WILLOW_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.WILLOW_PLANKS);
     }
     @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {}
     public static final TextureKey BOOK = TextureKey.of("book");
@@ -42,7 +49,7 @@ public class ModelProvider extends FabricModelProvider {
         MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(BlockInit.BOOK_STACK);
         for (int height = 0; height <= 3; height++) {
             ArrayList<Identifier> models = new ArrayList<>();
-            for (int i = 0; i <= 6; i++) {
+            for (int i = 0; i <= 8; i++) { // change this value to adjust the number of styles
                 for (int rotation = 0; rotation <= 3; rotation++) {
                     String parentModel = "block/template_book_stack_" + height + "_r" + rotation;
                     Identifier modelId = new Identifier(MOD_ID, "block/book_stack_" + i + "_" + height + "_r" + rotation);

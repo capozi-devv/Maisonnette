@@ -21,13 +21,15 @@ public class SeatEntity extends Entity {
     @Override protected void initDataTracker() {}
     @Override protected void readCustomDataFromNbt(NbtCompound nbt) {}
     @Override protected void writeCustomDataToNbt(NbtCompound nbt) {}
-    @Override public void tick() {
+    @Override
+    public void tick() {
         super.tick();
         if (!hasPassengers() && !getWorld().isClient) {
             this.discard();
         }
     }
-    @Override public ActionResult interact(PlayerEntity player, Hand hand) {
+    @Override
+    public ActionResult interact(PlayerEntity player, Hand hand) {
         if (!getWorld().isClient && !player.hasVehicle()) {
             player.startRiding(this);
         }

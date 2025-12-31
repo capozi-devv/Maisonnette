@@ -5,12 +5,14 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
 public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
     public BlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) { super(output, registriesFuture); }
-    @Override protected void configure(RegistryWrapper.WrapperLookup arg) {
+    @Override
+    protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(BlockTags.STAIRS)
                 .add(BlockInit.TUFF_STAIRS)
                 .add(BlockInit.CALCITE_STAIRS);
@@ -45,5 +47,10 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.RED_SEAT)
                 .add(BlockInit.GREEN_SEAT)
                 .add(BlockInit.MAGENTA_SEAT);
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(BlockInit.WILLOW_LOG)
+                .add(BlockInit.STRIPPED_WILLOW_LOG)
+                .add(BlockInit.WILLOW_WOOD)
+                .add(BlockInit.STRIPPED_WILLOW_WOOD);
     }
 }
