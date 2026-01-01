@@ -41,8 +41,10 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORANGE_WILLOW_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.YELLOW_WILLOW_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.WILLOW_PLANKS);
+        blockStateModelGenerator.registerTintableCross(BlockInit.RED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
-    @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {}
+    @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+    }
     public static final TextureKey BOOK = TextureKey.of("book");
     private void generateBookStacks(BlockStateModelGenerator generator) {
         List<VariantSettings.Rotation> rots = List.of(VariantSettings.Rotation.R0, VariantSettings.Rotation.R90, VariantSettings.Rotation.R180, VariantSettings.Rotation.R270);
