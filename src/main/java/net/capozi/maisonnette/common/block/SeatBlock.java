@@ -35,4 +35,14 @@ public class SeatBlock extends Block {
         }
         return ActionResult.SUCCESS;
     }
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        List<SeatEntity> nearbySeats = world.getEntitiesByClass(SeatEntity.class,
+                new Box(pos), entity -> true);
+        if (!nearbySeats.isEmpty()) {
+            for (SeatEntity seat : nearbySeats) {
+                seat.discard();
+            }
+        }
+    }
 }
