@@ -7,9 +7,9 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
-public class WillowSaplingGenerator extends SaplingGenerator {
+public class YellowWillowSaplingGenerator extends SaplingGenerator {
     @Override
     protected @Nullable RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return ConfiguredFeaturesProvider.WILLOW_KEY;
+        return ConfiguredFeaturesProvider.YELLOW_WILLOW_KEY;
     }
 }

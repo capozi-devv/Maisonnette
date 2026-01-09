@@ -24,13 +24,29 @@ public class ConfiguredFeaturesProvider {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
     public static void init(Registerable<ConfiguredFeature<?, ?>> context) {
-        register(context, WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+        register(context, RED_WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(BlockInit.WILLOW_LOG),
                 new StraightTrunkPlacer(5, 4, 3),
                 BlockStateProvider.of(BlockInit.RED_WILLOW_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
                 new TwoLayersFeatureSize(1, 0, 2)
         ).build());
+        register(context, ORANGE_WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlockInit.WILLOW_LOG),
+                new StraightTrunkPlacer(5, 4, 3),
+                BlockStateProvider.of(BlockInit.ORANGE_WILLOW_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+                new TwoLayersFeatureSize(1, 0, 2)
+        ).build());
+        register(context, YELLOW_WILLOW_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(BlockInit.WILLOW_LOG),
+                new StraightTrunkPlacer(5, 4, 3),
+                BlockStateProvider.of(BlockInit.YELLOW_WILLOW_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
+                new TwoLayersFeatureSize(1, 0, 2)
+        ).build());
     }
-    public static final RegistryKey<ConfiguredFeature<?, ?>> WILLOW_KEY = registerKey("willow");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_WILLOW_KEY = registerKey("red_willow");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_WILLOW_KEY = registerKey("orange_willow");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_WILLOW_KEY = registerKey("yellow_willow");
 }

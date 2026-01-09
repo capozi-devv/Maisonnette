@@ -1,5 +1,5 @@
 {
-  "feature": "maisonnette:willow",
+  "feature": "maisonnette:yellow_willow",
   "placement": [
     {
       "type": "minecraft:count",
@@ -36,7 +36,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "maisonnette:red_willow_sapling",
+          "Name": "maisonnette:yellow_willow_sapling",
           "Properties": {
             "stage": "0"
           }

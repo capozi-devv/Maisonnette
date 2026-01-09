@@ -6,12 +6,13 @@ import net.capozi.maisonnette.common.block.BulbBlock;
 import net.capozi.maisonnette.common.block.MosaicBlock;
 import net.capozi.maisonnette.common.block.SeatBlock;
 import net.capozi.maisonnette.common.item.MosaicTileItem;
-import net.capozi.maisonnette.server.world.WillowSaplingGenerator;
+import net.capozi.maisonnette.server.world.OrangeWillowSaplingGenerator;
+import net.capozi.maisonnette.server.world.RedWillowSaplingGenerator;
+import net.capozi.maisonnette.server.world.YellowWillowSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.AbstractBlock.OffsetType;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -87,7 +88,7 @@ public class BlockInit {
     public static final Block RED_WILLOW_LEAVES = registerBlock("red_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
     public static final Block ORANGE_WILLOW_LEAVES = registerBlock("orange_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
     public static final Block YELLOW_WILLOW_LEAVES = registerBlock("yellow_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
-    public static final Block RED_WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(new WillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
-//    public static final Block ORANGE_WILLOW_SAPLING = registerBlock("orange_willow_sapling", new SaplingBlock(, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
-//    public static final Block YELLOW_WILLOW_SAPLING = registerBlock("yellow_willow_sapling", new SaplingBlock(, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block RED_WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(new RedWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block ORANGE_WILLOW_SAPLING = registerBlock("orange_willow_sapling", new SaplingBlock(new OrangeWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block YELLOW_WILLOW_SAPLING = registerBlock("yellow_willow_sapling", new SaplingBlock(new YellowWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
 }
