@@ -1,6 +1,6 @@
 package net.capozi.maisonnette;
 
-import net.capozi.maisonnette.common.worldgen.ExpandedJigsawStructure;
+import net.capozi.maisonnette.server.worldgen.ExpandedJigsawStructure;
 import net.capozi.maisonnette.foundation.*;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -13,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 
 // NOTE: main
 public class Maisonnette implements ModInitializer {
