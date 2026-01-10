@@ -42,6 +42,8 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.YELLOW_WILLOW_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.WILLOW_PLANKS);
         blockStateModelGenerator.registerTintableCross(BlockInit.RED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.ORANGE_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.YELLOW_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
     @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     }

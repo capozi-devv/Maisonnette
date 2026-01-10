@@ -32,6 +32,7 @@ public class BulbBlock extends FacingBlock {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, POWERED, LIT);
     }
+
     public boolean emitsRedstonePower(BlockState state) {
         return true;
     }
@@ -72,7 +73,8 @@ public class BulbBlock extends FacingBlock {
         if (!world.isClient) {
             boolean lit = state.get(LIT);
             world.setBlockState(pos, state.with(LIT, !lit), Block.NOTIFY_ALL);
-            world.playSound(player, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 15f, 1f);
+            world.playSound(player, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 1f, 1f);
+            player.playSound(SoundEvents.BLOCK_LEVER_CLICK, 1f, 1f);
             return ActionResult.SUCCESS;
         }
         return ActionResult.CONSUME;

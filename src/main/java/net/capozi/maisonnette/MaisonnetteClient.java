@@ -15,5 +15,7 @@ public class MaisonnetteClient implements ClientModInitializer {
     public void onInitializeClient() {
 		EntityRendererRegistry.register(EntityInit.SEAT, (ctx) -> new EmptyRenderer<>(ctx));
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.RED_WILLOW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.ORANGE_WILLOW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.YELLOW_WILLOW_SAPLING, RenderLayer.getCutout());
 	}
 }
