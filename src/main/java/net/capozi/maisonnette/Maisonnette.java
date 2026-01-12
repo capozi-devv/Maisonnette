@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.fabricmc.api.ModInitializer;
 
-// NOTE: main
 public class Maisonnette implements ModInitializer {
 	public static final String MOD_ID = "maisonnette";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
