@@ -24,12 +24,13 @@ import static net.capozi.maisonnette.common.block.BulbBlock.LIT;
 
 public class BlockInit {
 	public static void init() {}
+    public static final BlockSetType WILLOW_SET_TYPE = new BlockSetType("willow");
+    public static final WoodType WILLOW_WOOD_TYPE = new WoodType("willow", WILLOW_SET_TYPE);
 	private static Item registerBlockItem(String name, BlockItem blockItem) {
 		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name), blockItem);
 	}
     private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings()));
+        return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name), new BlockItem(block, new FabricItemSettings()));
     }
 	private static Block registerBlock(String name, Block block, boolean registerBlockItem, boolean tile) {
 		if (tile) {
@@ -88,4 +89,10 @@ public class BlockInit {
     public static final Block RED_WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(new RedWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block ORANGE_WILLOW_SAPLING = registerBlock("orange_willow_sapling", new SaplingBlock(new OrangeWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block YELLOW_WILLOW_SAPLING = registerBlock("yellow_willow_sapling", new SaplingBlock(new YellowWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block WILLOW_SLAB = registerBlock("willow_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), true);
+    public static final Block WILLOW_STAIRS = registerBlock("willow_stairs", new StairsBlock(Blocks.OAK_STAIRS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), true);
+    public static final Block WILLOW_FENCE = registerBlock("willow_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), true);
+    public static final Block WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE), WILLOW_WOOD_TYPE), true);
+    public static final Block WILLOW_BUTTON = registerBlock("willow_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), WILLOW_SET_TYPE, 10, true), true);
+    public static final Block WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WILLOW_SET_TYPE), true);
 }

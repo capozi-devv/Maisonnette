@@ -36,10 +36,16 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.RED_WILLOW_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORANGE_WILLOW_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.YELLOW_WILLOW_LEAVES);
-        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.WILLOW_PLANKS);
         blockStateModelGenerator.registerTintableCross(BlockInit.RED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.ORANGE_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.YELLOW_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        BlockStateModelGenerator.BlockTexturePool willowPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.WILLOW_PLANKS);
+        willowPool.button(BlockInit.WILLOW_BUTTON);
+        willowPool.pressurePlate(BlockInit.WILLOW_PRESSURE_PLATE);
+        willowPool.fence(BlockInit.WILLOW_FENCE);
+        willowPool.fenceGate(BlockInit.WILLOW_FENCE_GATE);
+        willowPool.slab(BlockInit.WILLOW_SLAB);
+        willowPool.stairs(BlockInit.WILLOW_STAIRS);
     }
     @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     }

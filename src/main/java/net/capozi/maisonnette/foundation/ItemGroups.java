@@ -55,6 +55,12 @@ public class ItemGroups {
                         entries.add(BlockInit.RED_WILLOW_SAPLING);
                         entries.add(BlockInit.ORANGE_WILLOW_SAPLING);
                         entries.add(BlockInit.YELLOW_WILLOW_SAPLING);
+                        entries.add(BlockInit.WILLOW_BUTTON);
+                        entries.add(BlockInit.WILLOW_PRESSURE_PLATE);
+                        entries.add(BlockInit.WILLOW_FENCE);
+                        entries.add(BlockInit.WILLOW_FENCE_GATE);
+                        entries.add(BlockInit.WILLOW_SLAB);
+                        entries.add(BlockInit.WILLOW_STAIRS);
                         entries.add(BlockInit.WAXED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);
