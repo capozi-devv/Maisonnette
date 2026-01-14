@@ -16,9 +16,9 @@
     }
   },
   "pattern": [
-    "CCC",
+    "CGC",
     "RFR",
-    "CGC"
+    "CRC"
   ],
   "result": {
     "item": "maisonnette:copper_torchbulb"

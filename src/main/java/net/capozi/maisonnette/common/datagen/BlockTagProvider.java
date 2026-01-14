@@ -24,9 +24,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.CALCITE_WALL);
         getOrCreateTagBuilder(BlockTags.BUTTONS)
                 .add(BlockInit.CALCITE_BUTTON)
-                .add(BlockInit.TUFF_BUTTON)
-                .add(BlockInit.DIORITE_BUTTON)
-                .add(BlockInit.GRANITE_BUTTON);
+                .add(BlockInit.TUFF_BUTTON);
         getOrCreateTagBuilder(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON)
                 .add(BlockInit.BOOK_STACK);
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

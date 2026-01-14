@@ -1,5 +1,6 @@
 package net.capozi.maisonnette.common.datagen;
 
+import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -21,15 +22,16 @@ public class RecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_STAIRS, Blocks.CALCITE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_WALL, Blocks.CALCITE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_BUTTON, Blocks.CALCITE, 3);
-        offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.GRANITE_BUTTON, Blocks.GRANITE, 3);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_SLAB, Blocks.TUFF, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_STAIRS, Blocks.TUFF, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_BUTTON, Blocks.TUFF, 3);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_WALL, Blocks.TUFF, 1);
+        offerShapelessRecipe(exporter, BlockInit.WILLOW_PLANKS, BlockInit.WILLOW_LOG, Maisonnette.MOD_ID, 4);
+        offerShapelessRecipe(exporter, BlockInit.WILLOW_PLANKS, BlockInit.STRIPPED_WILLOW_LOG, Maisonnette.MOD_ID, 4);
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.COPPER_TORCHBULB, 1)
-                .pattern("CCC")
-                .pattern("RFR")
                 .pattern("CGC")
+                .pattern("RFR")
+                .pattern("CRC")
                 .input('C', Items.COPPER_INGOT)
                 .input('R', Items.REDSTONE)
                 .input('F', Items.CAMPFIRE)

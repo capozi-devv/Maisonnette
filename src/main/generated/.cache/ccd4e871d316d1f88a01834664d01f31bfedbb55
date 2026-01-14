@@ -1,6 +1,5 @@
-// 1.20.1	2026-01-09T10:39:23.684305	Maisonnette/Block Loot Tables
+// 1.20.1	2026-01-14T08:44:29.178691	Maisonnette/Block Loot Tables
 fbce6c9270c2203ed697c080b0062856557e6974 data/maisonnette/loot_tables/blocks/green_seat.json
-6870f74e013d05981c0df6e26a5a3656d3f7f31d data/maisonnette/loot_tables/blocks/granite_button.json
 a5429e208deb35741589e7e1eef380d7430cb3ab data/maisonnette/loot_tables/blocks/willow_wood.json
 b5b8103b4022610ab543607b7c2eba4ab2ae4d43 data/maisonnette/loot_tables/blocks/oxidized_copper_torchbulb.json
 e881db054c72ab5727f2e4bf111cecadfefc654f data/maisonnette/loot_tables/blocks/magenta_seat.json
@@ -14,7 +13,6 @@ cdace3456348452990bce59400dfa9aa7a2e9d16 data/maisonnette/loot_tables/blocks/whi
 646cc1b30a609a190e3fea4276530f52a38ef093 data/maisonnette/loot_tables/blocks/calcite_slab.json
 172796f5166b8e58e3a73b829b03b439c1b0d711 data/maisonnette/loot_tables/blocks/lime_seat.json
 5d43a1d99909cf5c996e95d59820b32cad142b23 data/maisonnette/loot_tables/blocks/orange_seat.json
-cab10a15bf2c987d5035b353129bad1029056f4f data/maisonnette/loot_tables/blocks/diorite_button.json
 1464ad717c2bd00b97a61545191973d40309c7a5 data/maisonnette/loot_tables/blocks/calcite_wall.json
 881245eac89da081777e5c82c9f447bca9b3e4e5 data/maisonnette/loot_tables/blocks/yellow_seat.json
 7737da0fb57b35fef3f454699f3f81a42859c638 data/maisonnette/loot_tables/blocks/tuff_slab.json
