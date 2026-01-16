@@ -23,7 +23,8 @@ public class SeatBlock extends Block {
         return var10000;
     }
     public SeatBlock(Settings settings) { super(settings); }
-    @Override public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             List<SeatEntity> nearbySeats = world.getEntitiesByClass(SeatEntity.class,
                     new Box(pos), entity -> true);

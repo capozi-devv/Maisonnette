@@ -27,7 +27,7 @@ public class BulbBlock extends FacingBlock {
     public static final BooleanProperty LIT;
     public BulbBlock(Oxidizable.OxidationLevel level, Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.UP)).with(POWERED, false).with(LIT, false));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.UP).with(POWERED, false).with(LIT, false));
     }
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, POWERED, LIT);
@@ -49,13 +49,12 @@ public class BulbBlock extends FacingBlock {
     }
     public void update(BlockState state, ServerWorld world, BlockPos pos) {
         boolean bl = world.isReceivingRedstonePower(pos);
-        if (bl != (Boolean)state.get(POWERED)) {
+        if (bl != state.get(POWERED)) {
             BlockState blockState = state;
             if (!(Boolean)state.get(POWERED)) {
-                blockState = (BlockState)state.cycle(LIT);
+                blockState = state.cycle(LIT);
             }
-
-            world.setBlockState(pos, (BlockState)blockState.with(POWERED, bl), 3);
+            world.setBlockState(pos, blockState.with(POWERED, bl), 3);
         }
     }
     static {
@@ -63,18 +62,19 @@ public class BulbBlock extends FacingBlock {
         LIT = Properties.LIT;
         FACING = Properties.FACING;
     }
-    @Override public BlockState getPlacementState(ItemPlacementContext ctx) {
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(FACING, ctx.getSide());
     }
     public boolean hasRandomTicks(BlockState state) {
         return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
-    @Override public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             boolean lit = state.get(LIT);
             world.setBlockState(pos, state.with(LIT, !lit), Block.NOTIFY_ALL);
-            world.playSound(player, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 1f, 1f);
-            player.playSound(SoundEvents.BLOCK_LEVER_CLICK, 1f, 1f);
+            world.playSound(null, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 1f, 1f);
             return ActionResult.SUCCESS;
         }
         return ActionResult.CONSUME;

@@ -30,7 +30,7 @@ public class MosaicBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final DirectionProperty FACING = Properties.FACING;
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{TILES, WATERLOGGED, FACING});
+        builder.add(TILES, WATERLOGGED, FACING);
     }
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         VoxelShape var10000;
@@ -47,14 +47,16 @@ public class MosaicBlock extends Block implements Waterloggable {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.getDefaultState().with(WATERLOGGED, false)).with(TILES, 1)).with(FACING, Direction.UP));
     }
-    @Override public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
+    @Override
+    public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
         return Collections.singletonList(new ItemStack(BlockInit.MOSAIC, state.get(TILES)));
     }
     public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
-    @Override public BlockState getPlacementState(ItemPlacementContext ctx) {
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState state = ctx.getWorld().getBlockState(ctx.getBlockPos());
-        return state.isOf(this) ? (BlockState)state.cycle(TILES) : (BlockState)this.getDefaultState().with(FACING, Direction.UP);
+        return state.isOf(this) ? state.cycle(TILES) : this.getDefaultState().with(FACING, Direction.UP);
     }
 }

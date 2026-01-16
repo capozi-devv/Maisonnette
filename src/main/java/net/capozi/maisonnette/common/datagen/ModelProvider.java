@@ -46,6 +46,8 @@ public class ModelProvider extends FabricModelProvider {
         willowPool.fenceGate(BlockInit.WILLOW_FENCE_GATE);
         willowPool.slab(BlockInit.WILLOW_SLAB);
         willowPool.stairs(BlockInit.WILLOW_STAIRS);
+        blockStateModelGenerator.registerDoor(BlockInit.WILLOW_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(BlockInit.WILLOW_TRAPDOOR);
     }
     @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     }

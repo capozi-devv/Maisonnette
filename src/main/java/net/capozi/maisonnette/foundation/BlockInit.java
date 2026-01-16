@@ -95,4 +95,6 @@ public class BlockInit {
     public static final Block WILLOW_FENCE_GATE = registerBlock("willow_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE), WILLOW_WOOD_TYPE), true);
     public static final Block WILLOW_BUTTON = registerBlock("willow_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), WILLOW_SET_TYPE, 10, true), true);
     public static final Block WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WILLOW_SET_TYPE), true);
+    public static final Block WILLOW_DOOR = registerBlock("willow_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
+    public static final Block WILLOW_TRAPDOOR = registerBlock("willow_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
 }
