@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
@@ -28,6 +29,9 @@ public class RecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_WALL, Blocks.TUFF, 1);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_PLANKS, BlockInit.WILLOW_LOG, Maisonnette.MOD_ID, 4);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_PLANKS, BlockInit.STRIPPED_WILLOW_LOG, Maisonnette.MOD_ID, 4);
+        offerSlabRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.WILLOW_SLAB, BlockInit.WILLOW_PLANKS);
+        offerPressurePlateRecipe(exporter, BlockInit.WILLOW_PRESSURE_PLATE, BlockInit.WILLOW_PLANKS);
+        offerShapelessRecipe(exporter, BlockInit.WILLOW_BUTTON, BlockInit.WILLOW_PLANKS, Maisonnette.MOD_ID, 1);
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.COPPER_TORCHBULB, 1)
                 .pattern("CGC")
                 .pattern("RFR")

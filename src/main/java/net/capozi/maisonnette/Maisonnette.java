@@ -41,6 +41,14 @@ public class Maisonnette implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.STRIPPED_WILLOW_LOG, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.STRIPPED_WILLOW_WOOD, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_PLANKS, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_STAIRS, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_SLAB, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_FENCE, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_FENCE_GATE, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_PRESSURE_PLATE, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_BUTTON, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_DOOR, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_TRAPDOOR, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.RED_WILLOW_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.ORANGE_WILLOW_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.YELLOW_WILLOW_LEAVES, 30, 60);
