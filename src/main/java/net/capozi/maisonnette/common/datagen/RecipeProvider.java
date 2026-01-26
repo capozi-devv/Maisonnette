@@ -9,6 +9,7 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
@@ -17,6 +18,7 @@ import java.util.function.Consumer;
 
 public class RecipeProvider extends FabricRecipeProvider {
     public RecipeProvider(FabricDataOutput dataOutput) { super(dataOutput); }
+    private Ingredient willowIngredient = Ingredient.ofItems(BlockInit.WILLOW_PLANKS);
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_SLAB, Blocks.CALCITE, 2);
@@ -32,6 +34,10 @@ public class RecipeProvider extends FabricRecipeProvider {
         offerSlabRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.WILLOW_SLAB, BlockInit.WILLOW_PLANKS);
         offerPressurePlateRecipe(exporter, BlockInit.WILLOW_PRESSURE_PLATE, BlockInit.WILLOW_PLANKS);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_BUTTON, BlockInit.WILLOW_PLANKS, Maisonnette.MOD_ID, 1);
+        createDoorRecipe(BlockInit.WILLOW_DOOR, willowIngredient);
+        createFenceRecipe(BlockInit.WILLOW_FENCE, willowIngredient);
+        createFenceGateRecipe(BlockInit.WILLOW_FENCE_GATE, willowIngredient);
+        createStairsRecipe(BlockInit.WILLOW_STAIRS, willowIngredient);
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.COPPER_TORCHBULB, 1)
                 .pattern("CGC")
                 .pattern("RFR")
