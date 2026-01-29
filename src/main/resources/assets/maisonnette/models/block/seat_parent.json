@@ -1,8 +1,8 @@
 {
-	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "maisonnette:block/seat_bottom"
+		"0": "maisonnette:block/seat_bottom",
+        "particle": "maisonnette:block/seat_bottom"
 	},
 	"elements": [
 		{
@@ -29,10 +29,30 @@
 			"translation": [0, 1, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
+		"firstperson_righthand": {
+			"rotation": [0, 18, 0],
+			"translation": [3.25, -1, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 18, 0],
+			"translation": [3.25, -1, 0]
+		},
+		"ground": {
+			"translation": [0, 2.5, 0],
+			"scale": [0.35, 0.35, 0.35]
+		},
 		"gui": {
 			"rotation": [37, 45, 0],
 			"translation": [0, 1.75, 0],
 			"scale": [0.7, 0.7, 0.7]
+		},
+		"head": {
+			"translation": [0, 8.25, 0]
+		},
+		"fixed": {
+			"rotation": [-37, 45, 0],
+			"scale": [0.7, 0.7, 0.7]
 		}
-	}
+	},
+	"format_version": "1.9.0"
 }
