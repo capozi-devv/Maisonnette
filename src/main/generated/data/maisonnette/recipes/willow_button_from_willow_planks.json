@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "maisonnette",
+  "ingredients": [
+    {
+      "item": "maisonnette:willow_planks"
+    }
+  ],
+  "result": {
+    "item": "maisonnette:willow_button"
+  }
+}

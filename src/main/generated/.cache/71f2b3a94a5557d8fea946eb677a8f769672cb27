@@ -1,3 +1,3 @@
-// 1.20.1	2026-01-18T13:59:51.4832128	Maisonnette/Tags for minecraft:item
-cf34e51473723d823921b148deb672ef1ebbedd5 data\minecraft\tags\items\planks.json
-4fe2c10a1cddd55b1f301796b5730747e2976f8d data\minecraft\tags\items\logs_that_burn.json
+// 1.20.1	2026-01-23T10:42:57.18667	Maisonnette/Tags for minecraft:item
+4fe2c10a1cddd55b1f301796b5730747e2976f8d data/minecraft/tags/items/logs_that_burn.json
+cf34e51473723d823921b148deb672ef1ebbedd5 data/minecraft/tags/items/planks.json

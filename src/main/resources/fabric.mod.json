@@ -2,15 +2,15 @@
 	"schemaVersion": 1,
 	"id": "maisonnette",
 	"version": "${version}",
-	"name": "Maisonnette",
+	"name": "§dMaisonnette",
 	"description": "When Art-Deco meets Academia",
 	"authors": [
-		"Capozi",
-		"Cosmo",
-		"KrimsonCinder"
+		"capozi.devv",
+		"CosmoLeveling",
+		"KindlingCinder"
 	],
 	"contact": {
-		"sources": "https://github.com/capozi-devv/Maisonnette-des-Chagrins"
+		"sources": "https://github.com/capozi-devv/Maisonnette"
 	},
 	"license": "MIT",
 	"icon": "assets/maisonnette/icon.png",
