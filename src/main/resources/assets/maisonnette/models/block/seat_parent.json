@@ -1,8 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "maisonnette:block/seat_bottom",
-        "particle": "maisonnette:block/seat_bottom"
+		"0": "maisonnette:block/seat_bottom"
 	},
 	"elements": [
 		{
@@ -31,11 +30,11 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [0, 18, 0],
-			"translation": [3.25, -1, 0]
+			"translation": [3.25, -1, 4.75]
 		},
 		"firstperson_lefthand": {
 			"rotation": [0, 18, 0],
-			"translation": [3.25, -1, 0]
+			"translation": [3.25, -1, 4.75]
 		},
 		"ground": {
 			"translation": [0, 2.5, 0],

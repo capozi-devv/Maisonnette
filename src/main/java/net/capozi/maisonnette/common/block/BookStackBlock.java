@@ -59,9 +59,11 @@ public class BookStackBlock extends Block implements Waterloggable {
         }
         return var10000;
     }
+    @Override
     public Item asItem() {
         return Items.BOOK;
     }
+    @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
         return new ItemStack(Items.BOOK);
     }
