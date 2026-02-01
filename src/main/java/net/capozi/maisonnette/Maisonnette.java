@@ -25,6 +25,7 @@ public class Maisonnette implements ModInitializer {
 		EntityInit.init();
 		ItemGroups.init();
 		SoundInit.init();
+        WorldgenInit.init();
 		BookStackBlock.registerBookUseCallback();
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WEATHERED_COPPER_TORCHBULB);

@@ -59,6 +59,8 @@ public class ItemGroups {
                         entries.add(BlockInit.WILLOW_SLAB);
                         entries.add(BlockInit.WILLOW_FENCE);
                         entries.add(BlockInit.WILLOW_FENCE_GATE);
+                        entries.add(BlockInit.WILLOW_DOOR);
+                        entries.add(BlockInit.WILLOW_TRAPDOOR);
                         entries.add(BlockInit.WILLOW_PRESSURE_PLATE);
                         entries.add(BlockInit.WILLOW_BUTTON);
                         entries.add(BlockInit.WAXED_COPPER_TORCHBULB);

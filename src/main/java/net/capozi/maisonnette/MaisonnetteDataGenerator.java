@@ -3,6 +3,7 @@ package net.capozi.maisonnette;
 import net.capozi.maisonnette.common.datagen.*;
 import net.capozi.maisonnette.common.datagen.ConfiguredFeaturesProvider;
 import net.capozi.maisonnette.common.datagen.PlacedFeaturesProvider;
+import net.capozi.maisonnette.common.datagen.BiomesProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -23,5 +24,6 @@ public class MaisonnetteDataGenerator implements DataGeneratorEntrypoint {
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeaturesProvider::init);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeaturesProvider::boostrap);
+        registryBuilder.addRegistry(RegistryKeys.BIOME, BiomesProvider::init);
     }
 }

@@ -1,4 +1,4 @@
-package net.capozi.maisonnette.server.world;
+package net.capozi.maisonnette.server.world.generator;
 
 import net.capozi.maisonnette.common.datagen.ConfiguredFeaturesProvider;
 import net.minecraft.block.sapling.SaplingGenerator;
