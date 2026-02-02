@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+    "parent": "minecraft:block/block",
 	"textures": {
 		"0": "maisonnette:block/seat_bottom"
 	},
@@ -17,41 +18,5 @@
 			}
 		}
 	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [67, -45, 0],
-			"translation": [0, 1, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [67, -45, 0],
-			"translation": [0, 1, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, 18, 0],
-			"translation": [3.25, -1, 4.75]
-		},
-		"firstperson_lefthand": {
-			"rotation": [0, 18, 0],
-			"translation": [3.25, -1, 4.75]
-		},
-		"ground": {
-			"translation": [0, 2.5, 0],
-			"scale": [0.35, 0.35, 0.35]
-		},
-		"gui": {
-			"rotation": [37, 45, 0],
-			"translation": [0, 1.75, 0],
-			"scale": [0.7, 0.7, 0.7]
-		},
-		"head": {
-			"translation": [0, 8.25, 0]
-		},
-		"fixed": {
-			"rotation": [-37, 45, 0],
-			"scale": [0.7, 0.7, 0.7]
-		}
-	},
 	"format_version": "1.9.0"
 }

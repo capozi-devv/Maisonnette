@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-31T21:38:33.558942	§dMaisonnette/Model Definitions
+// 1.20.1	2026-02-01T20:45:21.3245425	§dMaisonnette/Model Definitions
 d3d0b59dabd0d472205fd30df8863c5a23dd3374 assets\maisonnette\models\block\book_stack_8_0_r1.json
 36214320a804dfd87df80c30c97e5745c909f208 assets\maisonnette\models\block\book_stack_3_3_r0.json
 8527039d3669a15ff3cf4237d2f14645eb358e84 assets\maisonnette\models\block\orange_willow_sapling.json
@@ -118,7 +118,7 @@ d4758cd79dcc53f979206075749b5c88e7a8ef36 assets\maisonnette\models\block\book_st
 420777a9e5eb2a193dd1b2c6e22368806087139b assets\maisonnette\models\block\book_stack_1_2_r3.json
 8c9d8e6008b66c4bde8ec586b37dc9044519099b assets\maisonnette\models\item\willow_door.json
 b23b01125cd1fb3492dfb4c8c8141d50e6ce99ad assets\maisonnette\models\block\book_stack_8_0_r0.json
-06df633bace0567431cac3f94cddf6f726f1cfa6 assets\maisonnette\blockstates\book_stack.json
+39989bad20cc448b4049bf45b22a53905934b16d assets\maisonnette\blockstates\book_stack.json
 5ff743d810b8228c21125455c9ab66befc898a97 assets\maisonnette\models\block\book_stack_6_1_r0.json
 6958b6f66c809c576b84c2f02b116f94923e2730 assets\maisonnette\blockstates\yellow_willow_leaves.json
 16bbb7c0deb65c8f10f7b1029c7277451c313158 assets\maisonnette\blockstates\orange_willow_sapling.json

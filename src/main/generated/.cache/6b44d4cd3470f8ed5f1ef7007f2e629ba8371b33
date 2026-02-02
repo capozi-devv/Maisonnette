@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-31T21:38:33.565944	§dMaisonnette/Recipes
+// 1.20.1	2026-02-01T20:45:21.332544	§dMaisonnette/Recipes
 98459819eb7a71234a66d25d574a32c540d89939 data\maisonnette\recipes\calcite_stairs_from_calcite_stonecutting.json
 65502a10dc8654ccedb6aef06cb2edf816d7d807 data\maisonnette\recipes\orange_seat.json
 36886e4458e229119bcabdeeaaae583713b6ad47 data\maisonnette\advancements\recipes\decorations\tuff_wall_from_tuff_stonecutting.json
@@ -14,8 +14,8 @@ e7bdb34037b09256430254b96ec72cc4841c0a91 data\maisonnette\recipes\brown_seat.jso
 75a5058a680036dfd2b18c56f5689cdaafa30df7 data\maisonnette\recipes\willow_slab.json
 e6f9feed7e44b4b196d98938a4ca63a69ad28f3a data\maisonnette\recipes\gray_seat.json
 e641a074a2e96ff2322ab73373ec815735f42f9e data\maisonnette\advancements\recipes\misc\willow_button_from_willow_planks.json
-01eb8bbc36bdb0748af18777046d8fefd441b179 data\maisonnette\advancements\recipes\decorations\pink_seat.json
 253c9c8d7c6fa7f626d5b6b2f3362feed5470a93 data\maisonnette\recipes\magenta_seat.json
+01eb8bbc36bdb0748af18777046d8fefd441b179 data\maisonnette\advancements\recipes\decorations\pink_seat.json
 6471a523d075ec76e70b338a71c1e6fe54baea35 data\maisonnette\recipes\willow_pressure_plate.json
 940f57514bb6bbb50369a9307da67491f659f884 data\maisonnette\advancements\recipes\decorations\orange_seat.json
 bf05abf73b97a70d709a0a4591dbc4edc1754adc data\maisonnette\advancements\recipes\redstone\willow_pressure_plate.json

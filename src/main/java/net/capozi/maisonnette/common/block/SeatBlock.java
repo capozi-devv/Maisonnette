@@ -44,5 +44,6 @@ public class SeatBlock extends Block {
                 seat.discard();
             }
         }
+        super.onBreak(world, pos, state, player);
     }
 }
