@@ -11,8 +11,8 @@
     "foliage_placer": {
       "type": "minecraft:cherry_foliage_placer",
       "corner_hole_chance": 0.25,
-      "hanging_leaves_chance": 0.16666667,
-      "hanging_leaves_extension_chance": 0.33333334,
+      "hanging_leaves_chance": 0.5,
+      "hanging_leaves_extension_chance": 0.5,
       "height": 5,
       "offset": 0,
       "radius": 4,
@@ -38,35 +38,38 @@
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:cherry_trunk_placer",
-      "base_height": 7,
-      "branch_count": {
+      "type": "minecraft:upwards_branching_trunk_placer",
+      "base_height": 13,
+      "can_grow_through": [
+        "minecraft:air",
+        "minecraft:acacia_leaves",
+        "minecraft:azalea_leaves",
+        "minecraft:birch_leaves",
+        "minecraft:cherry_leaves",
+        "minecraft:flowering_azalea_leaves",
+        "minecraft:dark_oak_leaves",
+        "minecraft:jungle_leaves",
+        "minecraft:oak_leaves",
+        "minecraft:mangrove_leaves",
+        "minecraft:spruce_leaves"
+      ],
+      "extra_branch_length": {
         "type": "minecraft:uniform",
         "value": {
-          "max_inclusive": 3,
+          "max_inclusive": 1,
           "min_inclusive": 1
         }
       },
-      "branch_end_offset_from_top": {
+      "extra_branch_steps": {
         "type": "minecraft:uniform",
         "value": {
-          "max_inclusive": 0,
-          "min_inclusive": -1
+          "max_inclusive": 8,
+          "min_inclusive": 5
         }
       },
-      "branch_horizontal_length": {
-        "type": "minecraft:uniform",
-        "value": {
-          "max_inclusive": 4,
-          "min_inclusive": 2
-        }
-      },
-      "branch_start_offset_from_top": {
-        "max_inclusive": -3,
-        "min_inclusive": -4
-      },
-      "height_rand_a": 1,
-      "height_rand_b": 0
+      "height_rand_a": 7,
+      "height_rand_b": 2,
+      "place_branch_per_log_probability": 0.2
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
