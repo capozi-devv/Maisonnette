@@ -3,11 +3,25 @@ package net.capozi.maisonnette.common.datagen;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Items;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.TableBonusLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 
 public class LootTableProvider extends FabricBlockLootTableProvider {
     public LootTableProvider(FabricDataOutput dataOutput) { super(dataOutput); }
+    public LootTable.Builder orangeWillowLeavesDrops(Block leaves, Block drop, float... chance) {
+        return this.leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(Items.GLOW_BERRIES))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
+    }
+    public LootTable.Builder yellowWillowLeavesDrops(Block leaves, Block drop, float... chance) {
+        return this.leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(Items.APPLE))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
+    }
     @Override
     public void generate() {
         addDrop(BlockInit.CALCITE_STAIRS);
@@ -46,6 +60,19 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.WILLOW_PLANKS);
         addDrop(BlockInit.STRIPPED_WILLOW_WOOD);
         addDrop(BlockInit.STRIPPED_WILLOW_LOG);
-        addDrop(BlockInit.RED_WILLOW_LEAVES, leavesDrops(BlockInit.RED_WILLOW_LEAVES, Blocks.SAND, 0.1f));
+        addDrop(BlockInit.RED_WILLOW_LEAVES, oakLeavesDrops(BlockInit.RED_WILLOW_LEAVES, BlockInit.RED_WILLOW_SAPLING, 0.2f));
+        addDrop(BlockInit.ORANGE_WILLOW_LEAVES, oakLeavesDrops(BlockInit.ORANGE_WILLOW_LEAVES, BlockInit.ORANGE_WILLOW_SAPLING, 0.2f));
+        addDrop(BlockInit.YELLOW_WILLOW_LEAVES, oakLeavesDrops(BlockInit.YELLOW_WILLOW_LEAVES, BlockInit.YELLOW_WILLOW_SAPLING, 0.2f));
+        addDrop(BlockInit.RED_WILLOW_SAPLING);
+        addDrop(BlockInit.ORANGE_WILLOW_SAPLING);
+        addDrop(BlockInit.YELLOW_WILLOW_SAPLING);
+        addDrop(BlockInit.WILLOW_STAIRS);
+        addDrop(BlockInit.WILLOW_SLAB, slabDrops(BlockInit.WILLOW_SLAB));
+        addDrop(BlockInit.WILLOW_FENCE);
+        addDrop(BlockInit.WILLOW_FENCE_GATE);
+        addDrop(BlockInit.WILLOW_DOOR, doorDrops(BlockInit.WILLOW_DOOR));
+        addDrop(BlockInit.WILLOW_TRAPDOOR);
+        addDrop(BlockInit.WILLOW_PRESSURE_PLATE);
+        addDrop(BlockInit.WILLOW_BUTTON);
     }
 }

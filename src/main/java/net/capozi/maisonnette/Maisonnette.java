@@ -35,7 +35,7 @@ public class Maisonnette implements ModInitializer {
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.OXIDIZED_COPPER_TORCHBULB, BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
         StrippableBlockRegistry.register(BlockInit.WILLOW_LOG, BlockInit.STRIPPED_WILLOW_LOG);
         StrippableBlockRegistry.register(BlockInit.WILLOW_WOOD, BlockInit.STRIPPED_WILLOW_WOOD);
-        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.BOOK_STACK, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.BOOK_STACK, 30, 30);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_LOG, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_WOOD, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.STRIPPED_WILLOW_LOG, 5, 5);
