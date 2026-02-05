@@ -31,8 +31,8 @@ public class PlacedFeaturesProvider {
     }
     public static void boostrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-        register(context, RED_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.RED_WILLOW_KEY), new PlacementModifier[]{CountPlacementModifier.of(16), SquarePlacementModifier.of(), placementModifier, PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP, BiomePlacementModifier.of()});
-        register(context, ORANGE_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY), new PlacementModifier[]{CountPlacementModifier.of(16), SquarePlacementModifier.of(), placementModifier, PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP, BiomePlacementModifier.of()});
-        register(context, YELLOW_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.YELLOW_WILLOW_KEY), new PlacementModifier[]{CountPlacementModifier.of(16), SquarePlacementModifier.of(), placementModifier, PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP, BiomePlacementModifier.of()});
+        register(context, RED_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.RED_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.RED_WILLOW_SAPLING));
+        register(context, ORANGE_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.ORANGE_WILLOW_SAPLING));
+        register(context, YELLOW_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.YELLOW_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.YELLOW_WILLOW_SAPLING));
     }
 }
