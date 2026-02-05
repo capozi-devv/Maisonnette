@@ -29,9 +29,8 @@ public class BiomesProvider {
         DefaultBiomeFeatures.addLandCarvers(builder);
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDungeons(builder);
-        DefaultBiomeFeatures.addMineables(builder);
+        DefaultBiomeFeatures.addDefaultOres(builder);
         DefaultBiomeFeatures.addSprings(builder);
-        DefaultBiomeFeatures.addFrozenTopLayer(builder);
     }
     public static Biome redWillowBiome(Registerable<Biome> context) {
         SpawnSettings.Builder builder = new SpawnSettings.Builder();
