@@ -22,7 +22,6 @@ public class PlacedFeaturesProvider {
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Maisonnette.MOD_ID, name));
     }
-    static PlacementModifier placementModifier = SurfaceWaterDepthFilterPlacementModifier.of(0);
     public static void register(Registerable<PlacedFeature> featureRegisterable, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> feature, List<PlacementModifier> modifiers) {
         featureRegisterable.register(key, new PlacedFeature(feature, List.copyOf(modifiers)));
     }
