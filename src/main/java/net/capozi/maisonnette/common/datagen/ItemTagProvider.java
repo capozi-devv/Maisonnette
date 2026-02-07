@@ -17,6 +17,7 @@ public class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(BlockInit.CHARRED_PLANKS.asItem())
                 .add(BlockInit.WILLOW_PLANKS.asItem());
         getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(BlockInit.WILLOW_LOG.asItem())

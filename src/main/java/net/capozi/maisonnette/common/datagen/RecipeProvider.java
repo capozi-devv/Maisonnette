@@ -1,10 +1,11 @@
 package net.capozi.maisonnette.common.datagen;
 
+import devv.capozi.zip.common.datagen.RecipeUtils;
 import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
@@ -19,6 +20,7 @@ import java.util.function.Consumer;
 public class RecipeProvider extends FabricRecipeProvider {
     public RecipeProvider(FabricDataOutput dataOutput) { super(dataOutput); }
     private Ingredient willowIngredient = Ingredient.ofItems(BlockInit.WILLOW_PLANKS);
+    private Ingredient charredIngredient = Ingredient.ofItems(BlockInit.CHARRED_PLANKS);
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_SLAB, Blocks.CALCITE, 2);
@@ -30,7 +32,10 @@ public class RecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_BUTTON, Blocks.TUFF, 3);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.TUFF_WALL, Blocks.TUFF, 1);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_PLANKS, BlockInit.WILLOW_LOG, Maisonnette.MOD_ID, 4);
+        offerShapelessRecipe(exporter, BlockInit.CHARRED_PLANKS, BlockInit.CHARRED_LOG, Maisonnette.MOD_ID, 4);
+        offerShapelessRecipe(exporter, BlockInit.CHARRED_PLANKS, BlockInit.STRIPPED_CHARRED_LOG, Maisonnette.MOD_ID, 4);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_PLANKS, BlockInit.STRIPPED_WILLOW_LOG, Maisonnette.MOD_ID, 4);
+        RecipeUtils.offerWoodSet(exporter, Maisonnette.MOD_ID, charredIngredient, BlockInit.CHARRED_PLANKS, (SlabBlock)BlockInit.CHARRED_SLAB, (PressurePlateBlock)BlockInit.CHARRED_PRESSURE_PLATE, (ButtonBlock) BlockInit.CHARRED_BUTTON, (DoorBlock) BlockInit.CHARRED_DOOR, (FenceBlock) BlockInit.CHARRED_FENCE, (FenceGateBlock) BlockInit.CHARRED_FENCE_GATE, (StairsBlock) BlockInit.CHARRED_STAIRS, (TrapdoorBlock) BlockInit.CHARRED_TRAPDOOR);
         offerSlabRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.WILLOW_SLAB, BlockInit.WILLOW_PLANKS);
         offerPressurePlateRecipe(exporter, BlockInit.WILLOW_PRESSURE_PLATE, BlockInit.WILLOW_PLANKS);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_BUTTON, BlockInit.WILLOW_PLANKS, Maisonnette.MOD_ID, 1);

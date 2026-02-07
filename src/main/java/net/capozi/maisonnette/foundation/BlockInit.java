@@ -97,4 +97,17 @@ public class BlockInit {
     public static final Block WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WILLOW_SET_TYPE), true);
     public static final Block WILLOW_DOOR = registerBlock("willow_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
     public static final Block WILLOW_TRAPDOOR = registerBlock("willow_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
+    public static final Block CHARRED_LOG = registerBlock("charred_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)), true);
+    public static final Block STRIPPED_CHARRED_LOG = registerBlock("stripped_charred_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4f)), true);
+    public static final Block CHARRED_WOOD = registerBlock("charred_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)), true);
+    public static final Block STRIPPED_CHARRED_WOOD = registerBlock("stripped_charred_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4f)), true);
+    public static final Block CHARRED_PLANKS = registerBlock("charred_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)), true);
+    public static final Block CHARRED_SLAB = registerBlock("charred_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), true);
+    public static final Block CHARRED_STAIRS = registerBlock("charred_stairs", new StairsBlock(Blocks.OAK_STAIRS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), true);
+    public static final Block CHARRED_FENCE = registerBlock("charred_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), true);
+    public static final Block CHARRED_FENCE_GATE = registerBlock("charred_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE), WILLOW_WOOD_TYPE), true);
+    public static final Block CHARRED_BUTTON = registerBlock("charred_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), WILLOW_SET_TYPE, 10, true), true);
+    public static final Block CHARRED_PRESSURE_PLATE = registerBlock("charred_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WILLOW_SET_TYPE), true);
+    public static final Block CHARRED_DOOR = registerBlock("charred_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
+    public static final Block CHARRED_TRAPDOOR = registerBlock("charred_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
 }
