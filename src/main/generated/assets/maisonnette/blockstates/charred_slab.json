@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "maisonnette:block/charred_slab"
+    },
+    "type=double": {
+      "model": "maisonnette:block/charred_planks"
+    },
+    "type=top": {
+      "model": "maisonnette:block/charred_slab_top"
+    }
+  }
+}

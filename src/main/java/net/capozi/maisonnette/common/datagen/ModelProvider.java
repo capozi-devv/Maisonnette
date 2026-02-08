@@ -48,6 +48,17 @@ public class ModelProvider extends FabricModelProvider {
         willowPool.stairs(BlockInit.WILLOW_STAIRS);
         blockStateModelGenerator.registerDoor(BlockInit.WILLOW_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlockInit.WILLOW_TRAPDOOR);
+        BlockStateModelGenerator.BlockTexturePool charredPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.CHARRED_PLANKS);
+        charredPool.button(BlockInit.CHARRED_BUTTON);
+        charredPool.pressurePlate(BlockInit.CHARRED_PRESSURE_PLATE);
+        charredPool.fence(BlockInit.CHARRED_FENCE);
+        charredPool.fenceGate(BlockInit.CHARRED_FENCE_GATE);
+        charredPool.slab(BlockInit.CHARRED_SLAB);
+        charredPool.stairs(BlockInit.CHARRED_STAIRS);
+        blockStateModelGenerator.registerDoor(BlockInit.CHARRED_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(BlockInit.CHARRED_TRAPDOOR);
+        blockStateModelGenerator.registerLog(BlockInit.CHARRED_LOG).log(BlockInit.CHARRED_LOG).wood(BlockInit.CHARRED_WOOD);
+        blockStateModelGenerator.registerLog(BlockInit.STRIPPED_CHARRED_LOG).log(BlockInit.STRIPPED_CHARRED_LOG).wood(BlockInit.STRIPPED_CHARRED_WOOD);
     }
     @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     }

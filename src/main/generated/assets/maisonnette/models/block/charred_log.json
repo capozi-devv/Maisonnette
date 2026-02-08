@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "maisonnette:block/charred_log_top",
+    "side": "maisonnette:block/charred_log"
+  }
+}

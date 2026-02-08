@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "maisonnette:block/charred_planks",
+    "side": "maisonnette:block/charred_planks",
+    "top": "maisonnette:block/charred_planks"
+  }
+}

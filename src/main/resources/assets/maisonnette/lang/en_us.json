@@ -64,5 +64,18 @@
   "block.maisonnette.willow_button": "Willow Button",
   "block.maisonnette.willow_pressure_plate": "Willow Pressure Plate",
   "block.maisonnette.willow_door": "Willow Door",
-  "block.maisonnette.willow_trapdoor": "Willow Trapdoor"
+  "block.maisonnette.willow_trapdoor": "Willow Trapdoor",
+  "block.maisonnette.charred_log": "Charred Log",
+  "block.maisonnette.charred_wood": "Charred Wood",
+  "block.maisonnette.stripped_charred_log": "Stripped Charred Log",
+  "block.maisonnette.stripped_charred_wood": "Stripped Charred Wood",
+  "block.maisonnette.charred_planks": "Charred Planks",
+  "block.maisonnette.charred_stairs": "Charred Stairs",
+  "block.maisonnette.charred_slab": "Charred Slab",
+  "block.maisonnette.charred_fence": "Charred Fence",
+  "block.maisonnette.charred_fence_gate": "Charred Fence Gate",
+  "block.maisonnette.charred_door": "Charred Door",
+  "block.maisonnette.charred_trapdoor": "Charred Trapdoor",
+  "block.maisonnette.charred_pressure_plate": "Charred Pressure Plate",
+  "block.maisonnette.charred_button": "Charred Button"
 }

@@ -74,5 +74,19 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.WILLOW_TRAPDOOR);
         addDrop(BlockInit.WILLOW_PRESSURE_PLATE);
         addDrop(BlockInit.WILLOW_BUTTON);
+        addDrop(BlockInit.CHARRED_STAIRS);
+        addDrop(BlockInit.CHARRED_SLAB, slabDrops(BlockInit.CHARRED_SLAB));
+        addDrop(BlockInit.CHARRED_FENCE);
+        addDrop(BlockInit.CHARRED_FENCE_GATE);
+        addDrop(BlockInit.CHARRED_DOOR, doorDrops(BlockInit.CHARRED_DOOR));
+        addDrop(BlockInit.CHARRED_TRAPDOOR);
+        addDrop(BlockInit.CHARRED_PRESSURE_PLATE);
+        addDrop(BlockInit.CHARRED_BUTTON);
+        addDrop(BlockInit.CHARRED_WOOD);
+        addDrop(BlockInit.CHARRED_LOG);
+        addDrop(BlockInit.CHARRED_PLANKS);
+        addDrop(BlockInit.STRIPPED_CHARRED_WOOD);
+        addDrop(BlockInit.STRIPPED_CHARRED_LOG);
+
     }
 }
