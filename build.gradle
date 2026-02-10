@@ -27,6 +27,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation fileTree(dir: 'libs', include: ['*.jar'])
+    include fileTree(dir: 'libs', include: ['*.jar'])
     modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.terrablender_version}"
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
