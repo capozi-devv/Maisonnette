@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-07T10:50:05.5362796	§dMaisonnette/Block Loot Tables
+// 1.20.1	2026-02-09T19:41:39.2063169	§dMaisonnette/Block Loot Tables
 d102e2221411d1730db607b7d1d65bc98219cdf6 data\maisonnette\loot_tables\blocks\gray_seat.json
 2357bb8b0a0ff3b2018479aa343cbc3a3fd45597 data\maisonnette\loot_tables\blocks\willow_door.json
 e215e9d021c022a57881c7fdf2951c4b394fae0c data\maisonnette\loot_tables\blocks\charred_wood.json
@@ -24,8 +24,8 @@ fe118d208bdcf0c32536d7de8a450799bf458e4e data\maisonnette\loot_tables\blocks\red
 1464ad717c2bd00b97a61545191973d40309c7a5 data\maisonnette\loot_tables\blocks\calcite_wall.json
 927c6f70f2eb9f5fd75cb8d8685f9633fb6bbd82 data\maisonnette\loot_tables\blocks\light_gray_seat.json
 7318fe670d024ba5c841367b84d6a43d12e4cfda data\maisonnette\loot_tables\blocks\yellow_willow_leaves.json
-ec65d3c30d6d0d1b68f7783822974bd474b5aae4 data\maisonnette\loot_tables\blocks\willow_fence.json
 e8168d402685e93e831aff51cea136934f245abc data\maisonnette\loot_tables\blocks\red_willow_leaves.json
+ec65d3c30d6d0d1b68f7783822974bd474b5aae4 data\maisonnette\loot_tables\blocks\willow_fence.json
 fbce6c9270c2203ed697c080b0062856557e6974 data\maisonnette\loot_tables\blocks\green_seat.json
 e881db054c72ab5727f2e4bf111cecadfefc654f data\maisonnette\loot_tables\blocks\magenta_seat.json
 1a49a34d7995398a5bb63ab0b06cc44035094a8a data\maisonnette\loot_tables\blocks\charred_log.json
