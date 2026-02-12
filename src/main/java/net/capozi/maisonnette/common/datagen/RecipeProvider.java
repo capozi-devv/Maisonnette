@@ -22,6 +22,16 @@ public class RecipeProvider extends FabricRecipeProvider {
     public RecipeProvider(FabricDataOutput dataOutput) { super(dataOutput); }
     private Ingredient willowIngredient = Ingredient.ofItems(BlockInit.WILLOW_PLANKS);
     private Ingredient charredIngredient = Ingredient.ofItems(BlockInit.CHARRED_PLANKS);
+    public static void offerWoodSet(Consumer<RecipeJsonProvider> consumer, String modid, Ingredient woodIngredient, Block planks, SlabBlock slab, PressurePlateBlock pressurePlateBlock, ButtonBlock buttonBlock, DoorBlock doorBlock, FenceBlock fenceBlock, FenceGateBlock fenceGateBlock, StairsBlock stairsBlock, TrapdoorBlock trapdoorBlock) {
+        offerSlabRecipe(consumer, RecipeCategory.DECORATIONS, slab, planks);
+        offerPressurePlateRecipe(consumer, pressurePlateBlock, planks);
+        offerShapelessRecipe(consumer, buttonBlock, planks, modid, 1);
+        createDoorRecipe(doorBlock, woodIngredient).criterion(hasItem(Items.OAK_PLANKS), conditionsFromTag(ItemTags.WOODEN_DOORS)).offerTo(consumer);
+        createFenceRecipe(fenceBlock, woodIngredient).criterion(hasItem(Items.OAK_PLANKS), conditionsFromTag(ItemTags.WOODEN_FENCES)).offerTo(consumer);
+        createFenceGateRecipe(fenceGateBlock, woodIngredient).criterion(hasItem(Items.OAK_PLANKS), conditionsFromTag(ItemTags.FENCE_GATES)).offerTo(consumer);
+        createStairsRecipe(stairsBlock, woodIngredient).criterion(hasItem(Items.OAK_PLANKS), conditionsFromTag(ItemTags.WOODEN_STAIRS)).offerTo(consumer);
+        createTrapdoorRecipe(trapdoorBlock, woodIngredient).criterion(hasItem(Items.OAK_PLANKS), conditionsFromTag(ItemTags.WOODEN_TRAPDOORS)).offerTo(consumer);
+    }
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_SLAB, Blocks.CALCITE, 2);
@@ -36,16 +46,16 @@ public class RecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, BlockInit.CHARRED_PLANKS, BlockInit.CHARRED_LOG, Maisonnette.MOD_ID, 4);
         offerShapelessRecipe(exporter, BlockInit.CHARRED_PLANKS, BlockInit.STRIPPED_CHARRED_LOG, Maisonnette.MOD_ID, 4);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_PLANKS, BlockInit.STRIPPED_WILLOW_LOG, Maisonnette.MOD_ID, 4);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.PLANKS), RecipeCategory.FOOD, BlockInit.CHARRED_PLANKS, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_PRESSURE_PLATES), RecipeCategory.FOOD, BlockInit.CHARRED_PRESSURE_PLATE, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_BUTTONS), RecipeCategory.FOOD, BlockInit.CHARRED_BUTTON, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_DOORS), RecipeCategory.FOOD, BlockInit.CHARRED_DOOR, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_TRAPDOORS), RecipeCategory.FOOD, BlockInit.CHARRED_TRAPDOOR, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_SLABS), RecipeCategory.FOOD, BlockInit.CHARRED_SLAB, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_STAIRS), RecipeCategory.FOOD, BlockInit.CHARRED_STAIRS, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_FENCES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE, 0.35f, 600);
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.FENCE_GATES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE_GATE, 0.35f, 600);
-        RecipeUtils.offerWoodSet(exporter, Maisonnette.MOD_ID, charredIngredient, BlockInit.CHARRED_PLANKS, (SlabBlock)BlockInit.CHARRED_SLAB, (PressurePlateBlock)BlockInit.CHARRED_PRESSURE_PLATE, (ButtonBlock) BlockInit.CHARRED_BUTTON, (DoorBlock) BlockInit.CHARRED_DOOR, (FenceBlock) BlockInit.CHARRED_FENCE, (FenceGateBlock) BlockInit.CHARRED_FENCE_GATE, (StairsBlock) BlockInit.CHARRED_STAIRS, (TrapdoorBlock) BlockInit.CHARRED_TRAPDOOR);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.PLANKS), RecipeCategory.FOOD, BlockInit.CHARRED_PLANKS, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_PLANKS), conditionsFromItem(BlockInit.CHARRED_PLANKS)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_PRESSURE_PLATES), RecipeCategory.FOOD, BlockInit.CHARRED_PRESSURE_PLATE, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_PRESSURE_PLATE), conditionsFromItem(BlockInit.CHARRED_PRESSURE_PLATE)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_BUTTONS), RecipeCategory.FOOD, BlockInit.CHARRED_BUTTON, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_BUTTON), conditionsFromItem(BlockInit.CHARRED_BUTTON)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_DOORS), RecipeCategory.FOOD, BlockInit.CHARRED_DOOR, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_DOOR), conditionsFromItem(BlockInit.CHARRED_DOOR)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_TRAPDOORS), RecipeCategory.FOOD, BlockInit.CHARRED_TRAPDOOR, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_TRAPDOOR), conditionsFromItem(BlockInit.CHARRED_TRAPDOOR)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_SLABS), RecipeCategory.FOOD, BlockInit.CHARRED_SLAB, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_SLAB), conditionsFromItem(BlockInit.CHARRED_SLAB)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_STAIRS), RecipeCategory.FOOD, BlockInit.CHARRED_STAIRS, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_STAIRS), conditionsFromItem(BlockInit.CHARRED_STAIRS)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_FENCES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_FENCE), conditionsFromItem(BlockInit.CHARRED_FENCE)).offerTo(exporter);
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.FENCE_GATES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE_GATE, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_FENCE_GATE), conditionsFromItem(BlockInit.CHARRED_FENCE_GATE)).offerTo(exporter);
+        offerWoodSet(exporter, Maisonnette.MOD_ID, charredIngredient, BlockInit.CHARRED_PLANKS, (SlabBlock)BlockInit.CHARRED_SLAB, (PressurePlateBlock)BlockInit.CHARRED_PRESSURE_PLATE, (ButtonBlock) BlockInit.CHARRED_BUTTON, (DoorBlock) BlockInit.CHARRED_DOOR, (FenceBlock) BlockInit.CHARRED_FENCE, (FenceGateBlock) BlockInit.CHARRED_FENCE_GATE, (StairsBlock) BlockInit.CHARRED_STAIRS, (TrapdoorBlock) BlockInit.CHARRED_TRAPDOOR);
         offerSlabRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.WILLOW_SLAB, BlockInit.WILLOW_PLANKS);
         offerPressurePlateRecipe(exporter, BlockInit.WILLOW_PRESSURE_PLATE, BlockInit.WILLOW_PLANKS);
         offerShapelessRecipe(exporter, BlockInit.WILLOW_BUTTON, BlockInit.WILLOW_PLANKS, Maisonnette.MOD_ID, 1);

@@ -16,11 +16,8 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 
 public class LootTableProvider extends FabricBlockLootTableProvider {
     public LootTableProvider(FabricDataOutput dataOutput) { super(dataOutput); }
-    public LootTable.Builder orangeWillowLeavesDrops(Block leaves, Block drop, float... chance) {
-        return this.leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(Items.GLOW_BERRIES))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
-    }
     public LootTable.Builder yellowWillowLeavesDrops(Block leaves, Block drop, float... chance) {
-        return this.leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(Items.APPLE))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
+        return this.leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(Items.GOLDEN_APPLE))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
     }
     @Override
     public void generate() {
@@ -62,7 +59,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.STRIPPED_WILLOW_LOG);
         addDrop(BlockInit.RED_WILLOW_LEAVES, oakLeavesDrops(BlockInit.RED_WILLOW_LEAVES, BlockInit.RED_WILLOW_SAPLING, 0.2f));
         addDrop(BlockInit.ORANGE_WILLOW_LEAVES, oakLeavesDrops(BlockInit.ORANGE_WILLOW_LEAVES, BlockInit.ORANGE_WILLOW_SAPLING, 0.2f));
-        addDrop(BlockInit.YELLOW_WILLOW_LEAVES, oakLeavesDrops(BlockInit.YELLOW_WILLOW_LEAVES, BlockInit.YELLOW_WILLOW_SAPLING, 0.2f));
+        addDrop(BlockInit.YELLOW_WILLOW_LEAVES, yellowWillowLeavesDrops(BlockInit.YELLOW_WILLOW_LEAVES, BlockInit.YELLOW_WILLOW_LEAVES));
         addDrop(BlockInit.RED_WILLOW_SAPLING);
         addDrop(BlockInit.ORANGE_WILLOW_SAPLING);
         addDrop(BlockInit.YELLOW_WILLOW_SAPLING);
