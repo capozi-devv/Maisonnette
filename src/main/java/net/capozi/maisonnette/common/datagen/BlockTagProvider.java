@@ -13,15 +13,21 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(BlockTags.STAIRS)
+                .add(BlockInit.WILLOW_STAIRS)
+                .add(BlockInit.CHARRED_STAIRS)
                 .add(BlockInit.TUFF_STAIRS)
                 .add(BlockInit.CALCITE_STAIRS);
         getOrCreateTagBuilder(BlockTags.SLABS)
+                .add(BlockInit.WILLOW_SLAB)
+                .add(BlockInit.CHARRED_SLAB)
                 .add(BlockInit.TUFF_SLAB)
                 .add(BlockInit.CALCITE_SLAB);
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(BlockInit.TUFF_WALL)
                 .add(BlockInit.CALCITE_WALL);
         getOrCreateTagBuilder(BlockTags.BUTTONS)
+                .add(BlockInit.WILLOW_BUTTON)
+                .add(BlockInit.CHARRED_BUTTON)
                 .add(BlockInit.CALCITE_BUTTON)
                 .add(BlockInit.TUFF_BUTTON);
         getOrCreateTagBuilder(BlockTags.SNOW_LAYER_CAN_SURVIVE_ON)

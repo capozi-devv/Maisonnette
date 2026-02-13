@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_charred_planks": {
+    "has_charred_pressure_plate": {
       "conditions": {
         "items": [
           {
             "items": [
-              "maisonnette:charred_planks"
+              "maisonnette:charred_pressure_plate"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "maisonnette:charred_slab"
+        "recipe": "maisonnette:charred_pressure_plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_charred_planks",
+      "has_charred_pressure_plate",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "maisonnette:charred_slab"
+      "maisonnette:charred_pressure_plate"
     ]
   },
   "sends_telemetry_event": false

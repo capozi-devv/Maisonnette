@@ -1,21 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "maisonnette:charred_planks"
-    }
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "tag": "minecraft:wooden_fences"
   },
-  "pattern": [
-    "W#W",
-    "W#W"
-  ],
-  "result": {
-    "count": 3,
-    "item": "maisonnette:charred_fence"
-  },
-  "show_notification": true
+  "result": "maisonnette:charred_fence"
 }

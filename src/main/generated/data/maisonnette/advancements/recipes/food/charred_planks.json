@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oak_planks": {
+    "has_charred_planks": {
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:fence_gates"
+            "items": [
+              "maisonnette:charred_planks"
+            ]
           }
         ]
       },
@@ -13,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "maisonnette:charred_fence_gate"
+        "recipe": "maisonnette:charred_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_oak_planks",
+      "has_charred_planks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "maisonnette:charred_fence_gate"
+      "maisonnette:charred_planks"
     ]
   },
   "sends_telemetry_event": false

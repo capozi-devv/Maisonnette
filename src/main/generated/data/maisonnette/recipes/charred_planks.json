@@ -4,7 +4,7 @@
   "cookingtime": 600,
   "experience": 0.35,
   "ingredient": {
-    "tag": "minecraft:wooden_slabs"
+    "tag": "minecraft:planks"
   },
-  "result": "maisonnette:charred_slab"
+  "result": "maisonnette:charred_planks"
 }

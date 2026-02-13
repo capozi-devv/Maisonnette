@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:charred_button_from_charred_planks"
+        "recipe": "maisonnette:charred_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:charred_button_from_charred_planks"
+      "maisonnette:charred_log"
     ]
   },
   "sends_telemetry_event": false

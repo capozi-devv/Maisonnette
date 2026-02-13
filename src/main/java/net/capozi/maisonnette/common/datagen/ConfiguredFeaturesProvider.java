@@ -35,10 +35,10 @@ public class ConfiguredFeaturesProvider {
         return (new TreeFeatureConfig.Builder(BlockStateProvider.of(BlockInit.WILLOW_LOG), new DarkOakTrunkPlacer(7, 5, 1), BlockStateProvider.of(BlockInit.RED_WILLOW_LEAVES), new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.5F, 0.5F), new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
     }
     private static TreeFeatureConfig.Builder orangeWillow() {
-        return (new TreeFeatureConfig.Builder(BlockStateProvider.of(BlockInit.WILLOW_LOG), new DarkOakTrunkPlacer(7, 5, 1), BlockStateProvider.of(BlockInit.ORANGE_WILLOW_LEAVES), new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F), new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
+        return (new TreeFeatureConfig.Builder(BlockStateProvider.of(BlockInit.WILLOW_LOG), new DarkOakTrunkPlacer(7, 5, 1), BlockStateProvider.of(BlockInit.ORANGE_WILLOW_LEAVES), new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.5F, 0.5F), new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
     }
     private static TreeFeatureConfig.Builder yellowWillow() {
-        return (new TreeFeatureConfig.Builder(BlockStateProvider.of(BlockInit.WILLOW_LOG), new DarkOakTrunkPlacer(7, 5, 1), BlockStateProvider.of(BlockInit.YELLOW_WILLOW_LEAVES), new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F), new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
+        return (new TreeFeatureConfig.Builder(BlockStateProvider.of(BlockInit.WILLOW_LOG), new DarkOakTrunkPlacer(7, 5, 1), BlockStateProvider.of(BlockInit.YELLOW_WILLOW_LEAVES), new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.5F, 0.5F), new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
     }
     public static void init(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, RED_WILLOW_KEY, Feature.TREE, redWillow().build());

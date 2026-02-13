@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oak_planks": {
+    "has_charred_door": {
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:wooden_doors"
+            "items": [
+              "maisonnette:charred_door"
+            ]
           }
         ]
       },
@@ -20,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_oak_planks",
+      "has_charred_door",
       "has_the_recipe"
     ]
   ],

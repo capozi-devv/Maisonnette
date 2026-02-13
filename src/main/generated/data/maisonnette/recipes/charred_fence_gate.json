@@ -1,20 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "redstone",
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "maisonnette:charred_planks"
-    }
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "tag": "minecraft:fence_gates"
   },
-  "pattern": [
-    "#W#",
-    "#W#"
-  ],
-  "result": {
-    "item": "maisonnette:charred_fence_gate"
-  },
-  "show_notification": true
+  "result": "maisonnette:charred_fence_gate"
 }
