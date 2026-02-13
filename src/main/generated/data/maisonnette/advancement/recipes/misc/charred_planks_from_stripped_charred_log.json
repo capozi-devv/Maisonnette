@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_charred_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "maisonnette:stripped_charred_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "maisonnette:charred_planks_from_stripped_charred_log"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_charred_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "maisonnette:charred_planks_from_stripped_charred_log"
+    ]
+  }
+}

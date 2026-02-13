@@ -1,5 +1,6 @@
 package net.capozi.maisonnette.common.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -69,8 +70,9 @@ public class BulbBlock extends FacingBlock {
     public boolean hasRandomTicks(BlockState state) {
         return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
+
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient) {
             boolean lit = state.get(LIT);
             world.setBlockState(pos, state.with(LIT, !lit), Block.NOTIFY_ALL);
@@ -78,5 +80,10 @@ public class BulbBlock extends FacingBlock {
             return ActionResult.SUCCESS;
         }
         return ActionResult.CONSUME;
+    }
+
+    @Override
+    protected MapCodec<? extends FacingBlock> getCodec() {
+        return null;
     }
 }

@@ -3,6 +3,7 @@
 	"package": "net.capozi.maisonnette.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+      "access.AbstractBlockAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

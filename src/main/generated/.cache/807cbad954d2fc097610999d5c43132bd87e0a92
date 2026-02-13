@@ -1,8 +1,9 @@
-// 1.20.1	2026-02-12T22:17:55.2678859	§dMaisonnette/Tags for minecraft:block
-dcf5f1fbf436993dcd84e219d90bc1bbdea3d300 data\minecraft\tags\blocks\mineable\axe.json
-91eef71584c83d05fbe5a1646b974e944f0b513e data\minecraft\tags\blocks\stairs.json
-4fe2c10a1cddd55b1f301796b5730747e2976f8d data\minecraft\tags\blocks\logs_that_burn.json
-57dab9b589e0e9cc93b355081d32ed9c0cdd42e5 data\minecraft\tags\blocks\buttons.json
-81ceab94dc1ba2a88fb0143605fa0a00fb2ba1a6 data\minecraft\tags\blocks\slabs.json
-9248579be393e812f4a0d82bbf1ef34e3191cba7 data\minecraft\tags\blocks\walls.json
-a2e9a9be1515c89d5b396f150baf11fd4e6b587f data\minecraft\tags\blocks\snow_layer_can_survive_on.json
+// 1.21.1	2026-02-13T15:16:38.0182204	§dMaisonnette/Tags for minecraft:block
+b5bd37f3171da7f3ee861a0f440e492949796968 data\minecraft\tags\block\mineable\axe.json
+d760db3a535264ce9bf9a3c865eac25c45d2de5a data\minecraft\tags\block\logs_that_burn.json
+877fe6aa0dbcba4e50e1f57b95dcc5fa8a38d04a data\minecraft\tags\block\stairs.json
+d760db3a535264ce9bf9a3c865eac25c45d2de5a data\minecraft\tags\block\logs.json
+a251060ef1fcd96bf15d93db4f39432f6f0dd807 data\minecraft\tags\block\slabs.json
+549ea7b3b1ade5f92fbd5438821a651e03118f23 data\minecraft\tags\block\walls.json
+8b779af808d8379f254659312873ec3dafe138f8 data\minecraft\tags\block\snow_layer_can_survive_on.json
+86e499698cefb8d0e39dd41bf0e4a30b28025de5 data\minecraft\tags\block\buttons.json

@@ -1,6 +1,7 @@
 package net.capozi.maisonnette.common.block;
 
 import net.capozi.maisonnette.foundation.BlockInit;
+import net.capozi.maisonnette.mixin.access.AbstractBlockAccessor;
 import net.capozi.maisonnette.foundation.SoundInit;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.advancement.criterion.Criteria;
@@ -63,10 +64,12 @@ public class BookStackBlock extends Block implements Waterloggable {
     public Item asItem() {
         return Items.BOOK;
     }
+
     @Override
-    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+    public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
         return new ItemStack(Items.BOOK);
     }
+
     public boolean canReplace(BlockState state, ItemPlacementContext ctx) {
         return !ctx.shouldCancelInteraction() && ctx.getStack().getItem() == this.asItem() && (Integer)state.get(BOOKS) < 4 || super.canReplace(state, ctx);
     }
@@ -87,7 +90,7 @@ public class BookStackBlock extends Block implements Waterloggable {
             ItemPlacementContext ctx = new ItemPlacementContext(world, player, hand, stack, hit);
             BlockState state = block.getPlacementState(ctx);
             BlockPos pos = ctx.getBlockPos();
-            if (state != null && block.canPlaceAt(state, world, pos) && world.getBlockState(pos).canReplace(ctx)) {
+            if (state != null && ((AbstractBlockAccessor)block).invokeCanPlaceAt(state, world, pos) && world.getBlockState(pos).canReplace(ctx)) {
                 world.setBlockState(pos, state, 11);
                 BlockState placedState = world.getBlockState(pos);
                 if (placedState.isOf(state.getBlock())) {

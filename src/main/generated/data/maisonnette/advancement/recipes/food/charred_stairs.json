@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_charred_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "maisonnette:charred_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "maisonnette:charred_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_charred_stairs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "maisonnette:charred_stairs"
+    ]
+  }
+}

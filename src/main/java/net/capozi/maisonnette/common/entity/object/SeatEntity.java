@@ -2,6 +2,7 @@ package net.capozi.maisonnette.common.entity.object;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.ActionResult;
@@ -14,11 +15,12 @@ public class SeatEntity extends Entity {
         super(type, world);
         this.noClip = true;
     }
+    @Override
+    protected void initDataTracker(DataTracker.Builder builder) {}
     public SeatEntity(EntityType<?> type, World world, BlockPos pos) {
         this(type, world);
         this.setPosition(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
     }
-    @Override protected void initDataTracker() {}
     @Override protected void readCustomDataFromNbt(NbtCompound nbt) {}
     @Override protected void writeCustomDataToNbt(NbtCompound nbt) {}
     @Override

@@ -71,10 +71,10 @@ public class ModelProvider extends FabricModelProvider {
             for (int i = 0; i <= 8; i++) { // change this value to adjust the number of styles
                 for (int rotation = 0; rotation <= 3; rotation++) {
                     String parentModel = "block/template_book_stack_" + height + "_r" + rotation;
-                    Identifier modelId = new Identifier(MOD_ID, "block/book_stack_" + i + "_" + height + "_r" + rotation);
-                    Identifier texture = new Identifier(MOD_ID, "block/book_stack/book_" + i);
+                    Identifier modelId = Identifier.of(MOD_ID, "block/book_stack_" + i + "_" + height + "_r" + rotation);
+                    Identifier texture = Identifier.of(MOD_ID, "block/book_stack/book_" + i);
                     Model model = new Model(
-                            Optional.of(new Identifier(MOD_ID, parentModel)),
+                            Optional.of(Identifier.of(MOD_ID, parentModel)),
                             Optional.empty(),
                             BOOK
                     );

@@ -20,7 +20,7 @@ public class PlacedFeaturesProvider {
     public static final RegistryKey<PlacedFeature> ORANGE_WILLOW_PLACED_KEY = registerKey("orange_willow_placed");
     public static final RegistryKey<PlacedFeature> YELLOW_WILLOW_PLACED_KEY = registerKey("yellow_willow_placed");
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Maisonnette.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(Maisonnette.MOD_ID, name));
     }
     public static void register(Registerable<PlacedFeature> featureRegisterable, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> feature, List<PlacementModifier> modifiers) {
         featureRegisterable.register(key, new PlacedFeature(feature, List.copyOf(modifiers)));

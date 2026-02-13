@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "maisonnette",
+  "ingredients": [
+    {
+      "item": "maisonnette:charred_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "maisonnette:charred_planks"
+  }
+}

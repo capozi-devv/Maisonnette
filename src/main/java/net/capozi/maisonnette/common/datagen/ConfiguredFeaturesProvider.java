@@ -25,7 +25,7 @@ import net.minecraft.world.gen.trunk.*;
 public class ConfiguredFeaturesProvider {
     public static final RegistryEntryList<Block> WILLOW_CAN_GROW = RegistryEntryList.of(Blocks.AIR.getRegistryEntry(), Blocks.ACACIA_LEAVES.getRegistryEntry(), Blocks.AZALEA_LEAVES.getRegistryEntry(), Blocks.BIRCH_LEAVES.getRegistryEntry(), Blocks.CHERRY_LEAVES.getRegistryEntry(), Blocks.FLOWERING_AZALEA_LEAVES.getRegistryEntry(), Blocks.DARK_OAK_LEAVES.getRegistryEntry(), Blocks.JUNGLE_LEAVES.getRegistryEntry(), Blocks.OAK_LEAVES.getRegistryEntry(), Blocks.MANGROVE_LEAVES.getRegistryEntry(), Blocks.SPRUCE_LEAVES.getRegistryEntry());
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(Maisonnette.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(Maisonnette.MOD_ID, name));
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context, RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {

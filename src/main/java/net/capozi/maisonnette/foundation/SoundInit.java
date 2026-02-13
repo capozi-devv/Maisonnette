@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 public class SoundInit {
     public static void init() {}
     private static SoundEvent registerSoundEvent(String name) {
-        Identifier id = new Identifier(Maisonnette.MOD_ID, name);
+        Identifier id = Identifier.of(Maisonnette.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
     public static final SoundEvent BOOK_ADD = registerSoundEvent("book_add");

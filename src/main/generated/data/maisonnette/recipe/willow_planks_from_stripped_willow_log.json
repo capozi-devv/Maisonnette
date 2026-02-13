@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "maisonnette",
+  "ingredients": [
+    {
+      "item": "maisonnette:stripped_willow_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "maisonnette:willow_planks"
+  }
+}

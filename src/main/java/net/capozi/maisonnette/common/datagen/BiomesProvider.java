@@ -1,7 +1,6 @@
 package net.capozi.maisonnette.common.datagen;
 
 import net.capozi.maisonnette.Maisonnette;
-import net.minecraft.client.sound.MusicType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -11,6 +10,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.sound.MusicSound;
+import net.minecraft.sound.MusicType;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
@@ -137,8 +137,8 @@ public class BiomesProvider {
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundEvents.MUSIC_OVERWORLD_FOREST.value()))).build())
                 .build();
     }
-    public static final RegistryKey<Biome> RED_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, new Identifier(Maisonnette.MOD_ID, "red_willow_forest"));
-    public static final RegistryKey<Biome> ORANGE_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, new Identifier(Maisonnette.MOD_ID, "orange_willow_forest"));
-    public static final RegistryKey<Biome> YELLOW_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, new Identifier(Maisonnette.MOD_ID, "yellow_willow_forest"));
+    public static final RegistryKey<Biome> RED_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Maisonnette.MOD_ID, "red_willow_forest"));
+    public static final RegistryKey<Biome> ORANGE_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Maisonnette.MOD_ID, "orange_willow_forest"));
+    public static final RegistryKey<Biome> YELLOW_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Maisonnette.MOD_ID, "yellow_willow_forest"));
 
 }

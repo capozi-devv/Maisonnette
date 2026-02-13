@@ -23,8 +23,9 @@ public class SeatBlock extends Block {
         return var10000;
     }
     public SeatBlock(Settings settings) { super(settings); }
+
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient) {
             List<SeatEntity> nearbySeats = world.getEntitiesByClass(SeatEntity.class,
                     new Box(pos), entity -> true);
@@ -36,8 +37,9 @@ public class SeatBlock extends Block {
         }
         return ActionResult.SUCCESS;
     }
+
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         List<SeatEntity> nearbySeats = world.getEntitiesByClass(SeatEntity.class, new Box(pos), entity -> true);
         if (!nearbySeats.isEmpty()) {
             for (SeatEntity seat : nearbySeats) {
@@ -45,5 +47,6 @@ public class SeatBlock extends Block {
             }
         }
         super.onBreak(world, pos, state, player);
+        return Blocks.AIR.getDefaultState();
     }
 }

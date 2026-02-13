@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ItemGroups {
     public static final ItemGroup MAISONNETTE_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(Maisonnette.MOD_ID, "maisonnette"),
+            Identifier.of(Maisonnette.MOD_ID, "maisonnette"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maisonnette"))
                     .icon(() -> new ItemStack(BlockInit.COPPER_TORCHBULB)).entries((displayContext, entries) -> {
                         entries.add(BlockInit.CALCITE_STAIRS);

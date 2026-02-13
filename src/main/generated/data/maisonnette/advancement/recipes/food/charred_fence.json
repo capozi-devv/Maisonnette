@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_charred_fence": {
+      "conditions": {
+        "items": [
+          {
+            "items": "maisonnette:charred_fence"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "maisonnette:charred_fence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_charred_fence"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "maisonnette:charred_fence"
+    ]
+  }
+}
