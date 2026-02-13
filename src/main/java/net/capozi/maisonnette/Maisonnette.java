@@ -1,6 +1,5 @@
 package net.capozi.maisonnette;
 
-import net.capozi.maisonnette.server.worldgen.ExpandedJigsawStructure;
 import net.capozi.maisonnette.foundation.*;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -17,8 +16,7 @@ import net.fabricmc.api.ModInitializer;
 public class Maisonnette implements ModInitializer {
 	public static final String MOD_ID = "maisonnette";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    public static Identifier identifier(String name) { return new Identifier(Maisonnette.MOD_ID, name); }
-    public static final StructureType<ExpandedJigsawStructure> EXPANDED_JIGSAW = Registry.register(Registries.STRUCTURE_TYPE, new Identifier(MOD_ID, "expanded_jigsaw"), () -> ExpandedJigsawStructure.CODEC);
+    public static Identifier identifier(String name) { return Identifier.of(Maisonnette.MOD_ID, name); }
 	@Override
     public void onInitialize() {
 		BlockInit.init();

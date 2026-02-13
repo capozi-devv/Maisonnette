@@ -1,7 +1,7 @@
 package net.capozi.maisonnette.server.world.generator;
 
 import net.capozi.maisonnette.common.datagen.ConfiguredFeaturesProvider;
-import net.minecraft.block.sapling.SaplingGenerator;
+import net.minecraft.block.SaplingGenerator;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
