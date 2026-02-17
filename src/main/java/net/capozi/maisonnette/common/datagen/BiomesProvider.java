@@ -140,5 +140,4 @@ public class BiomesProvider {
     public static final RegistryKey<Biome> RED_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Maisonnette.MOD_ID, "red_willow_forest"));
     public static final RegistryKey<Biome> ORANGE_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Maisonnette.MOD_ID, "orange_willow_forest"));
     public static final RegistryKey<Biome> YELLOW_WILLOW_FOREST = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Maisonnette.MOD_ID, "yellow_willow_forest"));
-
 }
