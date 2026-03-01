@@ -24,10 +24,7 @@
 		],
 		"fabric-datagen": [
 			"net.capozi.maisonnette.MaisonnetteDataGenerator"
-		],
-        "terrablender": [
-            "net.capozi.maisonnette.foundation.TerrablenderEntrypoint"
-        ]
+		]
 	},
 	"mixins": [
 		"maisonnette.mixins.json"
@@ -36,9 +33,7 @@
 		"fabricloader": ">=0.16.10",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*",
-        "terrablender": "*",
-        "dotzip": ">=1.1.3.2a-1.20.1"
+		"fabric-api": "*"
 	},
 	"suggests": {
 		"another-mod": "*"

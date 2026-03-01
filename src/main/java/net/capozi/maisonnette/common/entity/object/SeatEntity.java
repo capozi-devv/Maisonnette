@@ -18,6 +18,7 @@ public class SeatEntity extends Entity {
         this(type, world);
         this.setPosition(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
     }
+
     @Override protected void initDataTracker() {}
     @Override protected void readCustomDataFromNbt(NbtCompound nbt) {}
     @Override protected void writeCustomDataToNbt(NbtCompound nbt) {}
