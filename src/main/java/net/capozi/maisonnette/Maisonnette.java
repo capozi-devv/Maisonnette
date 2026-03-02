@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.source.BiomeSources;
 import net.minecraft.world.gen.structure.StructureType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,5 +53,6 @@ public class Maisonnette implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.RED_WILLOW_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.ORANGE_WILLOW_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.YELLOW_WILLOW_LEAVES, 30, 60);
+        
 	}
 }
