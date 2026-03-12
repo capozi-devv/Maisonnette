@@ -24,7 +24,10 @@
 		],
 		"fabric-datagen": [
 			"net.capozi.maisonnette.MaisonnetteDataGenerator"
-		]
+		],
+        "terrablender": [
+            "net.capozi.maisonnette.MaisonnetteTerrablenderEntrypoint"
+        ]
 	},
 	"mixins": [
 		"maisonnette.mixins.json"
