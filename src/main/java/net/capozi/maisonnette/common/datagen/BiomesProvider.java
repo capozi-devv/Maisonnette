@@ -68,6 +68,7 @@ public class BiomesProvider {
                         .waterFogColor(6141935)
                         .skyColor(getSkyColor(0.7f))
                         .grassColor(8828803)
+                        .grassColorModifier(BiomeEffects.GrassColorModifier.DARK_FOREST)
                         .foliageColor(8828803)
                         .fogColor(12638463)
                         .moodSound(BiomeMoodSound.CAVE)
