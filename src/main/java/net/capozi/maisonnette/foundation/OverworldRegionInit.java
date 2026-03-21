@@ -8,8 +8,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.biome.source.util.MultiNoiseUtil;
+import terrablender.api.ParameterUtils;
 import terrablender.api.Region;
 import terrablender.api.RegionType;
+import terrablender.api.VanillaParameterOverlayBuilder;
 
 import java.util.function.Consumer;
 
@@ -20,9 +22,16 @@ public class OverworldRegionInit {
         }
         @Override
         public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
-            this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-                modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.TAIGA, BiomesProvider.YELLOW_WILLOW_FOREST);
-            });
+            VanillaParameterOverlayBuilder builder = new VanillaParameterOverlayBuilder();
+            new ParameterUtils.ParameterPointListBuilder()
+                    .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.ICY, ParameterUtils.Temperature.FROZEN))
+                    .humidity(ParameterUtils.Humidity.DRY)
+                    .continentalness(ParameterUtils.Continentalness.FAR_INLAND)
+                    .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1)
+                    .depth(ParameterUtils.Depth.SURFACE, ParameterUtils.Depth.SURFACE)
+                    .weirdness(ParameterUtils.Weirdness.MID_SLICE_NORMAL_ASCENDING, ParameterUtils.Weirdness.HIGH_SLICE_NORMAL_ASCENDING)
+                    .build().forEach(point -> builder.add(point, BiomesProvider.YELLOW_WILLOW_FOREST));
+            builder.build().forEach(mapper);
         }
     }
     public static class OrangeWillow extends Region {
