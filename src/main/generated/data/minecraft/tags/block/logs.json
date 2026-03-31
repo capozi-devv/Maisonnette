@@ -1,5 +1,9 @@
 {
   "values": [
+    "maisonnette:charred_log",
+    "maisonnette:stripped_charred_log",
+    "maisonnette:charred_wood",
+    "maisonnette:stripped_charred_wood",
     "maisonnette:willow_log",
     "maisonnette:stripped_willow_log",
     "maisonnette:willow_wood",

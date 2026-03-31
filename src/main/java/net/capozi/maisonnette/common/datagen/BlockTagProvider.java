@@ -56,6 +56,10 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.WILLOW_WOOD)
                 .add(BlockInit.STRIPPED_WILLOW_WOOD);
         getOrCreateTagBuilder(BlockTags.LOGS)
+                .add(BlockInit.CHARRED_LOG)
+                .add(BlockInit.STRIPPED_CHARRED_LOG)
+                .add(BlockInit.CHARRED_WOOD)
+                .add(BlockInit.STRIPPED_CHARRED_WOOD)
                 .add(BlockInit.WILLOW_LOG)
                 .add(BlockInit.STRIPPED_WILLOW_LOG)
                 .add(BlockInit.WILLOW_WOOD)
