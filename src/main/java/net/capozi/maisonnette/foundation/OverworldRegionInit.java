@@ -19,16 +19,9 @@ public class OverworldRegionInit {
         }
         @Override
         public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
-            VanillaParameterOverlayBuilder builder = new VanillaParameterOverlayBuilder();
-            new ParameterUtils.ParameterPointListBuilder()
-                    .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.ICY, ParameterUtils.Temperature.FROZEN))
-                    .humidity(ParameterUtils.Humidity.DRY)
-                    .continentalness(ParameterUtils.Continentalness.FAR_INLAND)
-                    .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1)
-                    .depth(ParameterUtils.Depth.SURFACE, ParameterUtils.Depth.SURFACE)
-                    .weirdness(ParameterUtils.Weirdness.MID_SLICE_NORMAL_ASCENDING, ParameterUtils.Weirdness.HIGH_SLICE_NORMAL_ASCENDING)
-                    .build().forEach(point -> builder.add(point, BiomesProvider.YELLOW_WILLOW_FOREST));
-            builder.build().forEach(mapper);
+            this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
+                builder.replaceBiome(BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomesProvider.YELLOW_WILLOW_FOREST);
+            });
         }
     }
     public static class OrangeWillow extends Region {
