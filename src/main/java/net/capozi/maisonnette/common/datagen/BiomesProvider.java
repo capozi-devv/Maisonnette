@@ -18,6 +18,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.biome.source.util.MultiNoiseUtil;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.carver.ConfiguredCarver;
 import net.minecraft.world.gen.feature.*;
@@ -67,6 +68,7 @@ public class BiomesProvider {
                         .waterFogColor(6141935)
                         .skyColor(getSkyColor(0.7f))
                         .grassColor(8828803)
+                        .grassColorModifier(BiomeEffects.GrassColorModifier.DARK_FOREST)
                         .foliageColor(8828803)
                         .fogColor(12638463)
                         .moodSound(BiomeMoodSound.CAVE)

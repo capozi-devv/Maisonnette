@@ -51,10 +51,11 @@ public class BookStackBlock extends Block implements Waterloggable {
     }
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         VoxelShape var10000;
-        switch ((Integer)state.get(BOOKS)) {
+        switch (state.get(BOOKS)) {
             case 1 -> var10000 = SHAPE_0;
             case 2 -> var10000 = SHAPE_1;
             case 3 -> var10000 = SHAPE_2;
+            case 4 -> var10000 = SHAPE_3;
             default -> var10000 = SHAPE_3;
         }
         return var10000;

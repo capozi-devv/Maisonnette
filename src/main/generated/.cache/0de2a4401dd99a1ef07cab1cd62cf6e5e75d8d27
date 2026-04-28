@@ -1,8 +1,8 @@
-// 1.20.1	2026-02-12T22:17:55.2658853	§dMaisonnette/WorldGen
+// 1.20.1	2026-03-14T15:00:29.0688502	§dMaisonnette/WorldGen
 2d0530b0afac6eeeb47d1fca88fd239a5e29b100 data\maisonnette\worldgen\configured_feature\red_willow.json
 90a09a45cd1e6a0188c023464e5d14ce6165ea8e data\maisonnette\worldgen\configured_feature\orange_willow.json
 9ee5644ab56bf48bb99fd5d92a0f7a06cffff529 data\maisonnette\worldgen\placed_feature\orange_willow_placed.json
-55f0f272a84b2b1e50b10b966385fc1720421eb9 data\maisonnette\worldgen\biome\red_willow_forest.json
+2013e9cfe61ec35fbaf6ac4ff88302f5000e467c data\maisonnette\worldgen\biome\red_willow_forest.json
 7795ef6616c1c5b22b42c830e8a89f35e08980cc data\maisonnette\worldgen\biome\orange_willow_forest.json
 71ebd588a511a4695a342e44db0395b215172ed9 data\maisonnette\worldgen\placed_feature\yellow_willow_placed.json
 16939cb1916ea77d8e99e227753bece517bf6226 data\maisonnette\worldgen\configured_feature\yellow_willow.json

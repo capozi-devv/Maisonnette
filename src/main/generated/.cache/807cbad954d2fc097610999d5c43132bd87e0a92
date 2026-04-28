@@ -1,6 +1,6 @@
-// 1.20.1	2026-02-12T22:17:55.2678859	§dMaisonnette/Tags for minecraft:block
-dcf5f1fbf436993dcd84e219d90bc1bbdea3d300 data\minecraft\tags\blocks\mineable\axe.json
+// 1.20.1	2026-03-14T15:00:29.0708506	§dMaisonnette/Tags for minecraft:block
 91eef71584c83d05fbe5a1646b974e944f0b513e data\minecraft\tags\blocks\stairs.json
+dcf5f1fbf436993dcd84e219d90bc1bbdea3d300 data\minecraft\tags\blocks\mineable\axe.json
 4fe2c10a1cddd55b1f301796b5730747e2976f8d data\minecraft\tags\blocks\logs_that_burn.json
 57dab9b589e0e9cc93b355081d32ed9c0cdd42e5 data\minecraft\tags\blocks\buttons.json
 81ceab94dc1ba2a88fb0143605fa0a00fb2ba1a6 data\minecraft\tags\blocks\slabs.json
