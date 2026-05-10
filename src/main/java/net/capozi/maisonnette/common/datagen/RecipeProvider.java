@@ -1,5 +1,6 @@
 package net.capozi.maisonnette.common.datagen;
 
+import devv.capozi.zip.common.datagen.RecipeUtils;
 import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -57,6 +58,7 @@ public class RecipeProvider extends FabricRecipeProvider {
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_STAIRS), RecipeCategory.FOOD, BlockInit.CHARRED_STAIRS, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_STAIRS), conditionsFromItem(BlockInit.CHARRED_STAIRS)).offerTo(exporter);
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_FENCES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_FENCE), conditionsFromItem(BlockInit.CHARRED_FENCE)).offerTo(exporter);
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.FENCE_GATES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE_GATE, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_FENCE_GATE), conditionsFromItem(BlockInit.CHARRED_FENCE_GATE)).offerTo(exporter);
+        RecipeUtils.offerWoodSet(exporter, Maisonnette.MOD_ID, willowIngredient, BlockInit.WILLOW_PLANKS, (SlabBlock)BlockInit.WILLOW_SLAB, (PressurePlateBlock)BlockInit.WILLOW_PRESSURE_PLATE, (ButtonBlock)BlockInit.WILLOW_BUTTON, (DoorBlock)BlockInit.WILLOW_DOOR, (FenceBlock)BlockInit.WILLOW_FENCE, (FenceGateBlock)BlockInit.WILLOW_FENCE_GATE, (StairsBlock)BlockInit.WILLOW_STAIRS, (TrapdoorBlock)BlockInit.WILLOW_TRAPDOOR);
         createDoorRecipe(BlockInit.WILLOW_DOOR, willowIngredient);
         createFenceRecipe(BlockInit.WILLOW_FENCE, willowIngredient);
         createFenceGateRecipe(BlockInit.WILLOW_FENCE_GATE, willowIngredient);
