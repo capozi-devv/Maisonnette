@@ -64,5 +64,30 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.STRIPPED_WILLOW_LOG)
                 .add(BlockInit.WILLOW_WOOD)
                 .add(BlockInit.STRIPPED_WILLOW_WOOD);
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(BlockInit.ORANGE_WILLOW_LEAVES)
+                .add(BlockInit.RED_WILLOW_LEAVES)
+                .add(BlockInit.YELLOW_WILLOW_LEAVES);
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(BlockInit.CHARRED_FENCE)
+                .add(BlockInit.WILLOW_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(BlockInit.CHARRED_FENCE_GATE)
+                .add(BlockInit.WILLOW_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.TRAPDOORS)
+                .add(BlockInit.CHARRED_TRAPDOOR)
+                .add(BlockInit.WILLOW_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
+                .add(BlockInit.WILLOW_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.DOORS)
+                .add(BlockInit.CHARRED_DOOR)
+                .add(BlockInit.WILLOW_DOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+                .add(BlockInit.WILLOW_DOOR);
+        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
+                .add(BlockInit.CHARRED_PRESSURE_PLATE)
+                .add(BlockInit.WILLOW_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(BlockInit.WILLOW_PRESSURE_PLATE);
     }
 }

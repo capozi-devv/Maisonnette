@@ -10,8 +10,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ItemGroups {
-    public static final ItemGroup MAISONNETTE_GROUP = Registry.register(Registries.ITEM_GROUP,
+public interface ItemGroups {
+    ItemGroup MAISONNETTE_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Maisonnette.MOD_ID, "maisonnette"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maisonnette"))
                     .icon(() -> new ItemStack(BlockInit.COPPER_TORCHBULB)).entries((displayContext, entries) -> {
@@ -81,5 +81,5 @@ public class ItemGroups {
                         entries.add(BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
                     }).build());
-    public static void init() {}
+    static void init() {}
 }

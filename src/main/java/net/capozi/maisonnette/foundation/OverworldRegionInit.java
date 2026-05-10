@@ -12,8 +12,8 @@ import terrablender.api.*;
 
 import java.util.function.Consumer;
 
-public class OverworldRegionInit {
-    public static class YellowWillow extends Region {
+public interface OverworldRegionInit {
+    class YellowWillow extends Region {
         public YellowWillow(Identifier name, RegionType type, int weight) {
             super(name, type, weight);
         }
@@ -24,7 +24,7 @@ public class OverworldRegionInit {
             });
         }
     }
-    public static class OrangeWillow extends Region {
+    class OrangeWillow extends Region {
         public OrangeWillow(Identifier name, RegionType type, int weight) {
             super(name, type, weight);
         }
@@ -35,7 +35,7 @@ public class OverworldRegionInit {
             });
         }
     }
-    public static class RedWillow extends Region {
+    class RedWillow extends Region {
         public RedWillow(Identifier name, RegionType type, int weight) {
             super(name, type, weight);
         }
