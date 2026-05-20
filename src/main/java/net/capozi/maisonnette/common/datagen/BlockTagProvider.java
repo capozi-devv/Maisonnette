@@ -121,5 +121,9 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.WILLOW_PRESSURE_PLATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(BlockInit.WILLOW_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
+                .add(BlockInit.BOOK_STACK);
+        getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_TRANSMITTER)
+                .add(BlockInit.BOOK_STACK);
     }
 }
