@@ -68,7 +68,7 @@ public class ModelProvider extends FabricModelProvider {
         MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(BlockInit.BOOK_STACK);
         for (int height = 0; height <= 3; height++) {
             ArrayList<Identifier> models = new ArrayList<>();
-            for (int i = 0; i <= 7; i++) { // change this value to adjust the number of styles
+            for (int i = 0; i <= 7; i++) {
                 for (int rotation = 0; rotation <= 3; rotation++) {
                     String parentModel = "block/template_book_stack_" + height + "_r" + rotation;
                     Identifier modelId = Identifier.of(MOD_ID, "block/book_stack_" + i + "_" + height + "_r" + rotation);
@@ -79,9 +79,9 @@ public class ModelProvider extends FabricModelProvider {
                             BOOK
                     );
                     model.upload(
-                            modelId, // output model path
+                            modelId,
                             TextureMap.of(BOOK, texture),
-                            generator.modelCollector // required for writing the file
+                            generator.modelCollector
                     );
                     models.add(modelId);
                 }
