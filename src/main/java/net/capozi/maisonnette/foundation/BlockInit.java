@@ -1,6 +1,6 @@
 package net.capozi.maisonnette.foundation;
 
-import devv.capozi.zip.common.index.Registrar;
+import devv.capozi.zip.common.api.index.Registrar;
 import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.common.block.BookStackBlock;
 import net.capozi.maisonnette.common.block.BulbBlock;
@@ -30,8 +30,8 @@ public interface BlockInit {
     }
     BlockSetType WILLOW_SET_TYPE = new BlockSetType("willow");
     WoodType WILLOW_WOOD_TYPE = new WoodType("willow", WILLOW_SET_TYPE);
-    Registrar<Block> blockRegistrar = new Registrar<>(Maisonnette.MOD_ID, Registries.BLOCK);
-    Registrar<Item> blockItemRegistrar = new Registrar<>(Maisonnette.MOD_ID, Registries.ITEM);
+    Registrar<Block> blockRegistrar = new Registrar<>((identifier, block) -> Registry.register(Registries.BLOCK, identifier, block));
+    Registrar<Item> blockItemRegistrar = new Registrar<>((identifier, block) -> Registry.register(Registries.ITEM, identifier, block));
     Block MOSAIC = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "mosaic_tiles"), new MosaicBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
     Block BOOK_STACK = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "book_stack"), new BookStackBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO).sounds(SoundInit.BOOK_STACK_SOUNDS).nonOpaque().offset(OffsetType.NONE).burnable()));
     Block CALCITE_STAIRS = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "calcite_stairs"), new StairsBlock(Blocks.CALCITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRANITE_STAIRS)));

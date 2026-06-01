@@ -81,7 +81,8 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.GREEN_SEAT)
                 .add(BlockInit.RED_SEAT)
                 .add(BlockInit.GREEN_SEAT)
-                .add(BlockInit.MAGENTA_SEAT);
+                .add(BlockInit.MAGENTA_SEAT)
+                .add(BlockInit.BOOK_STACK);
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(BlockInit.WILLOW_LOG)
                 .add(BlockInit.STRIPPED_WILLOW_LOG)
