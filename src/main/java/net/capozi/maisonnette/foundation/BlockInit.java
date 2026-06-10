@@ -11,6 +11,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.AbstractBlock.OffsetType;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -98,6 +100,10 @@ public interface BlockInit {
     Block CHARRED_DOOR = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_door"), new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE));
     Block CHARRED_TRAPDOOR = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_trapdoor"), new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE));
     Block COLOSSAL_HIBISCUS = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus"), new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.TWISTING_VINES), Direction.UP, true));
+    Block COLOSSAL_HIBISCUS_STEM = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus_stem"), new ColossalHibiscusBlock.ColossalHibiscusStemBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES_PLANT), Direction.UP, true, 0.5f));
+    Block COLOSSAL_HIBISCUS_BLOOMLING = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus_bloomling"), new SaplingBlock(new RedWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING))); //placeholder
+    Block CARNATION = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "carnation"), new FlowerBlock(StatusEffects.HEALTH_BOOST, 30, FabricBlockSettings.copyOf(Blocks.POPPY)));
+
 
     Item MOSAIC_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "mosaic_tiles"), new MosaicTileItem(MOSAIC, new FabricItemSettings()));
     Item CALCITE_STAIRS_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "calcite_stairs"), new BlockItem(CALCITE_STAIRS, new FabricItemSettings()));
@@ -164,4 +170,7 @@ public interface BlockInit {
     Item CHARRED_PRESSURE_PLATE_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_pressure_plate"), new BlockItem(CHARRED_PRESSURE_PLATE, new FabricItemSettings()));
     Item CHARRED_DOOR_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_door"), new BlockItem(CHARRED_DOOR, new FabricItemSettings()));
     Item CHARRED_TRAPDOOR_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_trapdoor"), new BlockItem(CHARRED_TRAPDOOR, new FabricItemSettings()));
+    Item COLOSSAL_HIBISCUS_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus"), new BlockItem(COLOSSAL_HIBISCUS,  new Item.Settings()));
+    Item CARNATION_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "carnation"), new BlockItem(CARNATION,  new Item.Settings()));
+    Item COLOSSAL_HIBISCUS_BLOOMLING_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus_bloomling"), new BlockItem(COLOSSAL_HIBISCUS_BLOOMLING, new Item.Settings()));
 }

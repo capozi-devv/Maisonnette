@@ -1,8 +1,8 @@
-// 1.20.1	2026-06-01T17:06:14.6375765	§dMaisonnette/Tags for minecraft:item
+// 1.20.1	2026-06-10T14:36:54.4382551	§dMaisonnette/Tags for minecraft:item
 8ddf67e41e2ffc617b05131b4af13b4f19960d31 data\minecraft\tags\items\wooden_doors.json
 5a4a6d3ff42d26872f1614d1ac311fdcbd06fcfb data\minecraft\tags\items\planks.json
-12a9025921d060bb02961e6e859b33f5fe219a3e data\minecraft\tags\items\logs_that_burn.json
 aaf7cfda479b664ac3f767a39cf7aa8c1cc13cb1 data\minecraft\tags\items\logs.json
+12a9025921d060bb02961e6e859b33f5fe219a3e data\minecraft\tags\items\logs_that_burn.json
 67a7e7a8249a9c9da349e34660155a17c0902171 data\minecraft\tags\items\fences.json
 7404df79ba71eb3d77af83f14a88726941a7cd2d data\minecraft\tags\items\wooden_trapdoors.json
 84b6687dce26968a41fcf8e2634c5f3ad069897e data\minecraft\tags\items\doors.json

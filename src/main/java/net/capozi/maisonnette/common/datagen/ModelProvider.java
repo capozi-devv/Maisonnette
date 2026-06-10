@@ -39,6 +39,8 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(BlockInit.RED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.ORANGE_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.YELLOW_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.CARNATION, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         BlockStateModelGenerator.BlockTexturePool willowPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.WILLOW_PLANKS);
         willowPool.button(BlockInit.WILLOW_BUTTON);
         willowPool.pressurePlate(BlockInit.WILLOW_PRESSURE_PLATE);

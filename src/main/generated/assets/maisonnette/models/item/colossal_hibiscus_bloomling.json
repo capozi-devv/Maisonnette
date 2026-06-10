@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "maisonnette:block/colossal_hibiscus_bloomling"
+  }
+}

@@ -18,23 +18,21 @@ public class ColossalHibiscusBlock extends AbstractPlantBlock {
     }
     @Override
     protected AbstractPlantStemBlock getStem() {
-        return null;
+        return (AbstractPlantStemBlock)BlockInit.COLOSSAL_HIBISCUS_STEM;
     }
     public static class ColossalHibiscusStemBlock extends AbstractPlantStemBlock {
-        public ColossalHibiscusStemBlock(Settings settings, Direction growthDirection, VoxelShape outlineShape, boolean tickWater, double growthChance) {
-            super(settings, growthDirection, outlineShape, tickWater, growthChance);
+        public static final VoxelShape SHAPE_2 = createCuboidShape(5f, 0f, 5f, 10f, 16f, 10f);
+        public ColossalHibiscusStemBlock(Settings settings, Direction growthDirection, boolean tickWater, double growthChance) {
+            super(settings, growthDirection, SHAPE_2, tickWater, growthChance);
         }
-
         @Override
         protected int getGrowthLength(Random random) {
             return 0;
         }
-
         @Override
         protected boolean chooseStemState(BlockState state) {
             return false;
         }
-
         @Override
         protected Block getPlant() {
             return BlockInit.COLOSSAL_HIBISCUS;
