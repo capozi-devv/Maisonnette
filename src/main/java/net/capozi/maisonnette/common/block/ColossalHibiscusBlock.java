@@ -10,14 +10,14 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 public class ColossalHibiscusBlock extends AbstractPlantBlock {
-    public static final VoxelShape SHAPE_1 = createCuboidShape(-14F, 8F, -14F, 30F, 9F, 30F);
+    public static final VoxelShape SHAPE_1 = createCuboidShape(-14F, 7F, -14F, 30F, 9F, 30F);
     public static final VoxelShape SHAPE_2 = createCuboidShape(5f, 0f, 5f, 10f, 8f, 10f);
     public ColossalHibiscusBlock(Settings settings, Direction direction, boolean bl) {
         super(settings, direction, VoxelShapes.union(SHAPE_1, SHAPE_2), bl);
     }
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE_1;
+        return createCuboidShape(-14F, 7F, -14F, 30F, 9F, 30F);
     }
 
     @Override
