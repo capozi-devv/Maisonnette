@@ -10,8 +10,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public interface ItemGroups {
-    ItemGroup MAISONNETTE_GROUP = Registry.register(Registries.ITEM_GROUP,
+public class ItemGroups {
+    public static final ItemGroup MAISONNETTE_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Maisonnette.MOD_ID, "maisonnette"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maisonnette"))
                     .icon(() -> new ItemStack(BlockInit.COPPER_TORCHBULB)).entries((displayContext, entries) -> {
@@ -24,6 +24,15 @@ public interface ItemGroups {
                         entries.add(BlockInit.TUFF_WALL);
                         entries.add(BlockInit.TUFF_BUTTON);
                         entries.add(Items.BOOK);
+                        entries.add(BlockInit.HANGING_FLOWER_POT);
+                        entries.add(BlockInit.CARNATION);
+                        entries.add(BlockInit.COLOSSAL_HIBISCUS);
+                        entries.add(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING);
+                        entries.add(BlockInit.BLACK_STARLETTE);
+                        entries.add(BlockInit.ORANGE_STARLETTE);
+                        entries.add(BlockInit.YELLOW_STARLETTE);
+                        entries.add(BlockInit.GREENHOUSE_GLASS);
+                        entries.add(BlockInit.WIRED_GREENHOUSE_GLASS);
                         entries.add(BlockInit.COPPER_TORCHBULB);
                         entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
@@ -81,5 +90,5 @@ public interface ItemGroups {
                         entries.add(BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
                     }).build());
-    static void init() {}
+    public static void init() {}
 }

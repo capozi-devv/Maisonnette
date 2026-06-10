@@ -1,45 +1,45 @@
 {
-	"schemaVersion": 1,
-	"id": "maisonnette",
-	"version": "${version}",
-	"name": "§dMaisonnette",
-	"description": "When Art-Deco meets Academia",
-	"authors": [
-		"capozi.devv",
-		"CosmoLeveling",
-		"KindlingCinder",
-        "Dragnmoth"
-	],
-	"contact": {
-		"sources": "https://github.com/capozi-devv/Maisonnette"
-	},
-	"license": "MIT",
-	"icon": "assets/maisonnette/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"net.capozi.maisonnette.Maisonnette"
-		],
-		"client": [
-			"net.capozi.maisonnette.MaisonnetteClient"
-		],
-		"fabric-datagen": [
-			"net.capozi.maisonnette.MaisonnetteDataGenerator"
-		],
-        "terrablender": [
-            "net.capozi.maisonnette.MaisonnetteTerrablenderEntrypoint"
-        ]
-	},
-	"mixins": [
-		"maisonnette.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "maisonnette",
+  "version": "${version}",
+  "name": "\u00a7dMaisonnette",
+  "description": "When Art-Deco meets Academia",
+  "authors": [
+    "capozi.devv",
+    "CosmoLeveling",
+    "KindlingCinder",
+    "Dragnmoth"
+  ],
+  "contact": {
+    "sources": "https://github.com/capozi-devv/Maisonnette"
+  },
+  "license": "MIT",
+  "icon": "assets/maisonnette/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.capozi.maisonnette.Maisonnette"
+    ],
+    "client": [
+      "net.capozi.maisonnette.MaisonnetteClient"
+    ],
+    "fabric-datagen": [
+      "net.capozi.maisonnette.MaisonnetteDataGenerator"
+    ],
+    "terrablender": [
+      "net.capozi.maisonnette.MaisonnetteTerrablenderEntrypoint"
+    ]
+  },
+  "mixins": [
+    "maisonnette.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }

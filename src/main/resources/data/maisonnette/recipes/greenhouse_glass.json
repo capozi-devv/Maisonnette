@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    " D ",
+    "DGD",
+    " D "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:white_dye"
+    },
+    "G": {
+      "tag": "maisonnette:glass_blocks"
+    }
+  },
+  "result": {
+    "item": "maisonnette:greenhouse_glass",
+    "count": 1
+  }
+}

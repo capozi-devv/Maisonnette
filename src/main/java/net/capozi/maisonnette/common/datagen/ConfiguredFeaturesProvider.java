@@ -13,9 +13,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
+import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
@@ -40,12 +44,30 @@ public class ConfiguredFeaturesProvider {
     private static TreeFeatureConfig.Builder yellowWillow() {
         return (new TreeFeatureConfig.Builder(BlockStateProvider.of(BlockInit.WILLOW_LOG), new DarkOakTrunkPlacer(7, 5, 1), BlockStateProvider.of(BlockInit.YELLOW_WILLOW_LEAVES), new CherryFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(0), ConstantIntProvider.create(5), 0.25F, 0.5F, 0.5F, 0.5F), new TwoLayersFeatureSize(1, 0, 2))).ignoreVines();
     }
+    private static RandomPatchFeatureConfig flowerPatch(Block block, int tries) {
+        return ConfiguredFeatures.createRandomPatchFeatureConfig(
+                tries,
+                PlacedFeatures.createEntry(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(BlockStateProvider.of(block))
+                )
+        );
+    }
+
     public static void init(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, RED_WILLOW_KEY, Feature.TREE, redWillow().build());
         register(context, ORANGE_WILLOW_KEY, Feature.TREE, orangeWillow().build());
         register(context, YELLOW_WILLOW_KEY, Feature.TREE, yellowWillow().build());
+        register(context, CARNATION_PATCH_KEY, Feature.FLOWER, flowerPatch(BlockInit.CARNATION, 5));
+        register(context, BLACK_STARLETTE_PATCH_KEY, Feature.FLOWER, flowerPatch(BlockInit.BLACK_STARLETTE, 9));
+        register(context, ORANGE_STARLETTE_PATCH_KEY, Feature.FLOWER, flowerPatch(BlockInit.ORANGE_STARLETTE, 9));
+        register(context, YELLOW_STARLETTE_PATCH_KEY, Feature.FLOWER, flowerPatch(BlockInit.YELLOW_STARLETTE, 9));
     }
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_WILLOW_KEY = registerKey("red_willow");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_WILLOW_KEY = registerKey("orange_willow");
     public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_WILLOW_KEY = registerKey("yellow_willow");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CARNATION_PATCH_KEY = registerKey("carnation_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLACK_STARLETTE_PATCH_KEY = registerKey("black_starlette_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_STARLETTE_PATCH_KEY = registerKey("orange_starlette_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_STARLETTE_PATCH_KEY = registerKey("yellow_starlette_patch");
 }

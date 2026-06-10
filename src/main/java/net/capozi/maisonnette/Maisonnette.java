@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.biome.source.BiomeSources;
 import net.minecraft.world.gen.structure.StructureType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,9 +22,11 @@ public class Maisonnette implements ModInitializer {
 	@Override
     public void onInitialize() {
 		BlockInit.init();
+        BlockEntityInit.init();
 		EntityInit.init();
 		ItemGroups.init();
 		SoundInit.init();
+		WorldGenerationInit.init();
 		BookStackBlock.registerBookUseCallback();
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WEATHERED_COPPER_TORCHBULB);

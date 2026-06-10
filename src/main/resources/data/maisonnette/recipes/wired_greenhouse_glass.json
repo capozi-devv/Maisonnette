@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "decorations",
+  "pattern": [
+    " N ",
+    "NGN",
+    " N "
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "G": {
+      "item": "maisonnette:greenhouse_glass"
+    }
+  },
+  "result": {
+    "item": "maisonnette:wired_greenhouse_glass",
+    "count": 1
+  }
+}

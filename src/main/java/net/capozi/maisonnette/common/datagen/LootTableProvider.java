@@ -4,7 +4,6 @@ import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
@@ -33,10 +32,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.EXPOSED_COPPER_TORCHBULB);
         addDrop(BlockInit.WAXED_COPPER_TORCHBULB);
         addDrop(BlockInit.OXIDIZED_COPPER_TORCHBULB);
-        addDrop(BlockInit.WAXED_COPPER_TORCHBULB);
         addDrop(BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
-        addDrop(BlockInit.WAXED_COPPER_TORCHBULB);
-        addDrop(BlockInit.OXIDIZED_COPPER_TORCHBULB);
         addDrop(BlockInit.BLACK_SEAT);
         addDrop(BlockInit.BLUE_SEAT);
         addDrop(BlockInit.BROWN_SEAT);
@@ -84,6 +80,22 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.CHARRED_PLANKS);
         addDrop(BlockInit.STRIPPED_CHARRED_WOOD);
         addDrop(BlockInit.STRIPPED_CHARRED_LOG);
+        addDrop(BlockInit.CARNATION);
+        addDrop(BlockInit.COLOSSAL_HIBISCUS);
+        addDrop(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING);
+        addDrop(BlockInit.BLACK_STARLETTE);
+        addDrop(BlockInit.ORANGE_STARLETTE);
+        addDrop(BlockInit.YELLOW_STARLETTE);
+        addDrop(BlockInit.POTTED_BLACK_STARLETTE, pottedPlantDrops(BlockInit.POTTED_BLACK_STARLETTE));
+        addDrop(BlockInit.POTTED_ORANGE_STARLETTE, pottedPlantDrops(BlockInit.POTTED_ORANGE_STARLETTE));
+        addDrop(BlockInit.POTTED_YELLOW_STARLETTE, pottedPlantDrops(BlockInit.POTTED_YELLOW_STARLETTE));
+        addDrop(BlockInit.POTTED_CARNATION, pottedPlantDrops(BlockInit.POTTED_CARNATION));
+        addDrop(BlockInit.POTTED_COLOSSAL_HIBISCUS_BLOOMLING, pottedPlantDrops(BlockInit.POTTED_COLOSSAL_HIBISCUS_BLOOMLING));
+        addDrop(BlockInit.POTTED_RED_WILLOW_SAPLING, pottedPlantDrops(BlockInit.POTTED_RED_WILLOW_SAPLING));
+        addDrop(BlockInit.POTTED_ORANGE_WILLOW_SAPLING, pottedPlantDrops(BlockInit.POTTED_ORANGE_WILLOW_SAPLING));
+        addDrop(BlockInit.POTTED_YELLOW_WILLOW_SAPLING, pottedPlantDrops(BlockInit.POTTED_YELLOW_WILLOW_SAPLING));
+        addDropWithSilkTouch(BlockInit.GREENHOUSE_GLASS);
+        addDropWithSilkTouch(BlockInit.WIRED_GREENHOUSE_GLASS);
 
     }
 }

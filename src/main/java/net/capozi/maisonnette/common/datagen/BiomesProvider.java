@@ -51,6 +51,7 @@ public class BiomesProvider {
         DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeaturesProvider.RED_WILLOW_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeaturesProvider.BLACK_STARLETTE_PATCH_PLACED_KEY);
         DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
         DefaultBiomeFeatures.addDefaultDisks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultFlowers(biomeBuilder);
@@ -84,6 +85,7 @@ public class BiomesProvider {
         DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeaturesProvider.ORANGE_WILLOW_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeaturesProvider.ORANGE_STARLETTE_PATCH_PLACED_KEY);
         DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
         DefaultBiomeFeatures.addDefaultDisks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultFlowers(biomeBuilder);
@@ -116,6 +118,7 @@ public class BiomesProvider {
         DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeaturesProvider.YELLOW_WILLOW_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, PlacedFeaturesProvider.YELLOW_STARLETTE_PATCH_PLACED_KEY);
         DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
         DefaultBiomeFeatures.addDefaultDisks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultFlowers(biomeBuilder);

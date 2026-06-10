@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "maisonnette:block/colossal_hibiscus" }
+    "": {
+      "model": "maisonnette:block/colossal_hibiscus"
+    }
   }
 }

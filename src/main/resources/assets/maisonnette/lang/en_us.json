@@ -21,6 +21,7 @@
   "block.maisonnette.waxed_exposed_copper_torchbulb": "Waxed Exposed Copper Torchbulb",
   "block.maisonnette.waxed_weathered_copper_torchbulb": "Waxed Weathered Copper Torchbulb",
   "block.maisonnette.waxed_oxidized_copper_torchbulb": "Waxed Oxidized Copper Torchbulb",
+  "block.maisonnette.hanging_flower_pot": "Hanging Flower Pot",
   "block.maisonnette.white_seat": "White Seat",
   "block.maisonnette.orange_seat": "Orange Seat",
   "block.maisonnette.magenta_seat": "Magenta Seat",
@@ -77,5 +78,13 @@
   "block.maisonnette.charred_door": "Charred Door",
   "block.maisonnette.charred_trapdoor": "Charred Trapdoor",
   "block.maisonnette.charred_pressure_plate": "Charred Pressure Plate",
-  "block.maisonnette.charred_button": "Charred Button"
+  "block.maisonnette.charred_button": "Charred Button",
+  "block.maisonnette.carnation": "Carnation",
+  "block.maisonnette.colossal_hibiscus": "Colossal Hibiscus",
+  "block.maisonnette.colossal_hibiscus_bloomling": "Colossal Hibiscus Bloomling",
+  "block.maisonnette.black_starlette": "Black Starlette",
+  "block.maisonnette.orange_starlette": "Orange Starlette",
+  "block.maisonnette.yellow_starlette": "Yellow Starlette",
+  "block.maisonnette.greenhouse_glass": "Greenhouse Glass",
+  "block.maisonnette.wired_greenhouse_glass": "Wired Greenhouse Glass"
 }
