@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -41,6 +40,19 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(BlockInit.YELLOW_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.CARNATION, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.BLACK_STARLETTE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.ORANGE_STARLETTE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.YELLOW_STARLETTE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.BLACK_STARLETTE, BlockInit.POTTED_BLACK_STARLETTE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.ORANGE_STARLETTE, BlockInit.POTTED_ORANGE_STARLETTE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.YELLOW_STARLETTE, BlockInit.POTTED_YELLOW_STARLETTE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.CARNATION, BlockInit.POTTED_CARNATION, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING, BlockInit.POTTED_COLOSSAL_HIBISCUS_BLOOMLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.RED_WILLOW_SAPLING, BlockInit.POTTED_RED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.ORANGE_WILLOW_SAPLING, BlockInit.POTTED_ORANGE_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.YELLOW_WILLOW_SAPLING, BlockInit.POTTED_YELLOW_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.WIRED_GREENHOUSE_GLASS);
         BlockStateModelGenerator.BlockTexturePool willowPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.WILLOW_PLANKS);
         willowPool.button(BlockInit.WILLOW_BUTTON);
         willowPool.pressurePlate(BlockInit.WILLOW_PRESSURE_PLATE);

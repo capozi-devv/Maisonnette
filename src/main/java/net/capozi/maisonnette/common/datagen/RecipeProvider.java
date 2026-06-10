@@ -13,15 +13,18 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
 
 public class RecipeProvider extends FabricRecipeProvider {
+    private static final TagKey<Item> GLASS_BLOCKS = TagKey.of(RegistryKeys.ITEM, new Identifier(Maisonnette.MOD_ID, "glass_blocks"));
     public RecipeProvider(FabricDataOutput dataOutput) { super(dataOutput); }
-    private Ingredient willowIngredient = Ingredient.ofItems(BlockInit.WILLOW_PLANKS);
-    private Ingredient charredIngredient = Ingredient.ofItems(BlockInit.CHARRED_PLANKS);
+    private final Ingredient willowIngredient = Ingredient.ofItems(BlockInit.WILLOW_PLANKS);
+    private final Ingredient charredIngredient = Ingredient.ofItems(BlockInit.CHARRED_PLANKS);
     public static void offerWoodSet(Consumer<RecipeJsonProvider> consumer, String modid, Ingredient woodIngredient, Block planks, SlabBlock slab, PressurePlateBlock pressurePlateBlock, ButtonBlock buttonBlock, DoorBlock doorBlock, FenceBlock fenceBlock, FenceGateBlock fenceGateBlock, StairsBlock stairsBlock, TrapdoorBlock trapdoorBlock) {
         offerSlabRecipe(consumer, RecipeCategory.DECORATIONS, slab, planks);
         offerPressurePlateRecipe(consumer, pressurePlateBlock, planks);
@@ -34,6 +37,22 @@ public class RecipeProvider extends FabricRecipeProvider {
     }
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.GREENHOUSE_GLASS, 1)
+                .pattern(" D ")
+                .pattern("DGD")
+                .pattern(" D ")
+                .input('D', Items.WHITE_DYE)
+                .input('G', GLASS_BLOCKS)
+                .criterion(hasItem(Items.GLASS), conditionsFromTag(GLASS_BLOCKS))
+                .offerTo(exporter, new Identifier(Maisonnette.MOD_ID, "greenhouse_glass"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.WIRED_GREENHOUSE_GLASS, 1)
+                .pattern(" N ")
+                .pattern("NGN")
+                .pattern(" N ")
+                .input('N', Items.IRON_NUGGET)
+                .input('G', BlockInit.GREENHOUSE_GLASS)
+                .criterion(hasItem(BlockInit.GREENHOUSE_GLASS), conditionsFromItem(BlockInit.GREENHOUSE_GLASS))
+                .offerTo(exporter, new Identifier(Maisonnette.MOD_ID, "wired_greenhouse_glass"));
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_SLAB, Blocks.CALCITE, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_STAIRS, Blocks.CALCITE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.DECORATIONS, BlockInit.CALCITE_WALL, Blocks.CALCITE, 1);
@@ -56,7 +75,10 @@ public class RecipeProvider extends FabricRecipeProvider {
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_STAIRS), RecipeCategory.FOOD, BlockInit.CHARRED_STAIRS, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_STAIRS), conditionsFromItem(BlockInit.CHARRED_STAIRS)).offerTo(exporter);
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.WOODEN_FENCES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_FENCE), conditionsFromItem(BlockInit.CHARRED_FENCE)).offerTo(exporter);
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.fromTag(ItemTags.FENCE_GATES), RecipeCategory.FOOD, BlockInit.CHARRED_FENCE_GATE, 0.35f, 600).criterion(hasItem(BlockInit.CHARRED_FENCE_GATE), conditionsFromItem(BlockInit.CHARRED_FENCE_GATE)).offerTo(exporter);
-        RecipeUtils.offerWoodSet(exporter, Maisonnette.MOD_ID, willowIngredient, BlockInit.WILLOW_PLANKS, (SlabBlock)BlockInit.WILLOW_SLAB, (PressurePlateBlock)BlockInit.WILLOW_PRESSURE_PLATE, (ButtonBlock)BlockInit.WILLOW_BUTTON, (DoorBlock)BlockInit.WILLOW_DOOR, (FenceBlock)BlockInit.WILLOW_FENCE, (FenceGateBlock)BlockInit.WILLOW_FENCE_GATE, (StairsBlock)BlockInit.WILLOW_STAIRS, (TrapdoorBlock)BlockInit.WILLOW_TRAPDOOR);
+        createDoorRecipe(BlockInit.WILLOW_DOOR, willowIngredient);
+        createFenceRecipe(BlockInit.WILLOW_FENCE, willowIngredient);
+        createFenceGateRecipe(BlockInit.WILLOW_FENCE_GATE, willowIngredient);
+        createStairsRecipe(BlockInit.WILLOW_STAIRS, willowIngredient);
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.COPPER_TORCHBULB, 1)
                 .pattern("CGC")
                 .pattern("RFR")

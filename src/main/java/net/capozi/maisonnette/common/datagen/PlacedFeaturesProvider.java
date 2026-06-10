@@ -19,6 +19,10 @@ public class PlacedFeaturesProvider {
     public static final RegistryKey<PlacedFeature> RED_WILLOW_PLACED_KEY = registerKey("red_willow_placed");
     public static final RegistryKey<PlacedFeature> ORANGE_WILLOW_PLACED_KEY = registerKey("orange_willow_placed");
     public static final RegistryKey<PlacedFeature> YELLOW_WILLOW_PLACED_KEY = registerKey("yellow_willow_placed");
+    public static final RegistryKey<PlacedFeature> CARNATION_PATCH_PLACED_KEY = registerKey("carnation_patch_placed");
+    public static final RegistryKey<PlacedFeature> BLACK_STARLETTE_PATCH_PLACED_KEY = registerKey("black_starlette_patch_placed");
+    public static final RegistryKey<PlacedFeature> ORANGE_STARLETTE_PATCH_PLACED_KEY = registerKey("orange_starlette_patch_placed");
+    public static final RegistryKey<PlacedFeature> YELLOW_STARLETTE_PATCH_PLACED_KEY = registerKey("yellow_starlette_patch_placed");
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Maisonnette.MOD_ID, name));
     }
@@ -30,5 +34,37 @@ public class PlacedFeaturesProvider {
         register(context, RED_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.RED_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.RED_WILLOW_SAPLING));
         register(context, ORANGE_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.ORANGE_WILLOW_SAPLING));
         register(context, YELLOW_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.YELLOW_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.YELLOW_WILLOW_SAPLING));
+        register(context, CARNATION_PATCH_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.CARNATION_PATCH_KEY),
+                List.of(
+                        RarityFilterPlacementModifier.of(4),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                        BiomePlacementModifier.of()
+                ));
+        register(context, BLACK_STARLETTE_PATCH_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.BLACK_STARLETTE_PATCH_KEY),
+                List.of(
+                        RarityFilterPlacementModifier.of(3),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                        BiomePlacementModifier.of()
+                ));
+        register(context, ORANGE_STARLETTE_PATCH_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.ORANGE_STARLETTE_PATCH_KEY),
+                List.of(
+                        RarityFilterPlacementModifier.of(3),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                        BiomePlacementModifier.of()
+                ));
+        register(context, YELLOW_STARLETTE_PATCH_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.YELLOW_STARLETTE_PATCH_KEY),
+                List.of(
+                        RarityFilterPlacementModifier.of(3),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                        BiomePlacementModifier.of()
+                ));
     }
 }

@@ -10,9 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public interface EntityInit {
-	EntityType<SeatEntity> SEAT = Registry.register(Registries.ENTITY_TYPE, new Identifier("maisonnette", "seat"),
-            FabricEntityTypeBuilder.<SeatEntity>create(SpawnGroup.MISC, SeatEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.35f))
-                    .trackRangeBlocks(10).trackedUpdateRate(1).disableSaving().disableSummon().build());
-	static void init() {}
+public class EntityInit {
+	public static final EntityType<SeatEntity> SEAT = Registry.register(Registries.ENTITY_TYPE, new Identifier("maisonnette", "seat"), FabricEntityTypeBuilder.<SeatEntity>create(SpawnGroup.MISC, SeatEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.35f)).trackRangeBlocks(10).trackedUpdateRate(1).disableSaving().disableSummon().build());
+	public static void init() {}
 }
