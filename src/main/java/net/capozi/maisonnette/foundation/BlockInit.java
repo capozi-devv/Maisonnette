@@ -2,10 +2,7 @@ package net.capozi.maisonnette.foundation;
 
 import devv.capozi.zip.common.api.index.Registrar;
 import net.capozi.maisonnette.Maisonnette;
-import net.capozi.maisonnette.common.block.BookStackBlock;
-import net.capozi.maisonnette.common.block.BulbBlock;
-import net.capozi.maisonnette.common.block.MosaicBlock;
-import net.capozi.maisonnette.common.block.SeatBlock;
+import net.capozi.maisonnette.common.block.*;
 import net.capozi.maisonnette.common.item.MosaicTileItem;
 import net.capozi.maisonnette.server.world.generator.OrangeWillowSaplingGenerator;
 import net.capozi.maisonnette.server.world.generator.RedWillowSaplingGenerator;
@@ -20,6 +17,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
 
 import static net.capozi.maisonnette.common.block.BulbBlock.LIT;
 
@@ -98,6 +97,8 @@ public interface BlockInit {
     Block CHARRED_PRESSURE_PLATE = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_pressure_plate"), new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WILLOW_SET_TYPE));
     Block CHARRED_DOOR = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_door"), new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE));
     Block CHARRED_TRAPDOOR = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_trapdoor"), new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE));
+    Block COLOSSAL_HIBISCUS = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus"), new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.TWISTING_VINES), Direction.UP, true));
+
     Item MOSAIC_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "mosaic_tiles"), new MosaicTileItem(MOSAIC, new FabricItemSettings()));
     Item CALCITE_STAIRS_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "calcite_stairs"), new BlockItem(CALCITE_STAIRS, new FabricItemSettings()));
     Item CALCITE_SLAB_ITEM = blockItemRegistrar.add(new Identifier(Maisonnette.MOD_ID, "calcite_slab"), new BlockItem(CALCITE_SLAB, new FabricItemSettings()));
