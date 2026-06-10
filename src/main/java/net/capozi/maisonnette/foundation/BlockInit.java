@@ -99,7 +99,7 @@ public interface BlockInit {
     Block CHARRED_PRESSURE_PLATE = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_pressure_plate"), new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WILLOW_SET_TYPE));
     Block CHARRED_DOOR = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_door"), new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE));
     Block CHARRED_TRAPDOOR = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "charred_trapdoor"), new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE));
-    Block COLOSSAL_HIBISCUS = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus"), new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.TWISTING_VINES), Direction.UP, true));
+    Block COLOSSAL_HIBISCUS = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus"), new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES), Direction.UP, true));
     Block COLOSSAL_HIBISCUS_STEM = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus_stem"), new ColossalHibiscusBlock.ColossalHibiscusStemBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES_PLANT), Direction.UP, true, 0.5f));
     Block COLOSSAL_HIBISCUS_BLOOMLING = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "colossal_hibiscus_bloomling"), new SaplingBlock(new RedWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING))); //placeholder
     Block CARNATION = blockRegistrar.add(new Identifier(Maisonnette.MOD_ID, "carnation"), new FlowerBlock(StatusEffects.HEALTH_BOOST, 30, FabricBlockSettings.copyOf(Blocks.POPPY)));

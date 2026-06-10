@@ -1,21 +1,25 @@
 package net.capozi.maisonnette.common.block;
 
 import net.capozi.maisonnette.foundation.BlockInit;
-import net.minecraft.block.AbstractPlantBlock;
-import net.minecraft.block.AbstractPlantStemBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
+import net.minecraft.block.*;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 
 public class ColossalHibiscusBlock extends AbstractPlantBlock {
-    public static final VoxelShape SHAPE_1 = createCuboidShape(-14F, 8F, -14F, 14F, 9F, 14F);
+    public static final VoxelShape SHAPE_1 = createCuboidShape(-14F, 8F, -14F, 30F, 9F, 30F);
     public static final VoxelShape SHAPE_2 = createCuboidShape(5f, 0f, 5f, 10f, 8f, 10f);
     public ColossalHibiscusBlock(Settings settings, Direction direction, boolean bl) {
         super(settings, direction, VoxelShapes.union(SHAPE_1, SHAPE_2), bl);
     }
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE_1;
+    }
+
     @Override
     protected AbstractPlantStemBlock getStem() {
         return (AbstractPlantStemBlock)BlockInit.COLOSSAL_HIBISCUS_STEM;
