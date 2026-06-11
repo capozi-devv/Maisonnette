@@ -126,5 +126,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.BOOK_STACK);
         getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_TRANSMITTER)
                 .add(BlockInit.BOOK_STACK);
+        getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                .add(BlockInit.COLOSSAL_HIBISCUS);
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:white_dye"
+    },
+    "G": {
+      "tag": "maisonnette:glass_blocks"
+    }
+  },
+  "pattern": [
+    " D ",
+    "DGD",
+    " D "
+  ],
+  "result": {
+    "item": "maisonnette:greenhouse_glass"
+  },
+  "show_notification": true
+}

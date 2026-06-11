@@ -15,10 +15,10 @@ import net.minecraft.util.Identifier;
 import java.util.concurrent.CompletableFuture;
 
 public class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    private static final TagKey<Item> GLASS_BLOCKS = TagKey.of(
-            RegistryKeys.ITEM,
-            new Identifier(Maisonnette.MOD_ID, "glass_blocks")
-    );
+//    private static final TagKey<Item> GLASS_BLOCKS = TagKey.of(
+//            RegistryKeys.ITEM,
+//            new Identifier(Maisonnette.MOD_ID, "glass_blocks")
+//    );
 
     public ItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -26,24 +26,24 @@ public class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(GLASS_BLOCKS)
-                .add(Items.GLASS)
-                .add(Items.WHITE_STAINED_GLASS)
-                .add(Items.ORANGE_STAINED_GLASS)
-                .add(Items.MAGENTA_STAINED_GLASS)
-                .add(Items.LIGHT_BLUE_STAINED_GLASS)
-                .add(Items.YELLOW_STAINED_GLASS)
-                .add(Items.LIME_STAINED_GLASS)
-                .add(Items.PINK_STAINED_GLASS)
-                .add(Items.GRAY_STAINED_GLASS)
-                .add(Items.LIGHT_GRAY_STAINED_GLASS)
-                .add(Items.CYAN_STAINED_GLASS)
-                .add(Items.PURPLE_STAINED_GLASS)
-                .add(Items.BLUE_STAINED_GLASS)
-                .add(Items.BROWN_STAINED_GLASS)
-                .add(Items.GREEN_STAINED_GLASS)
-                .add(Items.RED_STAINED_GLASS)
-                .add(Items.BLACK_STAINED_GLASS);
+//        getOrCreateTagBuilder(GLASS_BLOCKS)
+//                .add(Items.GLASS)
+//                .add(Items.WHITE_STAINED_GLASS)
+//                .add(Items.ORANGE_STAINED_GLASS)
+//                .add(Items.MAGENTA_STAINED_GLASS)
+//                .add(Items.LIGHT_BLUE_STAINED_GLASS)
+//                .add(Items.YELLOW_STAINED_GLASS)
+//                .add(Items.LIME_STAINED_GLASS)
+//                .add(Items.PINK_STAINED_GLASS)
+//                .add(Items.GRAY_STAINED_GLASS)
+//                .add(Items.LIGHT_GRAY_STAINED_GLASS)
+//                .add(Items.CYAN_STAINED_GLASS)
+//                .add(Items.PURPLE_STAINED_GLASS)
+//                .add(Items.BLUE_STAINED_GLASS)
+//                .add(Items.BROWN_STAINED_GLASS)
+//                .add(Items.GREEN_STAINED_GLASS)
+//                .add(Items.RED_STAINED_GLASS)
+//                .add(Items.BLACK_STAINED_GLASS);
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(BlockInit.CHARRED_PLANKS.asItem())

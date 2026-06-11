@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "maisonnette:greenhouse_glass"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " N ",
+    "NGN",
+    " N "
+  ],
+  "result": {
+    "item": "maisonnette:wired_greenhouse_glass"
+  },
+  "show_notification": true
+}

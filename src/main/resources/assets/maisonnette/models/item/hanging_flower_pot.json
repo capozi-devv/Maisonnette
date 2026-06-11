@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:item/flower_pot"
+    "layer0": "maisonnette:item/hanging_pot"
   }
 }

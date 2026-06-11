@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-10T14:36:54.4372542	§dMaisonnette/Tags for minecraft:block
+// 1.20.1	2026-06-11T14:43:55.779523	§dMaisonnette/Tags for minecraft:block
 91eef71584c83d05fbe5a1646b974e944f0b513e data\minecraft\tags\blocks\stairs.json
 7404df79ba71eb3d77af83f14a88726941a7cd2d data\minecraft\tags\blocks\wooden_trapdoors.json
 2d851344c1f5494ef84a9b31793de8dfab917a85 data\minecraft\tags\blocks\leaves.json
@@ -7,8 +7,9 @@ a2e9a9be1515c89d5b396f150baf11fd4e6b587f data\minecraft\tags\blocks\enchantment_
 65c54d90deaed2cfb21f2b02c39a29ba339ecf27 data\minecraft\tags\blocks\fence_gates.json
 81ceab94dc1ba2a88fb0143605fa0a00fb2ba1a6 data\minecraft\tags\blocks\slabs.json
 a2e9a9be1515c89d5b396f150baf11fd4e6b587f data\minecraft\tags\blocks\enchantment_power_transmitter.json
-aaf7cfda479b664ac3f767a39cf7aa8c1cc13cb1 data\minecraft\tags\blocks\logs.json
 a2e9a9be1515c89d5b396f150baf11fd4e6b587f data\minecraft\tags\blocks\snow_layer_can_survive_on.json
+aaf7cfda479b664ac3f767a39cf7aa8c1cc13cb1 data\minecraft\tags\blocks\logs.json
+094bbda5533c6d3eced63697860ad70cbc24e1e8 data\minecraft\tags\blocks\climbable.json
 84b6687dce26968a41fcf8e2634c5f3ad069897e data\minecraft\tags\blocks\doors.json
 7fcbf76e082ed34888b5fa1af9b7a8ec3d18e329 data\minecraft\tags\blocks\pressure_plates.json
 2755fca9dc559bb46915a6f9ce7462569bbe03cf data\minecraft\tags\blocks\mineable\axe.json

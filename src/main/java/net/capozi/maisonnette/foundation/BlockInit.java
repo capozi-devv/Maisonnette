@@ -119,11 +119,10 @@ public class BlockInit {
     public static final Block CHARRED_PRESSURE_PLATE = registerBlock("charred_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WILLOW_SET_TYPE), true);
     public static final Block CHARRED_DOOR = registerBlock("charred_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
     public static final Block CHARRED_TRAPDOOR = registerBlock("charred_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
-    public static final Block COLOSSAL_HIBISCUS = registerBlock("colossal_hibiscus", new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES), Direction.UP, true), true);
-    public static final Block COLOSSAL_HIBISCUS_STEM = registerBlock("colossal_hibiscus_stem", new ColossalHibiscusBlock.ColossalHibiscusStemBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES_PLANT), Direction.UP, true, 0.5f), false);
+    public static final Block COLOSSAL_HIBISCUS = registerBlock("colossal_hibiscus", new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).notSolid().noCollision(), Direction.UP, true), true);
+    public static final Block COLOSSAL_HIBISCUS_STEM = registerBlock("colossal_hibiscus_stem", new ColossalHibiscusBlock.ColossalHibiscusStemBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES_PLANT).notSolid(), Direction.UP, true, 0.5f), false);
     public static final Block COLOSSAL_HIBISCUS_BLOOMLING = registerBlock("colossal_hibiscus_bloomling", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block CARNATION = registerBlock("carnation", new FlowerBlock(StatusEffects.HEALTH_BOOST, 30, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
-
     public static final Block BLACK_STARLETTE = registerBlock("black_starlette", new FlowerBlock(StatusEffects.NIGHT_VISION, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block ORANGE_STARLETTE = registerBlock("orange_starlette", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block YELLOW_STARLETTE = registerBlock("yellow_starlette", new FlowerBlock(StatusEffects.GLOWING, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);

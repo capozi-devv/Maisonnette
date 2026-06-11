@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "maisonnette:block/orange_starlette"
-  }
-}
