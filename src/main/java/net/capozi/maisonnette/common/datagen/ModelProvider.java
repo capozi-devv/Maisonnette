@@ -73,6 +73,21 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerOrientableTrapdoor(BlockInit.CHARRED_TRAPDOOR);
         blockStateModelGenerator.registerLog(BlockInit.CHARRED_LOG).log(BlockInit.CHARRED_LOG).wood(BlockInit.CHARRED_WOOD);
         blockStateModelGenerator.registerLog(BlockInit.STRIPPED_CHARRED_LOG).log(BlockInit.STRIPPED_CHARRED_LOG).wood(BlockInit.STRIPPED_CHARRED_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORANGE_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MAGENTA_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.LIGHT_BLUE_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.YELLOW_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.LIME_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.PINK_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.GRAY_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.LIGHT_GRAY_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.CYAN_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.PURPLE_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.BLUE_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.BROWN_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.GREEN_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.RED_STAINED_GREENHOUSE_GLASS);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.BLACK_STAINED_GREENHOUSE_GLASS);
     }
     @Override public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     }

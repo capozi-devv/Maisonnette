@@ -1,12 +1,12 @@
-// 1.20.1	2026-06-11T14:43:55.7805239	§dMaisonnette/Tags for minecraft:item
+// 1.20.1	2026-06-11T21:59:44.3296038	§dMaisonnette/Tags for minecraft:item
 8ddf67e41e2ffc617b05131b4af13b4f19960d31 data\minecraft\tags\items\wooden_doors.json
+aaf7cfda479b664ac3f767a39cf7aa8c1cc13cb1 data\minecraft\tags\items\logs.json
 4fe2c10a1cddd55b1f301796b5730747e2976f8d data\minecraft\tags\items\logs_that_burn.json
 5a4a6d3ff42d26872f1614d1ac311fdcbd06fcfb data\minecraft\tags\items\planks.json
-aaf7cfda479b664ac3f767a39cf7aa8c1cc13cb1 data\minecraft\tags\items\logs.json
 67a7e7a8249a9c9da349e34660155a17c0902171 data\minecraft\tags\items\fences.json
-7404df79ba71eb3d77af83f14a88726941a7cd2d data\minecraft\tags\items\wooden_trapdoors.json
 84b6687dce26968a41fcf8e2634c5f3ad069897e data\minecraft\tags\items\doors.json
+7404df79ba71eb3d77af83f14a88726941a7cd2d data\minecraft\tags\items\wooden_trapdoors.json
+2d851344c1f5494ef84a9b31793de8dfab917a85 data\minecraft\tags\items\leaves.json
 65c54d90deaed2cfb21f2b02c39a29ba339ecf27 data\minecraft\tags\items\fence_gates.json
 a2b0e99e72ae5eb34803d5955424461c3aaf05ff data\minecraft\tags\items\wooden_pressure_plates.json
-2d851344c1f5494ef84a9b31793de8dfab917a85 data\minecraft\tags\items\leaves.json
 8e6a3020b04022ce5dfadbd4057b39114b03d8fd data\minecraft\tags\items\trapdoors.json

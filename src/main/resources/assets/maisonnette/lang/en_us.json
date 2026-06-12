@@ -86,5 +86,21 @@
   "block.maisonnette.orange_starlette": "Orange Starlette",
   "block.maisonnette.yellow_starlette": "Yellow Starlette",
   "block.maisonnette.greenhouse_glass": "Greenhouse Glass",
-  "block.maisonnette.wired_greenhouse_glass": "Wired Greenhouse Glass"
+  "block.maisonnette.wired_greenhouse_glass": "Wired Greenhouse Glass",
+  "block.maisonnette.white_stained_greenhouse_glass": "White Stained Greenhouse Glass",
+  "block.maisonnette.orange_stained_greenhouse_glass": "Orange Stained Greenhouse Glass",
+  "block.maisonnette.magenta_stained_greenhouse_glass": "Magenta Stained Greenhouse Glass",
+  "block.maisonnette.light_blue_stained_greenhouse_glass": "Light Blue Stained Greenhouse Glass",
+  "block.maisonnette.yellow_stained_greenhouse_glass": "Yellow Stained Greenhouse Glass",
+  "block.maisonnette.lime_stained_greenhouse_glass": "Lime Stained Greenhouse Glass",
+  "block.maisonnette.pink_stained_greenhouse_glass": "Pink Stained Greenhouse Glass",
+  "block.maisonnette.gray_stained_greenhouse_glass": "Gray Stained Greenhouse Glass",
+  "block.maisonnette.light_gray_stained_greenhouse_glass": "Light Gray Stained Greenhouse Glass",
+  "block.maisonnette.cyan_stained_greenhouse_glass": "Cyan Stained Greenhouse Glass",
+  "block.maisonnette.purple_stained_greenhouse_glass": "Purple Stained Greenhouse Glass",
+  "block.maisonnette.blue_stained_greenhouse_glass": "Blue Stained Greenhouse Glass",
+  "block.maisonnette.brown_stained_greenhouse_glass": "Brown Stained Greenhouse Glass",
+  "block.maisonnette.green_stained_greenhouse_glass": "Green Stained Greenhouse Glass",
+  "block.maisonnette.red_stained_greenhouse_glass": "Red Stained Greenhouse Glass",
+  "block.maisonnette.black_stained_greenhouse_glass": "Black Stained Greenhouse Glass"
 }

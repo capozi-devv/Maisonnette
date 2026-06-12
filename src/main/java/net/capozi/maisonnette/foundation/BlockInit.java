@@ -1,12 +1,7 @@
 package net.capozi.maisonnette.foundation;
 
 import net.capozi.maisonnette.Maisonnette;
-import net.capozi.maisonnette.common.block.BookStackBlock;
-import net.capozi.maisonnette.common.block.BulbBlock;
-import net.capozi.maisonnette.common.block.ColossalHibiscusBlock;
-import net.capozi.maisonnette.common.block.HangingFlowerPotBlock;
-import net.capozi.maisonnette.common.block.MosaicBlock;
-import net.capozi.maisonnette.common.block.SeatBlock;
+import net.capozi.maisonnette.common.block.*;
 import net.capozi.maisonnette.common.item.MosaicTileItem;
 import net.capozi.maisonnette.server.world.generator.OrangeWillowSaplingGenerator;
 import net.capozi.maisonnette.server.world.generator.RedWillowSaplingGenerator;
@@ -121,7 +116,7 @@ public class BlockInit {
     public static final Block CHARRED_TRAPDOOR = registerBlock("charred_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WILLOW_SET_TYPE), true);
     public static final Block COLOSSAL_HIBISCUS = registerBlock("colossal_hibiscus", new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).notSolid().noCollision(), Direction.UP, true), true);
     public static final Block COLOSSAL_HIBISCUS_STEM = registerBlock("colossal_hibiscus_stem", new ColossalHibiscusBlock.ColossalHibiscusStemBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES_PLANT).notSolid(), Direction.UP, true, 0.5f), false);
-    public static final Block COLOSSAL_HIBISCUS_BLOOMLING = registerBlock("colossal_hibiscus_bloomling", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
+    public static final Block COLOSSAL_HIBISCUS_BLOOMLING = registerBlock("colossal_hibiscus_bloomling", new ColossalHibiscusBloomlingBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block CARNATION = registerBlock("carnation", new FlowerBlock(StatusEffects.HEALTH_BOOST, 30, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block BLACK_STARLETTE = registerBlock("black_starlette", new FlowerBlock(StatusEffects.NIGHT_VISION, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block ORANGE_STARLETTE = registerBlock("orange_starlette", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
@@ -136,4 +131,19 @@ public class BlockInit {
     public static final Block POTTED_YELLOW_WILLOW_SAPLING = registerPottedBlock("potted_yellow_willow_sapling", YELLOW_WILLOW_SAPLING);
     public static final Block GREENHOUSE_GLASS = registerBlock("greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
     public static final Block WIRED_GREENHOUSE_GLASS = registerBlock("wired_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block ORANGE_STAINED_GREENHOUSE_GLASS = registerBlock("orange_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block MAGENTA_STAINED_GREENHOUSE_GLASS = registerBlock("magenta_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block LIGHT_BLUE_STAINED_GREENHOUSE_GLASS = registerBlock("light_blue_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block YELLOW_STAINED_GREENHOUSE_GLASS = registerBlock("yellow_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block LIME_STAINED_GREENHOUSE_GLASS = registerBlock("lime_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block PINK_STAINED_GREENHOUSE_GLASS = registerBlock("pink_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block GRAY_STAINED_GREENHOUSE_GLASS = registerBlock("gray_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block LIGHT_GRAY_STAINED_GREENHOUSE_GLASS = registerBlock("light_gray_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block CYAN_STAINED_GREENHOUSE_GLASS = registerBlock("cyan_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block PURPLE_STAINED_GREENHOUSE_GLASS = registerBlock("purple_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block BLUE_STAINED_GREENHOUSE_GLASS = registerBlock("blue_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block BROWN_STAINED_GREENHOUSE_GLASS = registerBlock("brown_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block GREEN_STAINED_GREENHOUSE_GLASS = registerBlock("green_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block RED_STAINED_GREENHOUSE_GLASS = registerBlock("red_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block BLACK_STAINED_GREENHOUSE_GLASS = registerBlock("black_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
 }
