@@ -33,6 +33,7 @@ public class ItemGroups {
                         entries.add(BlockInit.ORANGE_STARLETTE);
                         entries.add(BlockInit.YELLOW_STARLETTE);
                         entries.add(BlockInit.DELPHINIUM_FLOWER);
+                        entries.add(BlockInit.GLADIOLUS);
                         entries.add(BlockInit.COPPER_TORCHBULB);
                         entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
