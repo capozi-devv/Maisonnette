@@ -25,7 +25,6 @@ public class ItemGroups {
                         entries.add(BlockInit.TUFF_WALL);
                         entries.add(BlockInit.TUFF_BUTTON);
                         entries.add(Items.BOOK);
-                        entries.add(BlockInit.HANGING_FLOWER_POT);
                         entries.add(BlockInit.CARNATION);
                         entries.add(BlockInit.COLOSSAL_HIBISCUS);
                         entries.add(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING);
@@ -33,7 +32,9 @@ public class ItemGroups {
                         entries.add(BlockInit.ORANGE_STARLETTE);
                         entries.add(BlockInit.YELLOW_STARLETTE);
                         entries.add(BlockInit.DELPHINIUM_FLOWER);
-                        entries.add(BlockInit.GLADIOLUS);
+                        entries.add(BlockInit.WHITE_GLADIOLUS);
+                        entries.add(BlockInit.BLACK_GLADIOLUS);
+                        entries.add(BlockInit.HANGING_FLOWER_POT);
                         entries.add(BlockInit.COPPER_TORCHBULB);
                         entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
@@ -89,6 +90,8 @@ public class ItemGroups {
                         entries.add(BlockInit.WILLOW_TRAPDOOR);
                         entries.add(BlockInit.WILLOW_PRESSURE_PLATE);
                         entries.add(BlockInit.WILLOW_BUTTON);
+                        entries.add(BlockInit.WISTERIA_LEAVES);
+                        entries.add(BlockInit.WISTERIA_SAPLING);
                         entries.add(BlockInit.WISTERIA_LOG);
                         entries.add(BlockInit.WISTERIA_WOOD);
                         entries.add(BlockInit.STRIPPED_WISTERIA_LOG);
@@ -115,6 +118,8 @@ public class ItemGroups {
                         entries.add(BlockInit.CHARRED_TRAPDOOR);
                         entries.add(BlockInit.CHARRED_PRESSURE_PLATE);
                         entries.add(BlockInit.CHARRED_BUTTON);
+                        entries.add(BlockInit.WROUGHT_IRON_BARS);
+                        entries.add(BlockInit.WROUGHT_IRON_GATE);
                         entries.add(BlockInit.WAXED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);

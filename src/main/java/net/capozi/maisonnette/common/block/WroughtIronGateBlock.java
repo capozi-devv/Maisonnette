@@ -47,6 +47,12 @@ public class WroughtIronGateBlock extends DoorBlock {
             default : return NORTH_SOUTH_SHAPE;
         }
     }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return state.get(OPEN).booleanValue() ? createCuboidShape(0, 0, 0,0, 0, 0) : super.getCollisionShape(state, world, pos, context);
+    }
+
     @Override
     public @Nullable BlockState getPlacementState(ItemPlacementContext ctx) {
         boolean bl = ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()) || ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos().up());

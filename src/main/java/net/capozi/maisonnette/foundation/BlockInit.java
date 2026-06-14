@@ -120,7 +120,8 @@ public class BlockInit {
     public static final Block COLOSSAL_HIBISCUS = registerBlock("colossal_hibiscus", new ColossalHibiscusBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).notSolid().noCollision(), Direction.UP, true), true);
     public static final Block COLOSSAL_HIBISCUS_STEM = registerBlock("colossal_hibiscus_stem", new ColossalHibiscusBlock.ColossalHibiscusStemBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES_PLANT).notSolid(), Direction.UP, true, 0.5f), false);
     public static final Block COLOSSAL_HIBISCUS_BLOOMLING = registerBlock("colossal_hibiscus_bloomling", new ColossalHibiscusBloomlingBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
-    public static final Block GLADIOLUS = registerBlock("gladiolus", new ThreeTallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH)), true);
+    public static final Block WHITE_GLADIOLUS = registerBlock("white_gladiolus", new ThreeTallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH)), true);
+    public static final Block BLACK_GLADIOLUS = registerBlock("black_gladiolus", new ThreeTallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH)), true);
     public static final Block CARNATION = registerBlock("carnation", new FlowerBlock(StatusEffects.HEALTH_BOOST, 30, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block BLACK_STARLETTE = registerBlock("black_starlette", new FlowerBlock(StatusEffects.NIGHT_VISION, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
     public static final Block ORANGE_STARLETTE = registerBlock("orange_starlette", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, FabricBlockSettings.copyOf(Blocks.POPPY)), true);

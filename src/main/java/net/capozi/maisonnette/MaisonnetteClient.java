@@ -20,6 +20,7 @@ public class MaisonnetteClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.RED_WILLOW_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.ORANGE_WILLOW_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.YELLOW_WILLOW_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WISTERIA_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.CARNATION, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.COLOSSAL_HIBISCUS_STEM, RenderLayer.getCutout());
@@ -44,7 +45,8 @@ public class MaisonnetteClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WISTERIA_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.COLOSSAL_HIBISCUS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.DELPHINIUM_FLOWER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.GLADIOLUS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WHITE_GLADIOLUS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.BLACK_GLADIOLUS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WROUGHT_IRON_BARS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WROUGHT_IRON_GATE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.ORANGE_STAINED_GREENHOUSE_GLASS, RenderLayer.getTranslucent());

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=bottom": {
+      "model": "maisonnette:block/black_gladiolus_bottom"
+    },
+    "part=middle": {
+      "model": "maisonnette:block/black_gladiolus_middle"
+    },
+    "part=top": {
+      "model": "maisonnette:block/black_gladiolus_top"
+    }
+  }
+}
