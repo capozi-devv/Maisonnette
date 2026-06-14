@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "open=false,half=upper,facing=north": {"model": "maisonnette:block/wrought_iron_gate_top"},
+    "open=false,half=upper,facing=south": {"model": "maisonnette:block/wrought_iron_gate_top"},
+    "open=false,half=upper,facing=east": {"model": "maisonnette:block/wrought_iron_gate_top", "y": 90},
+    "open=false,half=upper,facing=west": {"model": "maisonnette:block/wrought_iron_gate_top", "y": 90},
+    "open=false,half=lower,facing=north": {"model": "maisonnette:block/wrought_iron_gate_bottom"},
+    "open=false,half=lower,facing=south": {"model": "maisonnette:block/wrought_iron_gate_bottom"},
+    "open=false,half=lower,facing=east": {"model": "maisonnette:block/wrought_iron_gate_bottom", "y": 90},
+    "open=false,half=lower,facing=west": {"model": "maisonnette:block/wrought_iron_gate_bottom", "y": 90},
+    "open=true,half=upper,facing=north": {"model": "maisonnette:block/wrought_iron_gate_top_open"},
+    "open=true,half=upper,facing=south": {"model": "maisonnette:block/wrought_iron_gate_top_open"},
+    "open=true,half=upper,facing=east": {"model": "maisonnette:block/wrought_iron_gate_top_open", "y": 90},
+    "open=true,half=upper,facing=west": {"model": "maisonnette:block/wrought_iron_gate_top_open", "y": 270},
+    "open=true,half=lower,facing=north": {"model": "maisonnette:block/wrought_iron_gate_bottom_open"},
+    "open=true,half=lower,facing=south": {"model": "maisonnette:block/wrought_iron_gate_bottom_open"},
+    "open=true,half=lower,facing=east": {"model": "maisonnette:block/wrought_iron_gate_bottom_open", "y": 90},
+    "open=true,half=lower,facing=west": {"model": "maisonnette:block/wrought_iron_gate_bottom_open", "y": 270}
+  }
+}

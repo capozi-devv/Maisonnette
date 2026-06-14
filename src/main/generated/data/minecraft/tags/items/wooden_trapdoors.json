@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "maisonnette:wisteria_trapdoor",
     "maisonnette:willow_trapdoor"
   ]
 }

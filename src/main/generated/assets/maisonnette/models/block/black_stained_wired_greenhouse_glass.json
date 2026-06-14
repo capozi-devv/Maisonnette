@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "maisonnette:block/black_stained_wired_greenhouse_glass"
-  }
-}

@@ -25,6 +25,8 @@ public class BlockInit {
 	public static void init() {}
     public static final BlockSetType WILLOW_SET_TYPE = new BlockSetType("willow");
     public static final WoodType WILLOW_WOOD_TYPE = new WoodType("willow", WILLOW_SET_TYPE);
+    public static final BlockSetType WISTERIA_SET_TYPE = new BlockSetType("wisteria");
+    public static final WoodType WISTERIA_WOOD_TYPE = new WoodType("wisteria", WISTERIA_SET_TYPE);
 	private static Item registerBlockItem(String name, BlockItem blockItem) {
 		return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name), blockItem);
 	}
@@ -93,6 +95,7 @@ public class BlockInit {
     public static final Block RED_WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(new RedWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block ORANGE_WILLOW_SAPLING = registerBlock("orange_willow_sapling", new SaplingBlock(new OrangeWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block YELLOW_WILLOW_SAPLING = registerBlock("yellow_willow_sapling", new SaplingBlock(new YellowWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block WISTERIA_SAPLING = registerBlock("wisteria_sapling", new SaplingBlock(new YellowWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block WILLOW_SLAB = registerBlock("willow_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), true);
     public static final Block WILLOW_STAIRS = registerBlock("willow_stairs", new StairsBlock(Blocks.OAK_STAIRS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), true);
     public static final Block WILLOW_FENCE = registerBlock("willow_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), true);
@@ -129,6 +132,7 @@ public class BlockInit {
     public static final Block POTTED_RED_WILLOW_SAPLING = registerPottedBlock("potted_red_willow_sapling", RED_WILLOW_SAPLING);
     public static final Block POTTED_ORANGE_WILLOW_SAPLING = registerPottedBlock("potted_orange_willow_sapling", ORANGE_WILLOW_SAPLING);
     public static final Block POTTED_YELLOW_WILLOW_SAPLING = registerPottedBlock("potted_yellow_willow_sapling", YELLOW_WILLOW_SAPLING);
+    public static final Block POTTED_WISTERIA_SAPLING = registerPottedBlock("potted_wisteria_sapling", WISTERIA_SAPLING);
     public static final Block GREENHOUSE_GLASS = registerBlock("greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
     public static final Block WIRED_GREENHOUSE_GLASS = registerBlock("wired_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
     public static final Block ORANGE_STAINED_GREENHOUSE_GLASS = registerBlock("orange_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
@@ -146,4 +150,21 @@ public class BlockInit {
     public static final Block GREEN_STAINED_GREENHOUSE_GLASS = registerBlock("green_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
     public static final Block RED_STAINED_GREENHOUSE_GLASS = registerBlock("red_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
     public static final Block BLACK_STAINED_GREENHOUSE_GLASS = registerBlock("black_stained_greenhouse_glass", new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()), true);
+    public static final Block WISTERIA_LOG = registerBlock("wisteria_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4f)), true);
+    public static final Block STRIPPED_WISTERIA_LOG = registerBlock("stripped_wisteria_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4f)), true);
+    public static final Block WISTERIA_WOOD = registerBlock("wisteria_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4f)), true);
+    public static final Block STRIPPED_WISTERIA_WOOD = registerBlock("stripped_wisteria_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4f)), true);
+    public static final Block WISTERIA_PLANKS = registerBlock("wisteria_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4f)), true);
+    public static final Block WISTERIA_SLAB = registerBlock("wisteria_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), true);
+    public static final Block WISTERIA_STAIRS = registerBlock("wisteria_stairs", new StairsBlock(Blocks.OAK_STAIRS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), true);
+    public static final Block WISTERIA_FENCE = registerBlock("wisteria_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), true);
+    public static final Block WISTERIA_FENCE_GATE = registerBlock("wisteria_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE), WISTERIA_WOOD_TYPE), true);
+    public static final Block WISTERIA_BUTTON = registerBlock("wisteria_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BUTTON), WISTERIA_SET_TYPE, 10, true), true);
+    public static final Block WISTERIA_PRESSURE_PLATE = registerBlock("wisteria_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), WISTERIA_SET_TYPE), true);
+    public static final Block WISTERIA_DOOR = registerBlock("wisteria_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WISTERIA_SET_TYPE), true);
+    public static final Block WISTERIA_TRAPDOOR = registerBlock("wisteria_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), WISTERIA_SET_TYPE), true);
+    public static final Block WISTERIA_LEAVES = registerBlock("wisteria_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
+    public static final Block DELPHINIUM_FLOWER = registerBlock("delphinium", new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH)), true);
+    public static final Block WROUGHT_IRON_BARS = registerBlock("wrought_iron_bars", new WroughtIronBarsBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)), true);
+    public static final Block WROUGHT_IRON_GATE = registerBlock("wrought_iron_gate", new WroughtIronGateBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)), true);
 }

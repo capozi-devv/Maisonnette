@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "maisonnette:block/wisteria_slab"
+    },
+    "type=double": {
+      "model": "maisonnette:block/wisteria_planks"
+    },
+    "type=top": {
+      "model": "maisonnette:block/wisteria_slab_top"
+    }
+  }
+}

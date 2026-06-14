@@ -23,6 +23,7 @@ public class PlacedFeaturesProvider {
     public static final RegistryKey<PlacedFeature> BLACK_STARLETTE_PATCH_PLACED_KEY = registerKey("black_starlette_patch_placed");
     public static final RegistryKey<PlacedFeature> ORANGE_STARLETTE_PATCH_PLACED_KEY = registerKey("orange_starlette_patch_placed");
     public static final RegistryKey<PlacedFeature> YELLOW_STARLETTE_PATCH_PLACED_KEY = registerKey("yellow_starlette_patch_placed");
+    public static final RegistryKey<PlacedFeature> DELPHINIUM_PATCH_PLACED_KEY = registerKey("delphinium_patch_placed");
     public static RegistryKey<PlacedFeature> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Maisonnette.MOD_ID, name));
     }
@@ -45,7 +46,7 @@ public class PlacedFeaturesProvider {
         register(context, BLACK_STARLETTE_PATCH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.BLACK_STARLETTE_PATCH_KEY),
                 List.of(
-                        RarityFilterPlacementModifier.of(3),
+                        RarityFilterPlacementModifier.of(12),
                         SquarePlacementModifier.of(),
                         PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                         BiomePlacementModifier.of()
@@ -53,7 +54,7 @@ public class PlacedFeaturesProvider {
         register(context, ORANGE_STARLETTE_PATCH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.ORANGE_STARLETTE_PATCH_KEY),
                 List.of(
-                        RarityFilterPlacementModifier.of(3),
+                        RarityFilterPlacementModifier.of(12),
                         SquarePlacementModifier.of(),
                         PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                         BiomePlacementModifier.of()
@@ -61,7 +62,15 @@ public class PlacedFeaturesProvider {
         register(context, YELLOW_STARLETTE_PATCH_PLACED_KEY,
                 configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.YELLOW_STARLETTE_PATCH_KEY),
                 List.of(
-                        RarityFilterPlacementModifier.of(3),
+                        RarityFilterPlacementModifier.of(12),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
+                        BiomePlacementModifier.of()
+                ));
+        register(context, DELPHINIUM_PATCH_PLACED_KEY,
+                configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.DELPHINIUM_PATCH_KEY),
+                List.of(
+                        RarityFilterPlacementModifier.of(12),
                         SquarePlacementModifier.of(),
                         PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                         BiomePlacementModifier.of()

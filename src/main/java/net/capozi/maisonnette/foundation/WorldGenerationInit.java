@@ -15,5 +15,10 @@ public final class WorldGenerationInit {
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 PlacedFeaturesProvider.CARNATION_PATCH_PLACED_KEY
         );
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.FLOWER_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                PlacedFeaturesProvider.DELPHINIUM_PATCH_PLACED_KEY
+        );
     }
 }

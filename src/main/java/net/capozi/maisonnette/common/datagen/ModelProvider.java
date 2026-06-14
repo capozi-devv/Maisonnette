@@ -35,6 +35,7 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.RED_WILLOW_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORANGE_WILLOW_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.YELLOW_WILLOW_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.WISTERIA_LEAVES);
 //        blockStateModelGenerator.registerTintableCross(BlockInit.RED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 //        blockStateModelGenerator.registerTintableCross(BlockInit.ORANGE_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 //        blockStateModelGenerator.registerTintableCross(BlockInit.YELLOW_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -51,6 +52,7 @@ public class ModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(BlockInit.RED_WILLOW_SAPLING, BlockInit.POTTED_RED_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(BlockInit.ORANGE_WILLOW_SAPLING, BlockInit.POTTED_ORANGE_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(BlockInit.YELLOW_WILLOW_SAPLING, BlockInit.POTTED_YELLOW_WILLOW_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(BlockInit.WISTERIA_SAPLING, BlockInit.POTTED_WISTERIA_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.GREENHOUSE_GLASS);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.WIRED_GREENHOUSE_GLASS);
         BlockStateModelGenerator.BlockTexturePool willowPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.WILLOW_PLANKS);
@@ -62,6 +64,17 @@ public class ModelProvider extends FabricModelProvider {
         willowPool.stairs(BlockInit.WILLOW_STAIRS);
         blockStateModelGenerator.registerDoor(BlockInit.WILLOW_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(BlockInit.WILLOW_TRAPDOOR);
+        blockStateModelGenerator.registerLog(BlockInit.WISTERIA_LOG).log(BlockInit.WISTERIA_LOG).wood(BlockInit.WISTERIA_WOOD);
+        blockStateModelGenerator.registerLog(BlockInit.STRIPPED_WISTERIA_LOG).log(BlockInit.STRIPPED_WISTERIA_LOG).wood(BlockInit.STRIPPED_WISTERIA_WOOD);
+        BlockStateModelGenerator.BlockTexturePool wisteriaPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.WISTERIA_PLANKS);
+        wisteriaPool.button(BlockInit.WISTERIA_BUTTON);
+        wisteriaPool.pressurePlate(BlockInit.WISTERIA_PRESSURE_PLATE);
+        wisteriaPool.fence(BlockInit.WISTERIA_FENCE);
+        wisteriaPool.fenceGate(BlockInit.WISTERIA_FENCE_GATE);
+        wisteriaPool.slab(BlockInit.WISTERIA_SLAB);
+        wisteriaPool.stairs(BlockInit.WISTERIA_STAIRS);
+        blockStateModelGenerator.registerDoor(BlockInit.WISTERIA_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(BlockInit.WISTERIA_TRAPDOOR);
         BlockStateModelGenerator.BlockTexturePool charredPool = blockStateModelGenerator.registerCubeAllModelTexturePool(BlockInit.CHARRED_PLANKS);
         charredPool.button(BlockInit.CHARRED_BUTTON);
         charredPool.pressurePlate(BlockInit.CHARRED_PRESSURE_PLATE);
@@ -97,7 +110,7 @@ public class ModelProvider extends FabricModelProvider {
         MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(BlockInit.BOOK_STACK);
         for (int height = 0; height <= 3; height++) {
             ArrayList<Identifier> models = new ArrayList<>();
-            for (int i = 0; i <= 7; i++) { // change this value to adjust the number of styles
+            for (int i = 0; i <= 8; i++) { // change this value to adjust the number of styles
                 for (int rotation = 0; rotation <= 3; rotation++) {
                     String parentModel = "block/template_book_stack_" + height + "_r" + rotation;
                     Identifier modelId = new Identifier(MOD_ID, "block/book_stack_" + i + "_" + height + "_r" + rotation);

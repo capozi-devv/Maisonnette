@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "maisonnette:block/delphinium_bottom"
+    },
+    "half=upper": {
+      "model": "maisonnette:block/delphinium_top"
+    }
+  }
+}

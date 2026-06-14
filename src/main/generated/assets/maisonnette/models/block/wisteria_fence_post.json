@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "maisonnette:block/wisteria_planks"
+  }
+}

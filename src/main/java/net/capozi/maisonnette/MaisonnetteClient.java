@@ -40,7 +40,12 @@ public class MaisonnetteClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WILLOW_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.CHARRED_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.CHARRED_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WISTERIA_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WISTERIA_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.COLOSSAL_HIBISCUS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.DELPHINIUM_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WROUGHT_IRON_BARS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.WROUGHT_IRON_GATE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.ORANGE_STAINED_GREENHOUSE_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.MAGENTA_STAINED_GREENHOUSE_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.LIGHT_BLUE_STAINED_GREENHOUSE_GLASS, RenderLayer.getTranslucent());

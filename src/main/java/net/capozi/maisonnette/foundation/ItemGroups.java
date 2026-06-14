@@ -2,6 +2,7 @@ package net.capozi.maisonnette.foundation;
 
 import net.capozi.maisonnette.Maisonnette;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -31,6 +32,7 @@ public class ItemGroups {
                         entries.add(BlockInit.BLACK_STARLETTE);
                         entries.add(BlockInit.ORANGE_STARLETTE);
                         entries.add(BlockInit.YELLOW_STARLETTE);
+                        entries.add(BlockInit.DELPHINIUM_FLOWER);
                         entries.add(BlockInit.COPPER_TORCHBULB);
                         entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
                         entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
@@ -86,6 +88,19 @@ public class ItemGroups {
                         entries.add(BlockInit.WILLOW_TRAPDOOR);
                         entries.add(BlockInit.WILLOW_PRESSURE_PLATE);
                         entries.add(BlockInit.WILLOW_BUTTON);
+                        entries.add(BlockInit.WISTERIA_LOG);
+                        entries.add(BlockInit.WISTERIA_WOOD);
+                        entries.add(BlockInit.STRIPPED_WISTERIA_LOG);
+                        entries.add(BlockInit.STRIPPED_WISTERIA_WOOD);
+                        entries.add(BlockInit.WISTERIA_PLANKS);
+                        entries.add(BlockInit.WISTERIA_STAIRS);
+                        entries.add(BlockInit.WISTERIA_SLAB);
+                        entries.add(BlockInit.WISTERIA_FENCE);
+                        entries.add(BlockInit.WISTERIA_FENCE_GATE);
+                        entries.add(BlockInit.WISTERIA_DOOR);
+                        entries.add(BlockInit.WISTERIA_TRAPDOOR);
+                        entries.add(BlockInit.WISTERIA_PRESSURE_PLATE);
+                        entries.add(BlockInit.WISTERIA_BUTTON);
                         entries.add(BlockInit.CHARRED_LOG);
                         entries.add(BlockInit.CHARRED_WOOD);
                         entries.add(BlockInit.STRIPPED_CHARRED_LOG);

@@ -13,11 +13,13 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(BlockTags.STAIRS)
+                .add(BlockInit.WISTERIA_STAIRS)
                 .add(BlockInit.WILLOW_STAIRS)
                 .add(BlockInit.CHARRED_STAIRS)
                 .add(BlockInit.TUFF_STAIRS)
                 .add(BlockInit.CALCITE_STAIRS);
         getOrCreateTagBuilder(BlockTags.SLABS)
+                .add(BlockInit.WISTERIA_SLAB)
                 .add(BlockInit.WILLOW_SLAB)
                 .add(BlockInit.CHARRED_SLAB)
                 .add(BlockInit.TUFF_SLAB)
@@ -27,6 +29,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.CALCITE_WALL);
         getOrCreateTagBuilder(BlockTags.BUTTONS)
                 .add(BlockInit.WILLOW_BUTTON)
+                .add(BlockInit.WISTERIA_BUTTON)
                 .add(BlockInit.CHARRED_BUTTON)
                 .add(BlockInit.CALCITE_BUTTON)
                 .add(BlockInit.TUFF_BUTTON);
@@ -35,6 +38,10 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(BlockInit.WILLOW_LOG)
                 .add(BlockInit.STRIPPED_WILLOW_LOG)
+                .add(BlockInit.WISTERIA_LOG)
+                .add(BlockInit.STRIPPED_WISTERIA_LOG)
+                .add(BlockInit.WISTERIA_WOOD)
+                .add(BlockInit.STRIPPED_WISTERIA_WOOD)
                 .add(BlockInit.WILLOW_WOOD)
                 .add(BlockInit.STRIPPED_WILLOW_WOOD)
                 .add(BlockInit.WILLOW_PLANKS)
@@ -87,7 +94,11 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.WILLOW_LOG)
                 .add(BlockInit.STRIPPED_WILLOW_LOG)
                 .add(BlockInit.WILLOW_WOOD)
-                .add(BlockInit.STRIPPED_WILLOW_WOOD);
+                .add(BlockInit.STRIPPED_WILLOW_WOOD)
+                .add(BlockInit.WISTERIA_LOG)
+                .add(BlockInit.STRIPPED_WISTERIA_LOG)
+                .add(BlockInit.WISTERIA_WOOD)
+                .add(BlockInit.STRIPPED_WISTERIA_WOOD);
         getOrCreateTagBuilder(BlockTags.LOGS)
                 .add(BlockInit.CHARRED_LOG)
                 .add(BlockInit.STRIPPED_CHARRED_LOG)
@@ -98,29 +109,38 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.WILLOW_WOOD)
                 .add(BlockInit.STRIPPED_WILLOW_WOOD);
         getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(BlockInit.WISTERIA_LEAVES)
                 .add(BlockInit.ORANGE_WILLOW_LEAVES)
                 .add(BlockInit.RED_WILLOW_LEAVES)
                 .add(BlockInit.YELLOW_WILLOW_LEAVES);
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(BlockInit.CHARRED_FENCE)
+                .add(BlockInit.WISTERIA_FENCE)
                 .add(BlockInit.WILLOW_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(BlockInit.CHARRED_FENCE_GATE)
+                .add(BlockInit.WISTERIA_FENCE_GATE)
                 .add(BlockInit.WILLOW_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.TRAPDOORS)
                 .add(BlockInit.CHARRED_TRAPDOOR)
+                .add(BlockInit.WISTERIA_TRAPDOOR)
                 .add(BlockInit.WILLOW_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
-                .add(BlockInit.WILLOW_TRAPDOOR);
+                .add(BlockInit.WILLOW_TRAPDOOR)
+                .add(BlockInit.WISTERIA_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.DOORS)
                 .add(BlockInit.CHARRED_DOOR)
+                .add(BlockInit.WISTERIA_DOOR)
                 .add(BlockInit.WILLOW_DOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+                .add(BlockInit.WISTERIA_DOOR)
                 .add(BlockInit.WILLOW_DOOR);
         getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
                 .add(BlockInit.CHARRED_PRESSURE_PLATE)
+                .add(BlockInit.WISTERIA_PRESSURE_PLATE)
                 .add(BlockInit.WILLOW_PRESSURE_PLATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(BlockInit.WISTERIA_PRESSURE_PLATE)
                 .add(BlockInit.WILLOW_PRESSURE_PLATE);
         getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
                 .add(BlockInit.BOOK_STACK);

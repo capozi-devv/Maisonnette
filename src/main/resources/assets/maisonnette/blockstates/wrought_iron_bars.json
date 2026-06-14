@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "half=upper,facing=north": {"model": "maisonnette:block/wrought_iron_bars_top"},
+    "half=upper,facing=south": {"model": "maisonnette:block/wrought_iron_bars_top"},
+    "half=upper,facing=east": {"model": "maisonnette:block/wrought_iron_bars_top", "y": 90},
+    "half=upper,facing=west": {"model": "maisonnette:block/wrought_iron_bars_top", "y": 90},
+    "half=lower,facing=north": {"model": "maisonnette:block/wrought_iron_bars_bottom"},
+    "half=lower,facing=south": {"model": "maisonnette:block/wrought_iron_bars_bottom"},
+    "half=lower,facing=east": {"model": "maisonnette:block/wrought_iron_bars_bottom", "y": 90},
+    "half=lower,facing=west": {"model": "maisonnette:block/wrought_iron_bars_bottom", "y": 90}
+  }
+}

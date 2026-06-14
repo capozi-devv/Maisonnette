@@ -82,9 +82,9 @@
   "block.maisonnette.carnation": "Carnation",
   "block.maisonnette.colossal_hibiscus": "Colossal Hibiscus",
   "block.maisonnette.colossal_hibiscus_bloomling": "Colossal Hibiscus Bloomling",
-  "block.maisonnette.black_starlette": "Black Starlette",
-  "block.maisonnette.orange_starlette": "Orange Starlette",
-  "block.maisonnette.yellow_starlette": "Yellow Starlette",
+  "block.maisonnette.black_starlette": "Midnight Starlette",
+  "block.maisonnette.orange_starlette": "Dusk Starlette",
+  "block.maisonnette.yellow_starlette": "Dawn Starlette",
   "block.maisonnette.greenhouse_glass": "Greenhouse Glass",
   "block.maisonnette.wired_greenhouse_glass": "Wired Greenhouse Glass",
   "block.maisonnette.white_stained_greenhouse_glass": "White Stained Greenhouse Glass",
@@ -102,5 +102,6 @@
   "block.maisonnette.brown_stained_greenhouse_glass": "Brown Stained Greenhouse Glass",
   "block.maisonnette.green_stained_greenhouse_glass": "Green Stained Greenhouse Glass",
   "block.maisonnette.red_stained_greenhouse_glass": "Red Stained Greenhouse Glass",
-  "block.maisonnette.black_stained_greenhouse_glass": "Black Stained Greenhouse Glass"
+  "block.maisonnette.black_stained_greenhouse_glass": "Black Stained Greenhouse Glass",
+  "block.maisonnette.delphinium": "Delphinium"
 }

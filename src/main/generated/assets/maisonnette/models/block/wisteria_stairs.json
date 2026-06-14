@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "maisonnette:block/wisteria_planks",
+    "side": "maisonnette:block/wisteria_planks",
+    "top": "maisonnette:block/wisteria_planks"
+  }
+}

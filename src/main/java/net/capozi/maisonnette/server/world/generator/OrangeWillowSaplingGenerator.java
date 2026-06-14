@@ -12,7 +12,6 @@ public class OrangeWillowSaplingGenerator extends LargeTreeSaplingGenerator {
     protected @Nullable RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
         return null;
     }
-
     @Override
     protected @Nullable RegistryKey<ConfiguredFeature<?, ?>> getLargeTreeFeature(Random random) {
         return ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY;
