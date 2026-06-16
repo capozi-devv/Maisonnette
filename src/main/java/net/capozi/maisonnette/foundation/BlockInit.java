@@ -2,9 +2,9 @@ package net.capozi.maisonnette.foundation;
 
 import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.common.block.*;
-import net.capozi.maisonnette.common.item.MosaicTileItem;
 import net.capozi.maisonnette.server.world.generator.OrangeWillowSaplingGenerator;
 import net.capozi.maisonnette.server.world.generator.RedWillowSaplingGenerator;
+import net.capozi.maisonnette.server.world.generator.WisteriaSaplingGenerator;
 import net.capozi.maisonnette.server.world.generator.YellowWillowSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -33,12 +33,6 @@ public class BlockInit {
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(Maisonnette.MOD_ID, name), new BlockItem(block, new FabricItemSettings()));
     }
-	private static Block registerBlock(String name, Block block, boolean registerBlockItem, boolean tile) {
-		if (tile) {
-			registerBlockItem(name, new MosaicTileItem(block, new FabricItemSettings()));
-		}
-		return Registry.register(Registries.BLOCK, new Identifier(Maisonnette.MOD_ID, name), block);
-	}
     private static Block registerBlock(String name, Block block, boolean registerBlockItem) {
         if (registerBlockItem) {
             registerBlockItem(name, block);
@@ -49,7 +43,6 @@ public class BlockInit {
     private static Block registerPottedBlock(String name, Block content) {
         return registerBlock(name, new FlowerPotBlock(content, FabricBlockSettings.copyOf(Blocks.FLOWER_POT)), false);
     }
-    public static final Block MOSAIC = registerBlock("mosaic_tiles", new MosaicBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)), true,true);
 	public static final Block BOOK_STACK = registerBlock("book_stack", new BookStackBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO).sounds(SoundInit.BOOK_STACK_SOUNDS).nonOpaque().offset(OffsetType.NONE).burnable()), false);
     public static final Block HANGING_FLOWER_POT = registerBlock("hanging_flower_pot", new HangingFlowerPotBlock(FabricBlockSettings.copyOf(Blocks.FLOWER_POT).nonOpaque()), true);
 	public static final Block CALCITE_STAIRS = registerBlock("calcite_stairs", new StairsBlock(Blocks.CALCITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRANITE_STAIRS)), true);
@@ -95,7 +88,7 @@ public class BlockInit {
     public static final Block RED_WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(new RedWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block ORANGE_WILLOW_SAPLING = registerBlock("orange_willow_sapling", new SaplingBlock(new OrangeWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block YELLOW_WILLOW_SAPLING = registerBlock("yellow_willow_sapling", new SaplingBlock(new YellowWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
-    public static final Block WISTERIA_SAPLING = registerBlock("wisteria_sapling", new SaplingBlock(new YellowWillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block WISTERIA_SAPLING = registerBlock("wisteria_sapling", new SaplingBlock(new WisteriaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block WILLOW_SLAB = registerBlock("willow_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), true);
     public static final Block WILLOW_STAIRS = registerBlock("willow_stairs", new StairsBlock(Blocks.OAK_STAIRS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), true);
     public static final Block WILLOW_FENCE = registerBlock("willow_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), true);
@@ -169,4 +162,6 @@ public class BlockInit {
     public static final Block DELPHINIUM_FLOWER = registerBlock("delphinium", new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH)), true);
     public static final Block WROUGHT_IRON_BARS = registerBlock("wrought_iron_bars", new WroughtIronBarsBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)), true);
     public static final Block WROUGHT_IRON_GATE = registerBlock("wrought_iron_gate", new WroughtIronGateBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)), true);
+    public static final Block WISTERIA_HANGING_LEAVES = registerBlock("wisteria_hanging_leaves", new WisteriaHangingLeavesBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES)), true);
+    public static final Block WISTERIA_HANGING_LEAVES_PLANT = registerBlock("wisteria_hanging_leaves_plant", new WisteriaHangingLeavesBlock.WisteriaHangingLeavesPlantBlock(FabricBlockSettings.copyOf(Blocks.WEEPING_VINES)), false);
 }

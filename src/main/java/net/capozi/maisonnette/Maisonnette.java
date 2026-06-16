@@ -1,5 +1,7 @@
 package net.capozi.maisonnette;
 
+import moth.butterflyapi.mod.ModContext;
+import net.capozi.maisonnette.common.loot.SnifferDiggingLoot;
 import net.capozi.maisonnette.server.worldgen.ExpandedJigsawStructure;
 import net.capozi.maisonnette.foundation.*;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -16,6 +18,7 @@ import net.fabricmc.api.ModInitializer;
 
 public class Maisonnette implements ModInitializer {
 	public static final String MOD_ID = "maisonnette";
+    public static final ModContext MOD = ModContext.of(MOD_ID);
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static Identifier identifier(String name) { return new Identifier(Maisonnette.MOD_ID, name); }
     public static final StructureType<ExpandedJigsawStructure> EXPANDED_JIGSAW = Registry.register(Registries.STRUCTURE_TYPE, new Identifier(MOD_ID, "expanded_jigsaw"), () -> ExpandedJigsawStructure.CODEC);
@@ -28,6 +31,7 @@ public class Maisonnette implements ModInitializer {
 		SoundInit.init();
 		WorldGenerationInit.init();
 		BookStackBlock.registerBookUseCallback();
+        SnifferDiggingLoot.register();
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WEATHERED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.WEATHERED_COPPER_TORCHBULB, BlockInit.OXIDIZED_COPPER_TORCHBULB);

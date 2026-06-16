@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-12T16:55:53.4507303	§dMaisonnette/Block Loot Tables
+// 1.20.1	2026-06-14T14:54:36.482425	§dMaisonnette/Block Loot Tables
 d102e2221411d1730db607b7d1d65bc98219cdf6 data\maisonnette\loot_tables\blocks\gray_seat.json
 2357bb8b0a0ff3b2018479aa343cbc3a3fd45597 data\maisonnette\loot_tables\blocks\willow_door.json
 e215e9d021c022a57881c7fdf2951c4b394fae0c data\maisonnette\loot_tables\blocks\charred_wood.json
@@ -20,8 +20,8 @@ e2f203a9ca410c633bf35b18a70b24fa9ebf43b1 data\maisonnette\loot_tables\blocks\blu
 aa32d58105f6d4893b9b3f22344f7941836c0043 data\maisonnette\loot_tables\blocks\willow_slab.json
 16667093774b803b6e13dc8fc025ecf87b62939e data\maisonnette\loot_tables\blocks\orange_starlette.json
 8f0fed47b3e10aa61706606b36132570cd9e4218 data\maisonnette\loot_tables\blocks\light_blue_seat.json
-61d157ac0d44d1a49f54e641a1bfa1410020b0e1 data\maisonnette\loot_tables\blocks\calcite_button.json
 e3d8aa03f8f80b83ff4e8ccc8219503b14f1e24a data\maisonnette\loot_tables\blocks\copper_torchbulb.json
+61d157ac0d44d1a49f54e641a1bfa1410020b0e1 data\maisonnette\loot_tables\blocks\calcite_button.json
 2c03329670eae761b4d68bccc770b4465051f21a data\maisonnette\loot_tables\blocks\tuff_wall.json
 fe118d208bdcf0c32536d7de8a450799bf458e4e data\maisonnette\loot_tables\blocks\red_seat.json
 13e041e24c81e8fb51f9baf783ed928071c44983 data\maisonnette\loot_tables\blocks\pink_seat.json
