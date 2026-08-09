@@ -86,6 +86,9 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.BLACK_STARLETTE);
         addDrop(BlockInit.ORANGE_STARLETTE);
         addDrop(BlockInit.YELLOW_STARLETTE);
+        addDrop(BlockInit.DELPHINIUM_FLOWER);
+        addDrop(BlockInit.BLACK_GLADIOLUS);
+        addDrop(BlockInit.WHITE_GLADIOLUS);
         addDrop(BlockInit.POTTED_BLACK_STARLETTE, pottedPlantDrops(BlockInit.POTTED_BLACK_STARLETTE));
         addDrop(BlockInit.POTTED_ORANGE_STARLETTE, pottedPlantDrops(BlockInit.POTTED_ORANGE_STARLETTE));
         addDrop(BlockInit.POTTED_YELLOW_STARLETTE, pottedPlantDrops(BlockInit.POTTED_YELLOW_STARLETTE));

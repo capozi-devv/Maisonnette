@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-14T14:54:36.482425	§dMaisonnette/Block Loot Tables
+// 1.20.1	2026-08-09T10:15:48.0879195	§dMaisonnette/Block Loot Tables
 d102e2221411d1730db607b7d1d65bc98219cdf6 data\maisonnette\loot_tables\blocks\gray_seat.json
 2357bb8b0a0ff3b2018479aa343cbc3a3fd45597 data\maisonnette\loot_tables\blocks\willow_door.json
 e215e9d021c022a57881c7fdf2951c4b394fae0c data\maisonnette\loot_tables\blocks\charred_wood.json
@@ -20,8 +20,8 @@ e2f203a9ca410c633bf35b18a70b24fa9ebf43b1 data\maisonnette\loot_tables\blocks\blu
 aa32d58105f6d4893b9b3f22344f7941836c0043 data\maisonnette\loot_tables\blocks\willow_slab.json
 16667093774b803b6e13dc8fc025ecf87b62939e data\maisonnette\loot_tables\blocks\orange_starlette.json
 8f0fed47b3e10aa61706606b36132570cd9e4218 data\maisonnette\loot_tables\blocks\light_blue_seat.json
-e3d8aa03f8f80b83ff4e8ccc8219503b14f1e24a data\maisonnette\loot_tables\blocks\copper_torchbulb.json
 61d157ac0d44d1a49f54e641a1bfa1410020b0e1 data\maisonnette\loot_tables\blocks\calcite_button.json
+e3d8aa03f8f80b83ff4e8ccc8219503b14f1e24a data\maisonnette\loot_tables\blocks\copper_torchbulb.json
 2c03329670eae761b4d68bccc770b4465051f21a data\maisonnette\loot_tables\blocks\tuff_wall.json
 fe118d208bdcf0c32536d7de8a450799bf458e4e data\maisonnette\loot_tables\blocks\red_seat.json
 13e041e24c81e8fb51f9baf783ed928071c44983 data\maisonnette\loot_tables\blocks\pink_seat.json
@@ -47,6 +47,7 @@ c9df44c8e4ff8bcc866c96e36732c87fb02e3947 data\maisonnette\loot_tables\blocks\cha
 172796f5166b8e58e3a73b829b03b439c1b0d711 data\maisonnette\loot_tables\blocks\lime_seat.json
 cdace3456348452990bce59400dfa9aa7a2e9d16 data\maisonnette\loot_tables\blocks\white_seat.json
 adb9b499bf661d500117ebff9c51aa8d1161eb39 data\maisonnette\loot_tables\blocks\orange_willow_leaves.json
+68c38cdd91e799b8da3688555ae1770e34dd3725 data\maisonnette\loot_tables\blocks\black_gladiolus.json
 0788bf36c3127d7e9676d45d0e4a80f7d8b0a2ba data\maisonnette\loot_tables\blocks\potted_orange_starlette.json
 0788bf36c3127d7e9676d45d0e4a80f7d8b0a2ba data\maisonnette\loot_tables\blocks\potted_yellow_starlette.json
 b5b8103b4022610ab543607b7c2eba4ab2ae4d43 data\maisonnette\loot_tables\blocks\oxidized_copper_torchbulb.json
@@ -65,6 +66,8 @@ fcf013790d7da47e6c4b2e6d8ff9f0dd373cc8fc data\maisonnette\loot_tables\blocks\str
 de98c0e3962669918af283156e6330b3b3d765a5 data\maisonnette\loot_tables\blocks\black_seat.json
 2bd581579a873488ec7ab3c964b4912ecceca920 data\maisonnette\loot_tables\blocks\red_willow_sapling.json
 fc109716c653d8a9ef225a4ff725cb5940bf94fc data\maisonnette\loot_tables\blocks\waxed_exposed_copper_torchbulb.json
+3a0335bedc35ed77b4567a249e89dea09691d65c data\maisonnette\loot_tables\blocks\delphinium.json
+83948e35ec74af733e9089439d0f1f20ab6dc28b data\maisonnette\loot_tables\blocks\white_gladiolus.json
 a5429e208deb35741589e7e1eef380d7430cb3ab data\maisonnette\loot_tables\blocks\willow_wood.json
 646cc1b30a609a190e3fea4276530f52a38ef093 data\maisonnette\loot_tables\blocks\calcite_slab.json
 049393da149f45072932e4194e3d0b7605d0a7f3 data\maisonnette\loot_tables\blocks\orange_willow_sapling.json
