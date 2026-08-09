@@ -21,6 +21,7 @@ import java.util.Optional;
 
 import static net.capozi.maisonnette.common.block.BulbBlock.LIT;
 
+@SuppressWarnings("all")
 public class BlockInit {
 	public static void init() {}
     public static final BlockSetType WILLOW_SET_TYPE = new BlockSetType("willow");
@@ -85,9 +86,9 @@ public class BlockInit {
     public static final Block RED_WILLOW_LEAVES = registerBlock("red_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
     public static final Block ORANGE_WILLOW_LEAVES = registerBlock("orange_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
     public static final Block YELLOW_WILLOW_LEAVES = registerBlock("yellow_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()), true);
-    public static final Block RED_WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(new SaplingGenerator("red_willow", null, Optional.of(ConfiguredFeaturesProvider.RED_WILLOW_KEY), null), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
-    public static final Block ORANGE_WILLOW_SAPLING = registerBlock("orange_willow_sapling", new SaplingBlock(new SaplingGenerator("orange_willow", null, Optional.of(ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY), null), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
-    public static final Block YELLOW_WILLOW_SAPLING = registerBlock("yellow_willow_sapling", new SaplingBlock(new SaplingGenerator("yellow_willow", null, Optional.of(ConfiguredFeaturesProvider.YELLOW_WILLOW_KEY), null), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block RED_WILLOW_SAPLING = registerBlock("red_willow_sapling", new SaplingBlock(new SaplingGenerator("red_willow", Optional.of(ConfiguredFeaturesProvider.RED_WILLOW_KEY), Optional.of(ConfiguredFeaturesProvider.RED_WILLOW_KEY), null), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block ORANGE_WILLOW_SAPLING = registerBlock("orange_willow_sapling", new SaplingBlock(new SaplingGenerator("orange_willow", Optional.of(ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY), Optional.of(ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY), null), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
+    public static final Block YELLOW_WILLOW_SAPLING = registerBlock("yellow_willow_sapling", new SaplingBlock(new SaplingGenerator("yellow_willow", Optional.of(ConfiguredFeaturesProvider.YELLOW_WILLOW_KEY), Optional.of(ConfiguredFeaturesProvider.YELLOW_WILLOW_KEY), null), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), true);
     public static final Block WILLOW_SLAB = registerBlock("willow_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), true);
     public static final Block WILLOW_STAIRS = registerBlock("willow_stairs", new StairsBlock(Blocks.OAK_STAIRS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), true);
     public static final Block WILLOW_FENCE = registerBlock("willow_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), true);
