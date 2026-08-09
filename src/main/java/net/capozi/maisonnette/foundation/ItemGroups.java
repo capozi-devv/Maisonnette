@@ -12,119 +12,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ItemGroups {
-//    public static final ItemGroup MAISONNETTE_GROUP = Registry.register(Registries.ITEM_GROUP,
-//            new Identifier(Maisonnette.MOD_ID, "maisonnette"),
-//            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maisonnette"))
-//                    .icon(() -> new ItemStack(BlockInit.COPPER_TORCHBULB)).entries((displayContext, entries) -> {
-//                        entries.add(BlockInit.CALCITE_STAIRS);
-//                        entries.add(BlockInit.CALCITE_SLAB);
-//                        entries.add(BlockInit.CALCITE_WALL);
-//                        entries.add(BlockInit.CALCITE_BUTTON);
-//                        entries.add(BlockInit.TUFF_STAIRS);
-//                        entries.add(BlockInit.TUFF_SLAB);
-//                        entries.add(BlockInit.TUFF_WALL);
-//                        entries.add(BlockInit.TUFF_BUTTON);
-//                        entries.add(Items.BOOK);
-//                        entries.add(BlockInit.CARNATION);
-//                        entries.add(BlockInit.COLOSSAL_HIBISCUS);
-//                        entries.add(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING);
-//                        entries.add(BlockInit.BLACK_STARLETTE);
-//                        entries.add(BlockInit.ORANGE_STARLETTE);
-//                        entries.add(BlockInit.YELLOW_STARLETTE);
-//                        entries.add(BlockInit.DELPHINIUM_FLOWER);
-//                        entries.add(BlockInit.WHITE_GLADIOLUS);
-//                        entries.add(BlockInit.BLACK_GLADIOLUS);
-//                        entries.add(BlockInit.HANGING_FLOWER_POT);
-//                        entries.add(BlockInit.COPPER_TORCHBULB);
-//                        entries.add(BlockInit.EXPOSED_COPPER_TORCHBULB);
-//                        entries.add(BlockInit.WEATHERED_COPPER_TORCHBULB);
-//                        entries.add(BlockInit.OXIDIZED_COPPER_TORCHBULB);
-//                        entries.add(BlockInit.WHITE_SEAT);
-//                        entries.add(BlockInit.ORANGE_SEAT);
-//                        entries.add(BlockInit.MAGENTA_SEAT);
-//                        entries.add(BlockInit.LIGHT_BLUE_SEAT);
-//                        entries.add(BlockInit.YELLOW_SEAT);
-//                        entries.add(BlockInit.LIME_SEAT);
-//                        entries.add(BlockInit.PINK_SEAT);
-//                        entries.add(BlockInit.GRAY_SEAT);
-//                        entries.add(BlockInit.LIGHT_GRAY_SEAT);
-//                        entries.add(BlockInit.CYAN_SEAT);
-//                        entries.add(BlockInit.PURPLE_SEAT);
-//                        entries.add(BlockInit.BLUE_SEAT);
-//                        entries.add(BlockInit.BROWN_SEAT);
-//                        entries.add(BlockInit.GREEN_SEAT);
-//                        entries.add(BlockInit.RED_SEAT);
-//                        entries.add(BlockInit.BLACK_SEAT);
-//                        entries.add(BlockInit.GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.ORANGE_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.MAGENTA_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.LIGHT_BLUE_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.YELLOW_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.LIME_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.PINK_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.GRAY_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.LIGHT_GRAY_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.CYAN_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.PURPLE_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.BLUE_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.BROWN_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.GREEN_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.RED_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.BLACK_STAINED_GREENHOUSE_GLASS);
-//                        entries.add(BlockInit.RED_WILLOW_LEAVES);
-//                        entries.add(BlockInit.ORANGE_WILLOW_LEAVES);
-//                        entries.add(BlockInit.YELLOW_WILLOW_LEAVES);
-//                        entries.add(BlockInit.RED_WILLOW_SAPLING);
-//                        entries.add(BlockInit.ORANGE_WILLOW_SAPLING);
-//                        entries.add(BlockInit.YELLOW_WILLOW_SAPLING);
-//                        entries.add(BlockInit.WILLOW_LOG);
-//                        entries.add(BlockInit.WILLOW_WOOD);
-//                        entries.add(BlockInit.STRIPPED_WILLOW_LOG);
-//                        entries.add(BlockInit.STRIPPED_WILLOW_WOOD);
-//                        entries.add(BlockInit.WILLOW_PLANKS);
-//                        entries.add(BlockInit.WILLOW_STAIRS);
-//                        entries.add(BlockInit.WILLOW_SLAB);
-//                        entries.add(BlockInit.WILLOW_FENCE);
-//                        entries.add(BlockInit.WILLOW_FENCE_GATE);
-//                        entries.add(BlockInit.WILLOW_DOOR);
-//                        entries.add(BlockInit.WILLOW_TRAPDOOR);
-//                        entries.add(BlockInit.WILLOW_PRESSURE_PLATE);
-//                        entries.add(BlockInit.WILLOW_BUTTON);
-//                        entries.add(BlockInit.WISTERIA_LEAVES);
-//                        entries.add(BlockInit.WISTERIA_SAPLING);
-//                        entries.add(BlockInit.WISTERIA_LOG);
-//                        entries.add(BlockInit.WISTERIA_WOOD);
-//                        entries.add(BlockInit.STRIPPED_WISTERIA_LOG);
-//                        entries.add(BlockInit.STRIPPED_WISTERIA_WOOD);
-//                        entries.add(BlockInit.WISTERIA_PLANKS);
-//                        entries.add(BlockInit.WISTERIA_STAIRS);
-//                        entries.add(BlockInit.WISTERIA_SLAB);
-//                        entries.add(BlockInit.WISTERIA_FENCE);
-//                        entries.add(BlockInit.WISTERIA_FENCE_GATE);
-//                        entries.add(BlockInit.WISTERIA_DOOR);
-//                        entries.add(BlockInit.WISTERIA_TRAPDOOR);
-//                        entries.add(BlockInit.WISTERIA_PRESSURE_PLATE);
-//                        entries.add(BlockInit.WISTERIA_BUTTON);
-//                        entries.add(BlockInit.CHARRED_LOG);
-//                        entries.add(BlockInit.CHARRED_WOOD);
-//                        entries.add(BlockInit.STRIPPED_CHARRED_LOG);
-//                        entries.add(BlockInit.STRIPPED_CHARRED_WOOD);
-//                        entries.add(BlockInit.CHARRED_PLANKS);
-//                        entries.add(BlockInit.CHARRED_STAIRS);
-//                        entries.add(BlockInit.CHARRED_SLAB);
-//                        entries.add(BlockInit.CHARRED_FENCE);
-//                        entries.add(BlockInit.CHARRED_FENCE_GATE);
-//                        entries.add(BlockInit.CHARRED_DOOR);
-//                        entries.add(BlockInit.CHARRED_TRAPDOOR);
-//                        entries.add(BlockInit.CHARRED_PRESSURE_PLATE);
-//                        entries.add(BlockInit.CHARRED_BUTTON);
-//                        entries.add(BlockInit.WROUGHT_IRON_BARS);
-//                        entries.add(BlockInit.WROUGHT_IRON_GATE);
-//                        entries.add(BlockInit.WAXED_COPPER_TORCHBULB);
-//                        entries.add(BlockInit.WAXED_EXPOSED_COPPER_TORCHBULB);
-//                        entries.add(BlockInit.WAXED_WEATHERED_COPPER_TORCHBULB);
-//                        entries.add(BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
-//                    }).build());
     private static Identifier CATEGORY = Maisonnette.identifier("textures/gui/sprites/category.png");
     private static Identifier SLOT = Maisonnette.identifier("textures/gui/sprites/slot.png");
     public static final ItemGroup MAISONNETTE = Maisonnette.MOD.tabBuilder(Maisonnette.MOD_ID)
@@ -133,7 +20,7 @@ public class ItemGroups {
             .category("maisonnette", Text.translatable("itemgroup.maisonnette"), (category) -> {
                 category.alignCenter();
                 category.backgroundTexture(CATEGORY);
-                category.textColor("#b3a3a3");
+                category.textColor("#555555");
                 category.noBorder();
                 category.add(
                         BlockInit.CALCITE_STAIRS,
@@ -174,7 +61,7 @@ public class ItemGroups {
             .category("wonderous_wards", Text.translatable("itemgroup.maisonnette.wonderous_wards"), (category) -> {
                 category.alignCenter();
                 category.backgroundTexture(CATEGORY);
-                category.textColor("#b3a3a3");
+                category.textColor("#555555");
                 category.noBorder();
                 category.add(
                         BlockInit.RED_WILLOW_LEAVES,
@@ -214,7 +101,7 @@ public class ItemGroups {
             .category("botanical_bounties", Text.translatable("itemgroup.maisonnette.botanical_bounties"), (category) -> {
                 category.alignCenter();
                 category.backgroundTexture(CATEGORY);
-                category.textColor("#b3a3a3");
+                category.textColor("#555555");
                 category.noBorder();
                 category.add(
                         BlockInit.CARNATION,
@@ -244,6 +131,7 @@ public class ItemGroups {
                         BlockInit.RED_STAINED_GREENHOUSE_GLASS,
                         BlockInit.BLACK_STAINED_GREENHOUSE_GLASS,
                         BlockInit.WISTERIA_LEAVES,
+                        BlockInit.WISTERIA_HANGING_LEAVES,
                         BlockInit.WISTERIA_SAPLING,
                         BlockInit.WISTERIA_LOG,
                         BlockInit.WISTERIA_WOOD,

@@ -49,6 +49,8 @@
   "sounds.maisonnette.book_hit": "Book Breaking",
   "sounds.maisonnette.book_step": "Footsteps",
   "sounds.maisonnette.book_fall": "Something Falls",
+  "sounds.maisonnette.gate_open": "Wrought Iron Gate Opens",
+  "sounds.maisonnette.gate_close": "Wrought Iron Gate Closes",
   "entity.maisonnette.specter": "Specter",
   "block.maisonnette.willow_log": "Willow Log",
   "block.maisonnette.stripped_willow_log": "Stripped Willow Log",

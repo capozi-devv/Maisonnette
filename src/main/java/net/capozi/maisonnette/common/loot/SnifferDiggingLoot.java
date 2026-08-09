@@ -17,7 +17,11 @@ public class SnifferDiggingLoot {
                 tableBuilder.pool(LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(BlockInit.COLOSSAL_HIBISCUS_BLOOMLING))
-                        .conditionally(RandomChanceLootCondition.builder(0.25f)));
+                        .conditionally(RandomChanceLootCondition.builder(0.2f)));
+                tableBuilder.pool(LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(BlockInit.WISTERIA_SAPLING))
+                        .conditionally(RandomChanceLootCondition.builder(0.145f)));
             }
         });
     }

@@ -1,10 +1,12 @@
 package net.capozi.maisonnette.common.block;
 
+import net.capozi.maisonnette.foundation.SoundInit;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -63,6 +65,11 @@ public class WroughtIronGateBlock extends DoorBlock {
         state = state.cycle(OPEN);
         world.setBlockState(pos, state, Block.NOTIFY_LISTENERS | Block.REDRAW_ON_MAIN_THREAD);
         world.emitGameEvent(player, this.isOpen(state) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
+        if (state.get(OPEN).booleanValue()) {
+            world.playSound(null, pos, SoundInit.GATE_OPEN, SoundCategory.BLOCKS, 1f, 1f);
+        } else {
+            world.playSound(null, pos, SoundInit.GATE_CLOSE, SoundCategory.BLOCKS, 1f, 1f);
+        }
         return ActionResult.success(world.isClient);
     }
 }

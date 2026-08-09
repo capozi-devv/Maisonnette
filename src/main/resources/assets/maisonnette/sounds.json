@@ -1,4 +1,16 @@
 {
+  "gate_open": {
+    "subtitle": "sounds.maisonnette.gate_open",
+    "sounds": [
+      "maisonnette:wrought_iron_gate_open"
+    ]
+  },
+  "gate_close": {
+    "subtitle": "sounds.maisonnette.gate_close",
+    "sounds": [
+      "maisonnette:wrought_iron_gate_close"
+    ]
+  },
   "book_add": {
     "subtitle": "sounds.maisonnette.book_add",
     "sounds": [

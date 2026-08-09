@@ -3,6 +3,7 @@ package net.capozi.maisonnette.common.block;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.ActionResult;
@@ -10,6 +11,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -53,6 +55,31 @@ public class ColossalHibiscusBlock extends AbstractPlantBlock {
         @Override
         protected Block getPlant() {
             return BlockInit.COLOSSAL_HIBISCUS;
+        }
+        @Override
+        public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+            if (entity.bypassesLandingEffects()) {
+                super.onLandedUpon(world, state, pos, entity, fallDistance);
+            } else {
+                entity.handleFallDamage(fallDistance, 0.0F, world.getDamageSources().fall());
+            }
+        }
+
+        @Override
+        public void onEntityLand(BlockView world, Entity entity) {
+            if (entity.bypassesLandingEffects()) {
+                super.onEntityLand(world, entity);
+            } else {
+                this.bounce(entity);
+            }
+        }
+
+        private void bounce(Entity entity) {
+            Vec3d vec3d = entity.getVelocity();
+            if (vec3d.y < 0.0) {
+                double d = 0.8;
+                entity.setVelocity(vec3d.x, -vec3d.y * d, vec3d.z);
+            }
         }
     }
 }

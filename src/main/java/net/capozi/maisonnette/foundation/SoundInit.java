@@ -13,6 +13,8 @@ public class SoundInit {
         Identifier id = new Identifier(Maisonnette.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
+    public static final SoundEvent GATE_OPEN = registerSoundEvent("gate_open");
+    public static final SoundEvent GATE_CLOSE = registerSoundEvent("gate_close");
     public static final SoundEvent BOOK_ADD = registerSoundEvent("book_add");
     public static final SoundEvent BOOK_STACK_BREAK = registerSoundEvent("book_stack_break");
     public static final SoundEvent BOOK_STACK_STEP = registerSoundEvent("book_stack_step");

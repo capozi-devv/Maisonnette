@@ -41,6 +41,8 @@ public class Maisonnette implements ModInitializer {
 		OxidizableBlocksRegistry.registerWaxableBlockPair(BlockInit.OXIDIZED_COPPER_TORCHBULB, BlockInit.WAXED_OXIDIZED_COPPER_TORCHBULB);
         StrippableBlockRegistry.register(BlockInit.WILLOW_LOG, BlockInit.STRIPPED_WILLOW_LOG);
         StrippableBlockRegistry.register(BlockInit.WILLOW_WOOD, BlockInit.STRIPPED_WILLOW_WOOD);
+        StrippableBlockRegistry.register(BlockInit.WISTERIA_LOG, BlockInit.STRIPPED_WISTERIA_LOG);
+        StrippableBlockRegistry.register(BlockInit.WISTERIA_WOOD, BlockInit.STRIPPED_WISTERIA_WOOD);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.BOOK_STACK, 30, 30);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_LOG, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WILLOW_WOOD, 5, 5);
@@ -58,5 +60,21 @@ public class Maisonnette implements ModInitializer {
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.RED_WILLOW_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.ORANGE_WILLOW_LEAVES, 30, 60);
         FlammableBlockRegistry.getDefaultInstance().add(BlockInit.YELLOW_WILLOW_LEAVES, 30, 60);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_LEAVES, 30, 60);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_HANGING_LEAVES, 30, 60);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_HANGING_LEAVES_PLANT, 30, 60);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_LOG, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_WOOD, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.STRIPPED_WISTERIA_LOG, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.STRIPPED_WISTERIA_WOOD, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_PLANKS, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_STAIRS, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_SLAB, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_FENCE, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_FENCE_GATE, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_PRESSURE_PLATE, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_BUTTON, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_DOOR, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(BlockInit.WISTERIA_TRAPDOOR, 5, 5);
 	}
 }
