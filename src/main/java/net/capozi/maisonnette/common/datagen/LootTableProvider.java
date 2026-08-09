@@ -99,6 +99,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
         addDrop(BlockInit.POTTED_YELLOW_WILLOW_SAPLING, pottedPlantDrops(BlockInit.POTTED_YELLOW_WILLOW_SAPLING));
         addDropWithSilkTouch(BlockInit.GREENHOUSE_GLASS);
         addDropWithSilkTouch(BlockInit.WIRED_GREENHOUSE_GLASS);
-
+        addDrop(BlockInit.WROUGHT_IRON_GATE, doorDrops(BlockInit.WROUGHT_IRON_GATE));
+        addDrop(BlockInit.WROUGHT_IRON_BARS, doorDrops(BlockInit.WROUGHT_IRON_BARS));
     }
 }

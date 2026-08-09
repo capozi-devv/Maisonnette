@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-09T10:15:48.0889199	§dMaisonnette/Tags for minecraft:block
+// 1.20.1	2026-08-09T10:18:44.756811	§dMaisonnette/Tags for minecraft:block
 bf16c3b6bc5802c5b3ce035c8a517897eeb44185 data\minecraft\tags\blocks\stairs.json
 aa61d0950fc80f965b55f8e1d7a7f7fba691b524 data\minecraft\tags\blocks\wooden_trapdoors.json
 9a4209e5a7e3f62ba2ae9020b573f6279c04f246 data\minecraft\tags\blocks\leaves.json
@@ -15,8 +15,8 @@ f6f1e6dd9e1f706986e27e2b10a41685c06fe647 data\minecraft\tags\blocks\pressure_pla
 3f60ab9d8da808cb3a7ceecf69518accb1e367e4 data\minecraft\tags\blocks\mineable\axe.json
 c4068cc7be43f24e620e9a636ff864445e36df4b data\minecraft\tags\blocks\logs_that_burn.json
 35e045a1f6848590fdf489ac0191915f7ffd5b0f data\minecraft\tags\blocks\fences.json
-9248579be393e812f4a0d82bbf1ef34e3191cba7 data\minecraft\tags\blocks\walls.json
 5ae232e7682db40619c3163cb19fc7c54d863729 data\minecraft\tags\blocks\buttons.json
+9248579be393e812f4a0d82bbf1ef34e3191cba7 data\minecraft\tags\blocks\walls.json
 e3d2ca56ef6fbf349acd8fbc8838c33767fc9113 data\minecraft\tags\blocks\mineable\pickaxe.json
 acabe4e4316ddd10a9daed5e4b9fbe9064a82f0f data\minecraft\tags\blocks\trapdoors.json
 f15885064ef48712ba499e10df56534744a31257 data\minecraft\tags\blocks\wooden_doors.json
