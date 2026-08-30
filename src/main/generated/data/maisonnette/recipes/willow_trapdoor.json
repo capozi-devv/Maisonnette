@@ -3,18 +3,16 @@
   "category": "redstone",
   "key": {
     "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "maisonnette:charred_planks"
+      "item": "maisonnette:willow_planks"
     }
   },
   "pattern": [
-    "#W#",
-    "#W#"
+    "###",
+    "###"
   ],
   "result": {
-    "item": "maisonnette:charred_fence_gate"
+    "count": 2,
+    "item": "maisonnette:willow_trapdoor"
   },
   "show_notification": true
 }

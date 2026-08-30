@@ -6,7 +6,7 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "maisonnette:charred_planks"
+      "item": "maisonnette:willow_planks"
     }
   },
   "pattern": [
@@ -14,7 +14,7 @@
     "#W#"
   ],
   "result": {
-    "item": "maisonnette:charred_fence_gate"
+    "item": "maisonnette:willow_fence_gate"
   },
   "show_notification": true
 }

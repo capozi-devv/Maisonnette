@@ -3,18 +3,14 @@
   "category": "redstone",
   "key": {
     "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "maisonnette:charred_planks"
+      "item": "maisonnette:wisteria_planks"
     }
   },
   "pattern": [
-    "#W#",
-    "#W#"
+    "##"
   ],
   "result": {
-    "item": "maisonnette:charred_fence_gate"
+    "item": "maisonnette:wisteria_pressure_plate"
   },
   "show_notification": true
 }

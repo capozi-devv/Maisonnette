@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "building",
   "key": {
     "#": {
-      "item": "maisonnette:charred_planks"
+      "item": "maisonnette:wisteria_planks"
     }
   },
   "pattern": [
-    "###",
+    "#  ",
+    "## ",
     "###"
   ],
   "result": {
-    "count": 2,
-    "item": "maisonnette:charred_trapdoor"
+    "count": 4,
+    "item": "maisonnette:wisteria_stairs"
   },
   "show_notification": true
 }

@@ -1,10 +1,17 @@
 {
-  "type": "minecraft:campfire_cooking",
-  "category": "food",
-  "cookingtime": 600,
-  "experience": 0.35,
-  "ingredient": {
-    "tag": "minecraft:wooden_slabs"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "maisonnette:charred_planks"
+    }
   },
-  "result": "maisonnette:charred_slab"
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "maisonnette:charred_slab"
+  },
+  "show_notification": true
 }

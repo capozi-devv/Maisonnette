@@ -1,18 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "misc",
   "key": {
     "#": {
-      "item": "maisonnette:charred_planks"
+      "item": "maisonnette:willow_planks"
     }
   },
   "pattern": [
-    "###",
     "###"
   ],
   "result": {
-    "count": 2,
-    "item": "maisonnette:charred_trapdoor"
+    "count": 6,
+    "item": "maisonnette:willow_slab"
   },
   "show_notification": true
 }

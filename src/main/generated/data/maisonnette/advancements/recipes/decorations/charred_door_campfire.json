@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_charred_slab": {
+    "has_charred_door": {
       "conditions": {
         "items": [
           {
             "items": [
-              "maisonnette:charred_slab"
+              "maisonnette:charred_door"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "maisonnette:charred_slab"
+        "recipe": "minecraft:charred_door_campfire"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_charred_slab",
+      "has_charred_door",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "maisonnette:charred_slab"
+      "minecraft:charred_door_campfire"
     ]
   },
   "sends_telemetry_event": false

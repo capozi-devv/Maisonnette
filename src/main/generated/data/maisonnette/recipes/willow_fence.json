@@ -1,20 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "misc",
   "key": {
     "#": {
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "maisonnette:charred_planks"
+      "item": "maisonnette:willow_planks"
     }
   },
   "pattern": [
-    "#W#",
-    "#W#"
+    "W#W",
+    "W#W"
   ],
   "result": {
-    "item": "maisonnette:charred_fence_gate"
+    "count": 3,
+    "item": "maisonnette:willow_fence"
   },
   "show_notification": true
 }

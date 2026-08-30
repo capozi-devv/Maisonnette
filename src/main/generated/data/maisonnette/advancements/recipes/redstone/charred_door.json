@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_charred_trapdoor": {
+    "has_oak_planks": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "maisonnette:charred_trapdoor"
-            ]
+            "tag": "minecraft:wooden_doors"
           }
         ]
       },
@@ -15,20 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "maisonnette:charred_trapdoor"
+        "recipe": "maisonnette:charred_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_charred_trapdoor",
+      "has_oak_planks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "maisonnette:charred_trapdoor"
+      "maisonnette:charred_door"
     ]
   },
   "sends_telemetry_event": false

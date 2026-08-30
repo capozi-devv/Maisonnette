@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_charred_fence_gate": {
+    "has_oak_planks": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "maisonnette:charred_fence_gate"
-            ]
+            "tag": "minecraft:wooden_stairs"
           }
         ]
       },
@@ -15,20 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "maisonnette:charred_fence_gate"
+        "recipe": "maisonnette:willow_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_charred_fence_gate",
+      "has_oak_planks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "maisonnette:charred_fence_gate"
+      "maisonnette:willow_stairs"
     ]
   },
   "sends_telemetry_event": false

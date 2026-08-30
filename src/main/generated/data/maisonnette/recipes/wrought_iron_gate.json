@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "N N",
+    "NIN",
+    "I I"
+  ],
+  "result": {
+    "item": "maisonnette:wrought_iron_gate"
+  },
+  "show_notification": true
+}

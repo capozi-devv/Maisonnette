@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "maisonnette:charred_log"
+        "recipe": "minecraft:charred_log_campfire"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "maisonnette:charred_log"
+      "minecraft:charred_log_campfire"
     ]
   },
   "sends_telemetry_event": false

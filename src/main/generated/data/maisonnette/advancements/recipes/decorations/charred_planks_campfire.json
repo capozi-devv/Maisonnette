@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_charred_stairs": {
+    "has_charred_planks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "maisonnette:charred_stairs"
+              "maisonnette:charred_planks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "maisonnette:charred_stairs"
+        "recipe": "minecraft:charred_planks_campfire"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_charred_stairs",
+      "has_charred_planks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "maisonnette:charred_stairs"
+      "minecraft:charred_planks_campfire"
     ]
   },
   "sends_telemetry_event": false
