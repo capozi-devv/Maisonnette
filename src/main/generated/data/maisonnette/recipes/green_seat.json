@@ -13,9 +13,9 @@
     }
   },
   "pattern": [
-    "   ",
-    "WNW",
-    "PPP"
+    " N ",
+    " W ",
+    " P "
   ],
   "result": {
     "item": "maisonnette:green_seat"

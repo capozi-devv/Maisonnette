@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "greenhouse_glass",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_dye"
+    },
+    [
+      {
+        "item": "maisonnette:orange_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:magenta_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:light_blue_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:yellow_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:pink_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:gray_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:light_gray_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:cyan_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:purple_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:blue_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:brown_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:green_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:red_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:black_stained_greenhouse_glass"
+      },
+      {
+        "item": "maisonnette:greenhouse_glass"
+      }
+    ]
+  ],
+  "result": {
+    "item": "maisonnette:lime_stained_greenhouse_glass"
+  }
+}

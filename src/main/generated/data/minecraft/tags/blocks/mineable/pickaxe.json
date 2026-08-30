@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "maisonnette:tuff_stairs",
+    "maisonnette:calcite_stairs",
+    "maisonnette:calcite_button",
+    "maisonnette:tuff_button",
+    "maisonnette:tuff_slab",
+    "maisonnette:calcite_slab",
     "maisonnette:wrought_iron_bars",
     "maisonnette:wrought_iron_gate",
     "maisonnette:copper_torchbulb",

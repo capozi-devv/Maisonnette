@@ -18,6 +18,7 @@ import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class RecipeProvider extends FabricRecipeProvider {
@@ -26,6 +27,17 @@ public class RecipeProvider extends FabricRecipeProvider {
     private final Ingredient willowIngredient = Ingredient.ofItems(BlockInit.WILLOW_PLANKS);
     private final Ingredient charredIngredient = Ingredient.ofItems(BlockInit.CHARRED_PLANKS);
     private final Ingredient wisteriaIngredient = Ingredient.ofItems(BlockInit.WISTERIA_PLANKS);
+    private void offerSeat(Consumer<RecipeJsonProvider> exporter, Block seat, Block wool) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, seat, 1)
+                .pattern(" N ")
+                .pattern(" W ")
+                .pattern(" P ")
+                .input('P', ItemTags.PLANKS)
+                .input('N', Items.GOLD_NUGGET)
+                .input('W', wool)
+                .criterion(hasItem(wool), conditionsFromItem(wool))
+                .offerTo(exporter, new Identifier(getRecipeName(seat)));
+    }
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.GREENHOUSE_GLASS, 1)
@@ -79,150 +91,22 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .input('G', Items.GLASS_PANE)
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(BlockInit.COPPER_TORCHBULB)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.WHITE_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.WHITE_WOOL)
-                .criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.WHITE_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.ORANGE_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.ORANGE_WOOL)
-                .criterion(hasItem(Items.ORANGE_WOOL), conditionsFromItem(Items.ORANGE_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.ORANGE_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.MAGENTA_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.MAGENTA_WOOL)
-                .criterion(hasItem(Items.MAGENTA_WOOL), conditionsFromItem(Items.MAGENTA_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.MAGENTA_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.LIGHT_BLUE_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.LIGHT_BLUE_WOOL)
-                .criterion(hasItem(Items.LIGHT_BLUE_WOOL), conditionsFromItem(Items.LIGHT_BLUE_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.LIGHT_BLUE_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.YELLOW_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.YELLOW_WOOL)
-                .criterion(hasItem(Items.YELLOW_WOOL), conditionsFromItem(Items.YELLOW_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.YELLOW_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.LIME_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.LIME_WOOL)
-                .criterion(hasItem(Items.LIME_WOOL), conditionsFromItem(Items.LIME_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.LIME_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.PINK_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.PINK_WOOL)
-                .criterion(hasItem(Items.PINK_WOOL), conditionsFromItem(Items.PINK_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.PINK_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.GRAY_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.GRAY_WOOL)
-                .criterion(hasItem(Items.GRAY_WOOL), conditionsFromItem(Items.GRAY_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.GRAY_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.LIGHT_GRAY_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.LIGHT_GRAY_WOOL)
-                .criterion(hasItem(Items.LIGHT_GRAY_WOOL), conditionsFromItem(Items.LIGHT_GRAY_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.LIGHT_GRAY_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.CYAN_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.CYAN_WOOL)
-                .criterion(hasItem(Items.CYAN_WOOL), conditionsFromItem(Items.CYAN_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.CYAN_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.PURPLE_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.PURPLE_WOOL)
-                .criterion(hasItem(Items.PURPLE_WOOL), conditionsFromItem(Items.PURPLE_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.PURPLE_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.BLUE_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.BLUE_WOOL)
-                .criterion(hasItem(Items.BLUE_WOOL), conditionsFromItem(Items.BLUE_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.BLUE_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.BROWN_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.BROWN_WOOL)
-                .criterion(hasItem(Items.BROWN_WOOL), conditionsFromItem(Items.BROWN_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.BROWN_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.GREEN_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.GREEN_WOOL)
-                .criterion(hasItem(Items.GREEN_WOOL), conditionsFromItem(Items.GREEN_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.GREEN_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.RED_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.RED_WOOL)
-                .criterion(hasItem(Items.RED_WOOL), conditionsFromItem(Items.RED_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.RED_SEAT)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.BLACK_SEAT, 1)
-                .pattern("   ")
-                .pattern("WNW")
-                .pattern("PPP")
-                .input('P', ItemTags.PLANKS)
-                .input('N', Items.GOLD_NUGGET)
-                .input('W', Items.BLACK_WOOL)
-                .criterion(hasItem(Items.BLACK_WOOL), conditionsFromItem(Items.BLACK_WOOL))
-                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.BLACK_SEAT)));
+        offerSeat(exporter, BlockInit.WHITE_SEAT, Blocks.WHITE_WOOL);
+        offerSeat(exporter, BlockInit.ORANGE_SEAT, Blocks.ORANGE_WOOL);
+        offerSeat(exporter, BlockInit.MAGENTA_SEAT, Blocks.MAGENTA_WOOL);
+        offerSeat(exporter, BlockInit.LIGHT_BLUE_SEAT, Blocks.LIGHT_BLUE_WOOL);
+        offerSeat(exporter, BlockInit.YELLOW_SEAT, Blocks.YELLOW_WOOL);
+        offerSeat(exporter, BlockInit.LIME_SEAT, Blocks.LIME_WOOL);
+        offerSeat(exporter, BlockInit.PINK_SEAT, Blocks.PINK_WOOL);
+        offerSeat(exporter, BlockInit.GRAY_SEAT, Blocks.GRAY_WOOL);
+        offerSeat(exporter, BlockInit.LIGHT_GRAY_SEAT, Blocks.LIGHT_GRAY_WOOL);
+        offerSeat(exporter, BlockInit.CYAN_SEAT, Blocks.CYAN_WOOL);
+        offerSeat(exporter, BlockInit.PURPLE_SEAT, Blocks.PURPLE_WOOL);
+        offerSeat(exporter, BlockInit.BLUE_SEAT, Blocks.BLUE_WOOL);
+        offerSeat(exporter, BlockInit.BROWN_SEAT, Blocks.BROWN_WOOL);
+        offerSeat(exporter, BlockInit.GREEN_SEAT, Blocks.GREEN_WOOL);
+        offerSeat(exporter, BlockInit.RED_SEAT, Blocks.RED_WOOL);
+        offerSeat(exporter, BlockInit.BLACK_SEAT, Blocks.BLACK_WOOL);
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.WROUGHT_IRON_BARS, 1)
                 .pattern(" N ")
                 .pattern("N N")
@@ -239,5 +123,43 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .input('I', Items.IRON_INGOT)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(BlockInit.WROUGHT_IRON_GATE)));
+        offerDyeableRecipes(exporter,
+                List.of(
+                        Items.ORANGE_DYE,
+                        Items.MAGENTA_DYE,
+                        Items.LIGHT_BLUE_DYE,
+                        Items.YELLOW_DYE,
+                        Items.LIME_DYE,
+                        Items.PINK_DYE,
+                        Items.GRAY_DYE,
+                        Items.LIGHT_GRAY_DYE,
+                        Items.CYAN_DYE,
+                        Items.PURPLE_DYE,
+                        Items.BLUE_DYE,
+                        Items.BROWN_DYE,
+                        Items.GREEN_DYE,
+                        Items.RED_DYE,
+                        Items.BLACK_DYE
+                ),
+                List.of(
+                        BlockInit.ORANGE_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.MAGENTA_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.LIGHT_BLUE_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.YELLOW_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.LIME_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.PINK_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.GRAY_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.LIGHT_GRAY_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.CYAN_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.PURPLE_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.BLUE_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.BROWN_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.GREEN_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.RED_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.BLACK_STAINED_GREENHOUSE_GLASS.asItem(),
+                        BlockInit.GREENHOUSE_GLASS.asItem()
+                ),
+                "greenhouse_glass"
+        );
     }
 }

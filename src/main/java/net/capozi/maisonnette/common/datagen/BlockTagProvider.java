@@ -100,6 +100,12 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(BlockInit.MAGENTA_SEAT)
                 .add(BlockInit.BOOK_STACK);
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(BlockInit.TUFF_STAIRS)
+                .add(BlockInit.CALCITE_STAIRS)
+                .add(BlockInit.CALCITE_BUTTON)
+                .add(BlockInit.TUFF_BUTTON)
+                .add(BlockInit.TUFF_SLAB)
+                .add(BlockInit.CALCITE_SLAB)
                 .add(BlockInit.WROUGHT_IRON_BARS)
                 .add(BlockInit.WROUGHT_IRON_GATE)
                 .add(BlockInit.COPPER_TORCHBULB)
