@@ -30,7 +30,7 @@ public class PlacedFeaturesProvider {
     public static void register(Registerable<PlacedFeature> featureRegisterable, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> feature, List<PlacementModifier> modifiers) {
         featureRegisterable.register(key, new PlacedFeature(feature, List.copyOf(modifiers)));
     }
-    public static void boostrap(Registerable<PlacedFeature> context) {
+    public static void init(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
         register(context, RED_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.RED_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.RED_WILLOW_SAPLING));
         register(context, ORANGE_WILLOW_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ConfiguredFeaturesProvider.ORANGE_WILLOW_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(16, 0.5f, 7), BlockInit.ORANGE_WILLOW_SAPLING));

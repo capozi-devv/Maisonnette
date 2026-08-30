@@ -23,7 +23,7 @@ public class MaisonnetteDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeaturesProvider::init);
-        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeaturesProvider::boostrap);
+        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeaturesProvider::init);
         registryBuilder.addRegistry(RegistryKeys.BIOME, BiomesProvider::init);
     }
 }
