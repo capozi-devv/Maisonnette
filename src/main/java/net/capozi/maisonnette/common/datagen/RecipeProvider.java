@@ -233,5 +233,21 @@ public class RecipeProvider extends FabricRecipeProvider {
                 .input('W', Items.BLACK_WOOL)
                 .criterion(hasItem(Items.BLACK_WOOL), conditionsFromItem(Items.BLACK_WOOL))
                 .offerTo(exporter, new Identifier(getRecipeName(BlockInit.BLACK_SEAT)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.WROUGHT_IRON_BARS, 1)
+                .pattern(" N ")
+                .pattern("N N")
+                .pattern("III")
+                .input('N', Items.IRON_NUGGET)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.WROUGHT_IRON_BARS)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockInit.WROUGHT_IRON_GATE, 1)
+                .pattern("N N")
+                .pattern("NIN")
+                .pattern("I I")
+                .input('N', Items.IRON_NUGGET)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(BlockInit.WROUGHT_IRON_GATE)));
     }
 }
