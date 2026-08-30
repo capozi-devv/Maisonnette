@@ -1,6 +1,5 @@
-package net.capozi.maisonnette.common.loot;
+package net.capozi.maisonnette.common.datagen;
 
-import net.capozi.maisonnette.Maisonnette;
 import net.capozi.maisonnette.foundation.BlockInit;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
@@ -9,7 +8,7 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.Identifier;
 
-public class SnifferDiggingLoot {
+public class LootTableModifiers {
     private static final Identifier SNIFFER_DIGGING = new Identifier("minecraft", "gameplay/sniffer_digging");
     public static void register() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {

@@ -1,7 +1,7 @@
 package net.capozi.maisonnette;
 
 import moth.butterflyapi.mod.ModContext;
-import net.capozi.maisonnette.common.loot.SnifferDiggingLoot;
+import net.capozi.maisonnette.common.datagen.LootTableModifiers;
 import net.capozi.maisonnette.server.worldgen.ExpandedJigsawStructure;
 import net.capozi.maisonnette.foundation.*;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -31,7 +31,7 @@ public class Maisonnette implements ModInitializer {
 		SoundInit.init();
 		WorldGenerationInit.init();
 		BookStackBlock.registerBookUseCallback();
-        SnifferDiggingLoot.register();
+        LootTableModifiers.register();
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.COPPER_TORCHBULB, BlockInit.EXPOSED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.EXPOSED_COPPER_TORCHBULB, BlockInit.WEATHERED_COPPER_TORCHBULB);
 		OxidizableBlocksRegistry.registerOxidizableBlockPair(BlockInit.WEATHERED_COPPER_TORCHBULB, BlockInit.OXIDIZED_COPPER_TORCHBULB);
